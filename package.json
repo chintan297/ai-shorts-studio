@@ -15,7 +15,9 @@
     "content:build": "tsx scripts/build-content.mts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "supabase:setup": "tsx scripts/setup-supabase.mts"
+    "supabase:setup": "tsx scripts/setup-supabase.mts",
+    "deploy": "vercel deploy --prod --yes",
+    "deploy:preview": "vercel deploy --yes"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
