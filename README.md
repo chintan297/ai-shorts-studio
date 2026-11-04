@@ -130,3 +130,4 @@ npm run build && npm run test:e2e   # acceptance tests 1–8 with two browser "d
 - **Audio licensing** of generated music can't be verified by this app. The upload confirmation asks you to check it.
 - **Facts** cite a named source but should still be verified before publishing (the Overview tab shows the fact and source).
 - No views, subscribers or monetization are guaranteed. Analytics are only what you enter by hand.
+# ai-shorts-studio
