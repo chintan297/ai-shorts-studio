@@ -1046,7 +1046,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Science facts",
-    concept: "A steel pressure cooker whistles on a gas stove and turns softly see-through, showing water boiling hard inside at about 120 °C so the dal cooks faster.",
+    concept: "A steel pressure cooker whistles on a gas stove and turns softly transparent, showing water boiling hard inside at about 120 °C so the dal cooks faster.",
     hook: "A steel pressure cooker's whistle rattles and shoots a jet of white steam into warm kitchen light.",
     subject: "A classic steel pressure cooker on a gas burner, with a weighted whistle on its lid",
     environment: "A warm home kitchen in India in the evening: tiled wall, spice jars, a window with dusk light",
@@ -1074,7 +1074,7 @@ const seeds: VideoSeed[] = [
       statement: "A pressure cooker raises the boiling point of water to about 120 °C, so food cooks faster.",
       sourceName: "Encyclopaedia Britannica — Pressure cooker",
     },
-    thumbnail: { text: "120°C का राज़!", concept: "A steel pressure cooker whistling steam with a glowing see-through cutaway" },
+    thumbnail: { text: "120°C का राज़!", concept: "A steel pressure cooker whistling steam with a glowing transparent cutaway" },
     seo: {
       title: "Pressure Cooker में खाना जल्दी क्यों पकता है? 🍲",
       altTitles: ["Why a Pressure Cooker Cooks Food Faster", "कुकर की सीटी के पीछे का विज्ञान", "Pressure Cooker Science: 120 डिग्री का राज़"],

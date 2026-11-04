@@ -1162,7 +1162,7 @@ const seeds: VideoSeed[] = [
     category: "Science facts",
     concept: "A single corn kernel sizzles in hot sand in a roadside iron kadhai; it turns translucent to show its tiny drop of water flashing into steam until the hull bursts into popcorn.",
     hook: "A single golden corn kernel sizzles on glowing hot sand in an iron kadhai, in extreme macro.",
-    subject: "One corn kernel with a glossy hard hull, shown with an illustrative see-through view of the tiny water droplet inside",
+    subject: "One corn kernel with a glossy hard hull, shown with an illustrative transparent view of the tiny water droplet inside",
     environment: "A roadside popcorn roaster's iron kadhai full of hot sand at an evening street market, fire glowing beneath",
     action: "The kernel turns softly translucent as the tiny drop of water inside it starts boiling into swirling steam, the pressure visibly building and the hull straining.",
     payoff: "In slow motion the hull bursts and the kernel blooms into a fluffy white popcorn puff that tumbles across the sand.",

@@ -9,22 +9,22 @@ export const FASHION_MODELS: Record<string, CastMember> = {
   meher: {
     name: "Meher Anand",
     description:
-      "an original fictional adult AI fashion model, a 25-year-old Indian woman with a mature adult face. Face: heart-shaped with high cheekbones and a softly pointed chin. Eyes: large almond-shaped deep-brown eyes with thick dark lashes and bold, softly arched black eyebrows. Nose: straight with a slightly rounded tip and a tiny gold stud on the left nostril (always present). Lips: full and well-defined. Skin: warm wheatish golden-brown with natural texture and a healthy glow. Hair: very long, thick, glossy jet-black hair with soft waves, reaching the waist. Body: about 168 cm tall with naturally curvy hourglass adult proportions and confident posture.",
+      "an original fictional adult AI fashion model, a 25-year-old Indian woman with a mature adult face. Face: heart-shaped with high cheekbones and a softly pointed chin. Eyes: large almond-shaped deep-brown eyes with thick dark lashes and bold, softly arched black eyebrows. Nose: straight with a slightly rounded tip and a tiny gold stud on the left nostril (always present). Lips: full and well-defined. Skin: warm wheatish golden-brown with natural texture and a healthy glow. Hair: very long, thick, glossy jet-black hair with soft waves, reaching the waist. Body: about 168 cm tall with balanced, elegant adult proportions and confident posture.",
   },
   valeria: {
     name: "Valeria Solis",
     description:
-      "an original fictional adult AI fashion model, a 26-year-old Latina woman with a mature adult face. Face: oval with defined cheekbones and a soft jawline. Eyes: warm amber-brown eyes with long lashes and full dark eyebrows. Nose: small and straight. Lips: full, with a natural berry tone. Skin: sun-kissed caramel-tan with natural texture and one small beauty mark high on the right cheekbone (always present). Hair: long, voluminous dark-chocolate loose curls reaching mid-back. Body: about 170 cm tall with athletic, curvy adult proportions and confident posture.",
+      "an original fictional adult AI fashion model, a 26-year-old Latina woman with a mature adult face. Face: oval with defined cheekbones and a soft jawline. Eyes: warm amber-brown eyes with long lashes and full dark eyebrows. Nose: small and straight. Lips: full, with a natural berry tone. Skin: sun-kissed caramel-tan with natural texture and one small beauty mark high on the right cheekbone (always present). Hair: long, voluminous dark-chocolate loose curls reaching mid-back. Body: about 170 cm tall with athletic, balanced adult proportions and confident posture.",
   },
   hana: {
     name: "Hana Mori",
     description:
-      "an original fictional adult AI fashion model, a 27-year-old East Asian woman with a mature adult face and poised, elegant presence. Face: soft oval with a defined jawline. Eyes: dark-brown almond eyes with soft monolids and straight, softly feathered eyebrows. Nose: small with a soft bridge. Lips: naturally rosy with a defined cupid's bow. Skin: fair with a neutral undertone, natural texture and a light flush. Hair: long, straight, glossy black hair reaching mid-back with soft curtain bangs (always present). Body: about 168 cm tall with slender, toned adult proportions and elegant posture.",
+      "an original fictional adult AI fashion model, a 27-year-old East Asian woman with a mature adult face and poised, elegant presence. Face: soft oval with a defined jawline. Eyes: dark-brown almond eyes with soft monolids and straight, softly feathered eyebrows. Nose: small with a soft bridge. Lips: naturally rosy with a defined cupid's bow. Skin: fair with a neutral undertone, natural texture and a light flush. Hair: long, straight, glossy black hair reaching mid-back with soft curtain bangs (always present). Body: about 168 cm tall with slender, balanced adult proportions and elegant posture.",
   },
   elara: {
     name: "Elara Vey",
     description:
-      "an original fictional adult AI fashion model, a 25-year-old woman with a global mixed-heritage look and a mature adult face. Face: soft oval with gently defined high cheekbones and a softly rounded chin. Eyes: almond-shaped hazel-green eyes with a warm amber ring, natural dark lashes and softly arched dark-brown eyebrows. Nose: straight, slim bridge with a softly rounded tip. Lips: medium-full with a defined cupid's bow. Skin: warm light-olive golden-beige with natural texture and one small beauty mark just above the left corner of her upper lip (always present). Hair: long, thick, softly wavy dark-chocolate-brown hair with subtle caramel highlights, reaching mid-back. Body: about 172 cm tall with slim-athletic adult proportions and graceful posture.",
+      "an original fictional adult AI fashion model, a 25-year-old woman with a global mixed-heritage look and a mature adult face. Face: soft oval with gently defined high cheekbones and a softly rounded chin. Eyes: almond-shaped hazel-green eyes with a warm amber ring, natural dark lashes and softly arched dark-brown eyebrows. Nose: straight, slim bridge with a softly rounded tip. Lips: medium-full with a defined cupid's bow. Skin: warm light-olive golden-beige with natural texture and one small beauty mark just above the left corner of her upper lip (always present). Hair: long, thick, softly wavy dark-chocolate-brown hair with subtle caramel highlights, reaching mid-back. Body: about 172 cm tall with slim-athletic, balanced adult proportions and graceful posture.",
   },
 };
 
@@ -66,7 +66,7 @@ export const aiFashionTemplate: ChannelTemplate = {
     madeForKids: false,
     syntheticDisclosure: "required",
     defaultSlots: ["11:00", "20:00"],
-    narrator: "Confident, warm young female voice (used sparingly — most reels are music-led)",
+    narrator: "Confident, warm female voice (used sparingly — most reels are music-led)",
     identities: Object.values(FASHION_MODELS).map((m) => ({
       title: m.name,
       summary: `Permanent identity — ${m.description}`,
@@ -86,15 +86,10 @@ export const aiFashionTemplate: ChannelTemplate = {
   motionRules:
     "Only subtle, confident movement: a slow head turn, an over-the-shoulder glance, a soft smile, a hair flip or the breeze moving hair and fabric, a slight weight shift, at most one slow hand movement (touching hair, sunglasses or an earring). She does not walk, run, dance or spin; hands stay relaxed and natural.",
   imageNegatives: [
-    "nudity",
-    "nipples",
-    "see-through fabric",
-    "lingerie",
-    "underwear",
+    "revealing clothing",
     "wardrobe malfunction",
-    "sexualized pose",
-    "body-part close-up",
-    "upskirt angle",
+    "unflattering angle",
+    "close-up on body parts",
     "extra legs",
     "distorted legs",
     "elongated neck",
@@ -103,20 +98,17 @@ export const aiFashionTemplate: ChannelTemplate = {
     "doll face",
     "different face",
     "inconsistent identity",
-    "young-looking face",
-    "childlike proportions",
-    "school uniform",
   ],
   videoNegatives: [
-    "no nudity, see-through fabric, lingerie or wardrobe malfunctions",
-    "no sexualized posing, no camera close-ups of chest, hips or legs, no low upskirt angles",
+    "no revealing or ill-fitting clothing, the outfit stays neat, intact and tasteful",
+    "no close-ups of anything except the face, hair, jewelry or shoes; framing stays elegant and fashion-editorial",
     "no walking, dancing or spinning",
     "no complex hand gestures",
     "no drift in facial features",
   ],
   thumbnailPalette: "hot pink, glossy black and champagne gold (party) or turquoise and sunset coral (beach)",
   thumbnailFont: "bold modern sans-serif (Montserrat ExtraBold style) in white with a soft pink glow",
-  defaultVoice: "Confident, warm young Indian female voice",
+  defaultVoice: "Confident, warm Indian female voice",
   defaultTone: "confident, stylish and playful",
   baseTags: ["AI fashion model", "fashion reels", "outfit ideas", "glam look", "fashion shorts", "AI model"],
   baseHashtags: ["#AIFashion", "#OutfitIdeas"],

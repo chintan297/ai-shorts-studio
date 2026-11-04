@@ -38,7 +38,7 @@ export const futureAiTemplate: ChannelTemplate = {
     madeForKids: false,
     syntheticDisclosure: "required",
     defaultSlots: ["12:30", "19:30"],
-    narrator: "Confident young Indian male narrator with a clear, slightly deep voice",
+    narrator: "Confident Indian male narrator with a clear, slightly deep voice",
     identities: [
       {
         title: "Visual identity",
@@ -60,11 +60,11 @@ export const futureAiTemplate: ChannelTemplate = {
     "Keep the same subject design, materials, colors and environment layout in every frame. Technology looks plausible and well-engineered. No random new objects appear.",
   motionRules:
     "Machines and vehicles move smoothly with believable mass and momentum. Any people move naturally and calmly in the background.",
-  imageNegatives: ["cartoon", "toy-like", "plastic look", "cluttered sci-fi clichés", "dystopian gore"],
+  imageNegatives: ["cartoon", "toy-like", "plastic look", "cluttered sci-fi clichés", "dystopian ruins"],
   videoNegatives: ["no robotic stuttering", "no impossible geometry glitches"],
   thumbnailPalette: "electric cyan, deep navy and warm orange accents",
   thumbnailFont: "extra-bold condensed sans-serif (Anton / Bebas Neue style), white with a cyan glow outline",
-  defaultVoice: "Confident young Indian male narrator with a clear, slightly deep voice",
+  defaultVoice: "Confident Indian male narrator with a clear, slightly deep voice",
   defaultTone: "excited, curious and confident",
   baseTags: ["future technology", "future tech hindi", "AI technology", "technology in hindi", "futuristic", "AI video"],
   baseHashtags: ["#FutureTech", "#AI"],

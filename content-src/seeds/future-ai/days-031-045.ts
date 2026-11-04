@@ -364,8 +364,8 @@ const seeds: VideoSeed[] = [
   {
     category: "AI innovations",
     concept: "Smart AI glasses translate a deaf student's sign language into a spoken voice in real time, so her whole Hyderabad classroom understands her answer.",
-    hook: "Close-up of a teenage girl's hands forming quick, confident signs, with a faint ring of cyan light tracing each finger movement in the air.",
-    subject: "A teenage student wearing slim transparent-framed AI glasses with a tiny cyan sensor at the hinge, signing with expressive hands",
+    hook: "Close-up of a student’s hands forming quick, confident signs, with a faint ring of cyan light tracing each finger movement in the air.",
+    subject: "A college student wearing slim transparent-framed AI glasses with a tiny cyan sensor at the hinge, signing with expressive hands",
     environment: "A bright modern school classroom in Hyderabad in the morning, with sunlit windows, green plants, wooden desks and classmates turned toward her",
     action: "As she signs her answer, soft cyan sound-wave ripples flow out from her glasses into the room, and her classmates' faces light up as they understand.",
     payoff: "The teacher smiles and nods, the class raises and twists their open hands in silent sign applause, and the girl beams.",

@@ -247,6 +247,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -693,6 +700,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -1146,6 +1160,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -1594,6 +1615,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -2039,6 +2067,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -2489,6 +2524,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -2923,6 +2965,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -3373,6 +3422,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -3819,6 +3875,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -4269,6 +4332,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -4715,6 +4785,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -5165,6 +5242,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -5599,6 +5683,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -6049,6 +6140,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -6494,6 +6592,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -6944,6 +7049,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -7392,6 +7504,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -7838,6 +7957,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -8291,6 +8417,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -8737,6 +8870,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -9187,6 +9327,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -9621,6 +9768,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -10071,6 +10225,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -10517,6 +10678,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -10967,6 +11135,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -11413,6 +11588,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -11863,6 +12045,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -12297,6 +12486,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -12747,6 +12943,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -13192,6 +13395,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -13642,6 +13852,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -14076,6 +14293,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -14529,6 +14753,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -14977,6 +15208,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -15423,6 +15661,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -15876,6 +16121,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -16324,6 +16576,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -16758,6 +17017,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -17208,6 +17474,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -17654,6 +17927,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -18104,6 +18384,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -18550,6 +18837,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -19000,6 +19294,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -19446,6 +19747,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -19896,6 +20204,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -20343,6 +20658,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -20777,6 +21099,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -21225,6 +21554,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -21678,6 +22014,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -22124,6 +22467,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -22574,6 +22924,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -23020,6 +23377,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -23470,6 +23834,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -23916,6 +24287,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -24366,6 +24744,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -24800,6 +25185,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -25250,6 +25642,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -25684,6 +26083,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -26134,6 +26540,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -26582,6 +26995,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -27027,6 +27447,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -27477,6 +27904,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -27923,6 +28357,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -28376,6 +28817,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -28810,6 +29258,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -29260,6 +29715,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -29706,6 +30168,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -30159,6 +30628,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -30593,6 +31069,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -31043,6 +31526,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -31489,6 +31979,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -31939,6 +32436,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -32385,6 +32889,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -32835,6 +33346,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -33283,6 +33801,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -33717,6 +34242,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -34167,6 +34699,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -34614,6 +35153,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -35048,6 +35594,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -35498,6 +36051,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -35946,6 +36506,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -36392,6 +36959,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -36845,6 +37419,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -37291,6 +37872,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -37741,6 +38329,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -38189,6 +38784,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -38623,6 +39225,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -39073,6 +39682,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -39519,6 +40135,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -39969,6 +40592,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -40403,6 +41033,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -40853,6 +41490,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -41299,6 +41943,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -41749,6 +42400,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -42197,6 +42855,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -42642,6 +43307,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -43092,6 +43764,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -43538,6 +44217,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -43991,6 +44677,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -44436,6 +45129,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -44884,6 +45584,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -45337,6 +46044,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -45771,6 +46485,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -46221,6 +46942,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -46667,6 +47395,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -47117,6 +47852,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -47551,6 +48293,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -48001,6 +48750,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -48447,6 +49203,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -48897,6 +49660,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -49343,6 +50113,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -49793,6 +50570,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -50239,6 +51023,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -50689,6 +51480,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -51123,6 +51921,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -51571,6 +52376,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -52024,6 +52836,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -52470,6 +53289,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -52920,6 +53746,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -53354,6 +54187,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -53804,6 +54644,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -54250,6 +55097,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -54703,6 +55557,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -55137,6 +55998,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -55587,6 +56455,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -56032,6 +56907,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -56482,6 +57364,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -56916,6 +57805,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -57366,6 +58262,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -57812,6 +58715,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -58262,6 +59172,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -58696,6 +59613,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -59143,6 +60067,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -59593,6 +60524,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -60027,6 +60965,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -60477,6 +61422,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -60925,6 +61877,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -61359,6 +62318,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -61809,6 +62775,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -62255,6 +63228,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -62708,6 +63688,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -63154,6 +64141,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -63604,6 +64598,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -64038,6 +65039,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -64488,6 +65496,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -64933,6 +65948,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -65383,6 +66405,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -65829,6 +66858,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -66282,6 +67318,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -66727,6 +67770,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -67177,6 +68227,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -67611,6 +68668,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -68061,6 +69125,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -68495,6 +69566,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -68945,6 +70023,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -69391,6 +70476,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -69840,6 +70932,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -70286,6 +71385,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -70739,6 +71845,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -71185,6 +72298,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -71635,6 +72755,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -72083,6 +73210,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -72517,6 +73651,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -72967,6 +74108,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -73415,6 +74563,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -73849,6 +75004,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -74299,6 +75461,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -74745,6 +75914,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -75195,6 +76371,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -75643,6 +76826,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -76089,6 +77279,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -76542,6 +77739,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -76976,6 +78180,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -77426,6 +78637,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -77872,6 +79090,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -78321,6 +79546,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -78767,6 +79999,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",
@@ -79220,6 +80459,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -79668,6 +80914,13 @@
      "mandatory": false
     },
     {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
+    },
+    {
      "id": "P3",
      "section": "promptClarity",
      "label": "No placeholders or unresolved values",
@@ -80113,6 +81366,13 @@
      "label": "Image prompt is complete",
      "passed": true,
      "mandatory": false
+    },
+    {
+     "id": "P4",
+     "section": "promptClarity",
+     "label": "Prompts contain no safety-filter trigger words",
+     "passed": true,
+     "mandatory": true
     },
     {
      "id": "P3",

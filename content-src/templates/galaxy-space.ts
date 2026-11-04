@@ -60,7 +60,7 @@ export const galaxySpaceTemplate: ChannelTemplate = {
   motionRules:
     "Camera and celestial motion are slow, smooth and majestic. Orbits, gas flows and particles follow believable physics.",
   imageNegatives: ["cartoon planets", "spaceship clutter", "excessive lens flare", "fake text labels"],
-  videoNegatives: ["no star flicker", "no sudden scale jumps", "no explosions unless described"],
+  videoNegatives: ["no star flicker", "no sudden scale jumps", "no sudden unexplained events"],
   thumbnailPalette: "deep space black, violet nebula glow and bright gold starlight",
   thumbnailFont: "bold geometric sans-serif (Montserrat Black style) in white with a soft violet glow",
   defaultVoice: "Calm, deep Indian male documentary narrator with a subtle cinematic reverb",

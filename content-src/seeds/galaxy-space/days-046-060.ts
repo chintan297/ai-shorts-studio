@@ -389,7 +389,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Planets",
-    concept: "A stream of tiny Earths pours into a see-through outline of Jupiter, illustrating that more than 1,300 Earths could fit inside it.",
+    concept: "A stream of tiny Earths pours into a transparent outline of Jupiter, illustrating that more than 1,300 Earths could fit inside it.",
     hook: "A tiny blue Earth floats in front of the enormous banded face of Jupiter, which fills the whole frame.",
     subject: "Jupiter with its creamy and rust-colored cloud bands beside a small Earth for scale, and an illustrative translucent Jupiter shell filling with tiny Earth spheres",
     environment: "Space near Jupiter with sunlight coming from one side",

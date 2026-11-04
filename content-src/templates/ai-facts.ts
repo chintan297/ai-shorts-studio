@@ -36,7 +36,7 @@ export const aiFactsTemplate: ChannelTemplate = {
     madeForKids: false,
     syntheticDisclosure: "required",
     defaultSlots: ["12:00", "18:30"],
-    narrator: "Energetic, friendly young Indian female narrator, clear and expressive",
+    narrator: "Energetic, friendly Indian female narrator, clear and expressive",
     identities: [
       {
         title: "Editorial rules",
@@ -61,7 +61,7 @@ export const aiFactsTemplate: ChannelTemplate = {
   videoNegatives: ["no exaggerated or false depiction of the fact", "no fake charts or numbers on screen"],
   thumbnailPalette: "bright yellow, black and white with one bold red accent",
   thumbnailFont: "heavy impact-style sans-serif in yellow with a thick black outline",
-  defaultVoice: "Energetic, friendly young Indian female narrator, clear and expressive",
+  defaultVoice: "Energetic, friendly Indian female narrator, clear and expressive",
   defaultTone: "surprised, energetic and friendly",
   baseTags: ["amazing facts hindi", "facts in hindi", "interesting facts", "did you know", "rochak tathya", "science facts hindi"],
   baseHashtags: ["#Facts", "#AmazingFacts"],

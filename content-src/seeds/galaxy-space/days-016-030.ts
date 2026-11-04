@@ -752,7 +752,7 @@ const seeds: VideoSeed[] = [
       ambience: "dry desert night silence with a faint wind",
     },
     fact: {
-      statement: "The Large Magellanic Cloud is a satellite galaxy of the Milky Way about 160,000 light-years away, visible to the naked eye from the Southern Hemisphere.",
+      statement: "The Large Magellanic Cloud is a satellite galaxy of the Milky Way about 160,000 light-years away, visible to the unaided eye from the Southern Hemisphere.",
       sourceName: "NASA Hubble — Large Magellanic Cloud",
     },
     thumbnail: { text: "ये बादल नहीं, Galaxy है!", concept: "Two glowing Magellanic Clouds beside the Milky Way above a dark desert ridge" },
@@ -760,7 +760,7 @@ const seeds: VideoSeed[] = [
       title: "आसमान का ये ‘बादल’ असल में एक Galaxy है 🌌",
       altTitles: ["The Large Magellanic Cloud: Our Satellite Galaxy", "दक्षिणी आसमान की साथी आकाशगंगा", "Southern Hemisphere की खास Galaxy"],
       summaryHi: "Large Magellanic Cloud हमारी Milky Way की एक साथी (satellite) galaxy है, जो लगभग 1,60,000 light-years दूर है। Southern Hemisphere के अंधेरे आसमान में ये बिना telescope के एक चमकते बादल जैसी दिखती है।",
-      summaryEn: "The Large Magellanic Cloud is a satellite galaxy of the Milky Way about 160,000 light-years away, visible to the naked eye from the Southern Hemisphere.",
+      summaryEn: "The Large Magellanic Cloud is a satellite galaxy of the Milky Way about 160,000 light-years away, visible to the unaided eye from the Southern Hemisphere.",
       primaryKeywords: ["large magellanic cloud", "satellite galaxy"],
       secondaryKeywords: ["magellanic clouds hindi", "southern sky", "galaxy facts"],
       hashtags: ["#MagellanicCloud", "#SouthernSky"],

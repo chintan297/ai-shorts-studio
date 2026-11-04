@@ -938,7 +938,7 @@ const seeds: VideoSeed[] = [
     category: "AI innovations",
     concept: "An AI cricket coach traces a young bowler's delivery as a glowing light path in the air at a Mumbai maidan, showing exactly where the ball swung and pitched.",
     hook: "A red leather ball leaves a young bowler's hand and a thin ribbon of golden light follows it through the air, curving gently toward the stumps.",
-    subject: "A teenage fast bowler in white training kit with a slim AR visor, and a floating golden light trail drawn by a compact AI coaching sensor on a tripod beside the pitch",
+    subject: "A young cricketer in white training kit with a slim AR visor, and a floating golden light trail drawn by a compact AI coaching sensor on a tripod beside the pitch",
     environment: "A busy Mumbai maidan at sunset, with several practice nets, old stone buildings and palm trees along the edge, kids playing matches in the background and orange dust in the air",
     action: "The ball swings late and clips the off stump, then the light path freezes in mid-air and a second ghostly trail appears beside it, showing a corrected line as the tripod sensor pulses.",
     payoff: "The bowler walks back to his run-up studying the two glowing paths hanging over the pitch, and nods with a determined grin.",

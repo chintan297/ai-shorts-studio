@@ -74,7 +74,7 @@ export const kidsLearningTemplate: ChannelTemplate = {
     "Every character keeps exactly the same design, proportions, colors and clothing as described, in every frame. The art style never changes. Every letter, number, shape and color being taught is drawn correctly and is easy to recognize.",
   motionRules:
     "Gentle, bouncy, cheerful movement at a calm pace. Nothing scary, no sudden loud moments, no dangerous actions.",
-  imageNegatives: ["scary", "dark mood", "sharp teeth", "weapons", "creepy", "horror", "cluttered background"],
+  imageNegatives: ["scary", "dark mood", "sharp teeth", "creepy", "horror", "cluttered background"],
   videoNegatives: ["nothing frightening or dangerous", "no sudden loud noises", "no flashing or strobing lights"],
   thumbnailPalette: "sunny yellow, sky blue, grass green and candy pink",
   thumbnailFont: "rounded extra-bold kids font (Baloo / Fredoka style), white with a thick colorful outline",
