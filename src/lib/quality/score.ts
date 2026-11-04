@@ -100,7 +100,7 @@ export function scorePackage(pkg: Pkg, ctx: QualityContext): QualityReport {
   const placeholder = /\{|\}|TODO|lorem|undefined|null\b/i;
   add("promptClarity", "P1", "Flow prompt is complete but not bloated", flow.length >= 1200 && flow.length <= 6500, true, "Flow prompt should be 1,200–6,500 characters.");
   add("promptClarity", "P2", "Image prompt is complete", image.length >= 400 && image.length <= 3500, false, "Image prompt should be 400–3,500 characters.");
-  const copied = [flow, image, pkg.imagePrompt.negativePrompt, pkg.thumbnail.prompt, pkg.thumbnail.negativePrompt].join("\n");
+  const copied = [flow, pkg.flowPrompt.lite, image, pkg.imagePrompt.negativePrompt, pkg.thumbnail.prompt, pkg.thumbnail.negativePrompt].join("\n");
   const risky = FILTER_RISK_TERMS.exec(copied)?.[0];
   add("promptClarity", "P4", `Prompts contain no safety-filter trigger words${risky ? ` (found “${risky}”)` : ""}`, !risky, true, "Rewrite that part positively and tastefully; never mention banned content, even to exclude it.");
   add("promptClarity", "P3", "No placeholders or unresolved values", !placeholder.test(flow) && !placeholder.test(image) && !placeholder.test(pkg.thumbnail.prompt), true, "Remove the placeholder text.");

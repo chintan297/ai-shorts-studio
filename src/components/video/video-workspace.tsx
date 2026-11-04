@@ -16,7 +16,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useChannelSequence, useSchedule } from "@/hooks/use-progress";
 import { useSync } from "@/hooks/use-sync";
 import { channelEntries, getChannel, indexEntry, videoHref } from "@/lib/content/catalog";
-import { allDetailsText, flowPromptText, imagePromptText, storyboardText, thumbnailPromptText } from "@/lib/content/copy-format";
+import { allDetailsText, flowLitePromptText, flowPromptText, imagePromptText, storyboardText, thumbnailPromptText } from "@/lib/content/copy-format";
 import { formatDate, formatSlot, plannedDate, slotFor } from "@/lib/content/schedule";
 import type { VideoIndexEntry, VideoPackage } from "@/lib/content/schema";
 import { promptKey } from "@/lib/progress/types";
@@ -360,6 +360,17 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
                 progress={flowProgress}
                 templateVersion={pkg.templateVersion}
               >
+                <Card size="sm" className="border-amber-500/40">
+                  <CardContent className="space-y-3">
+                    <CopyField
+                      label="Short safe prompt: use this if Flow says “might violate our policies”"
+                      value={flowLitePromptText(pkg)}
+                      copyLabel="Short Flow Prompt"
+                      maxHeight="max-h-60"
+                      hint="About a quarter of the length: fewer details, fewer chances for a filter to object. Use the generated image as the start frame to keep the same face."
+                    />
+                  </CardContent>
+                </Card>
                 <Card size="sm">
                   <CardHeader>
                     <CardTitle>Audio included in the prompt</CardTitle>
@@ -472,6 +483,9 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
               </CopyButton>
               <CopyButton text={flowPromptText(pkg, overrides.flow)} label="Google Flow Video + Audio Prompt" className="justify-start">
                 Copy Google Flow Prompt
+              </CopyButton>
+              <CopyButton text={flowLitePromptText(pkg)} label="Short Flow Prompt" className="justify-start">
+                Copy Short Flow Prompt
               </CopyButton>
               <CopyButton text={thumbnailPromptText(pkg, overrides.thumbnail)} label="Thumbnail Prompt" className="justify-start">
                 Copy Thumbnail Prompt

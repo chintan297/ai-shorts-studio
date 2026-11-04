@@ -228,6 +228,36 @@ function audioBlock(tpl: ChannelTemplate, seed: VideoSeed): string {
   return out.join("\n");
 }
 
+/**
+ * Compact version of the Flow prompt (~700–1,000 chars): fewer descriptors means fewer things for a content
+ * filter to object to. Character consistency then comes from using the generated image as the start frame.
+ */
+function liteFlowPrompt(tpl: ChannelTemplate, seed: VideoSeed): string {
+  const { audio } = seed;
+  const lines = [
+    `Vertical 9:16 video, 8 seconds, one continuous shot. ${seed.concept}`,
+    `Look: ${tpl.videoStyle.split(":")[0]}.`,
+    seed.look ? `Outfit: ${seed.look.outfit}. Accessories: ${seed.look.accessories}. Hair: ${seed.look.hairStyling}.` : `Subject: ${seed.subject}.`,
+    `Setting: ${seed.environment}.`,
+    `Start: ${seed.hook}`,
+    `Middle: ${seed.action}`,
+    `End: ${seed.payoff}`,
+    `Camera: ${seed.camera.angle}; ${seed.camera.movement}; ${seed.camera.lens}. Lighting: ${seed.lighting}.`,
+  ];
+  const spoken = audio.mode === "music-only" ? [] : audio.lines;
+  const sound: string[] = [];
+  if (spoken.length) {
+    const who = audio.mode === "dialogue" ? "On-screen speech in Hindi" : "Off-screen narrator speaking Hindi";
+    sound.push(`${who}: ${spoken.map((l) => `“${l.text}”`).join(" then ")}`);
+  }
+  sound.push(`original instrumental music (${audio.music}, no vocals)`);
+  sound.push(audio.sfx.map((c) => c.sound).join(", "));
+  sound.push(audio.ambience);
+  lines.push(`Audio: ${sound.join("; ")}.`);
+  lines.push("Smooth stabilized motion, natural physics, consistent look throughout, no text or logos on screen.");
+  return lines.join("\n");
+}
+
 function flowPrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["flowPrompt"] {
   const appearance = characterAppearance(tpl, seed);
   const lines = [
@@ -285,7 +315,7 @@ function flowPrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["flowPr
   notes.push(
     "If your Flow mode outputs silent video, don't add commercial music. Use an original track from YouTube Studio's Audio Library.",
   );
-  return { prompt: lines.join("\n"), notes };
+  return { prompt: lines.join("\n"), lite: liteFlowPrompt(tpl, seed), notes };
 }
 
 function thumbnail(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["thumbnail"] {
