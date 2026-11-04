@@ -22,6 +22,7 @@ import { CHANNELS } from "@/lib/content/catalog";
 import { formatSlot, slotFor } from "@/lib/content/schedule";
 import type { ChannelId } from "@/lib/content/schema";
 import { REJECTION_MESSAGES } from "@/lib/progress/types";
+import { SHARED_WORKSPACE } from "@/lib/sync";
 import { actions, describeError } from "@/lib/sync/actions";
 
 export function SettingsView() {
@@ -30,7 +31,7 @@ export function SettingsView() {
       <PageHeader title="Settings" description="Workspace, devices, sync, schedule and backups. There's no login: devices connect with one-time pairing codes." />
       <div className="space-y-4">
         <WorkspaceCard />
-        <PairingCard />
+        {SHARED_WORKSPACE ? <SharedModeCard /> : <PairingCard />}
         <DevicesCard />
         <SyncCard />
         <ScheduleCard />
@@ -105,6 +106,22 @@ function InlineTextSetting({ id, label, initial, onSave }: { id: string; label: 
         </Button>
       </div>
     </div>
+  );
+}
+
+function SharedModeCard() {
+  return (
+    <Card id="pairing">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <KeyRound className="size-4" /> Same data on every device
+        </CardTitle>
+        <CardDescription>
+          This site uses one shared workspace. Open it on any phone or computer and the same, up-to-date progress appears, with no
+          code or login. Anyone who has the site address can see and change this progress, so keep the address to yourself.
+        </CardDescription>
+      </CardHeader>
+    </Card>
   );
 }
 
@@ -204,7 +221,7 @@ function DevicesCard() {
                 </p>
               </div>
             </div>
-            {m.id === memberId ? (
+            {SHARED_WORKSPACE ? null : m.id === memberId ? (
               <ConfirmDialog
                 trigger={
                   <Button size="sm" variant="ghost">

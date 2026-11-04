@@ -28,7 +28,7 @@ export interface Snapshot {
 }
 
 export type Membership =
-  | { status: "active"; workspaceId: string; memberId: string; role: "owner" | "member" }
+  | { status: "active"; workspaceId: string; memberId: string; role: "owner" | "member"; shared: boolean }
   | { status: "revoked" }
   | { status: "none" };
 
@@ -78,6 +78,8 @@ export interface SyncBackend {
   ensureSession(): Promise<void>;
   getMembership(): Promise<Membership>;
   createWorkspace(device: DeviceInfo, force?: boolean): Promise<{ workspaceId: string }>;
+  /** Shared-workspace mode: joins the single shared workspace (no pairing code). */
+  joinSharedWorkspace(device: DeviceInfo): Promise<{ workspaceId: string }>;
   fetchSnapshot(): Promise<Snapshot>;
   applyOps(ops: Op[]): Promise<OpResult[]>;
   subscribe(workspaceId: string, handlers: RealtimeHandlers): () => void;

@@ -218,4 +218,34 @@ describe("supabase migration (PGlite)", () => {
     const history = await as<{ action_type: string }>(a, "select action_type from public.activity_history where action_type in ('progress_reset','backup_imported')");
     expect(history.map((h) => h.action_type).sort()).toEqual(["backup_imported", "progress_reset"]);
   });
+
+  it("shared workspace: every device joins the same workspace with no code, and sees the same data", async () => {
+    const shared = (await db.query<{ id: string }>("select id from public.workspaces where is_shared")).rows[0]!.id;
+    const d1 = await newUser();
+    const d2 = await newUser();
+    const [j1] = await as<{ r: { workspace_id: string; joined: boolean } }>(d1, "select public.join_shared_workspace('shared-dev-0001', 'Laptop') as r");
+    const [j2] = await as<{ r: { workspace_id: string; joined: boolean } }>(d2, "select public.join_shared_workspace('shared-dev-0002', 'Phone') as r");
+    expect(j1!.r).toMatchObject({ workspace_id: shared, joined: true });
+    expect(j2!.r.workspace_id).toBe(shared);
+
+    // d1 writes, d2 reads it (and the membership says it's the shared workspace)
+    await apply(d1, op("set_notes", 1, 1, { notes: "from laptop" }));
+    const rows = await as<{ notes: string }>(d2, "select notes from public.video_progress where video_id = 'ai-facts-d001-v1'");
+    expect(rows[0]?.notes).toBe("from laptop");
+    const [m] = await as<{ r: { shared: boolean } }>(d2, "select public.get_my_membership() as r");
+    expect(m!.r.shared).toBe(true);
+
+    // joining again is a no-op; a device moving from a personal workspace leaves it
+    const [again] = await as<{ r: { joined: boolean } }>(d1, "select public.join_shared_workspace('shared-dev-0001', 'Laptop') as r");
+    expect(again!.r.joined).toBe(false);
+    const d3 = await newUser();
+    const [personal] = await as<{ r: { workspace_id: string } }>(d3, "select public.create_workspace('personal-dev-03', 'Tablet') as r");
+    await as(d3, "select public.join_shared_workspace('personal-dev-03', 'Tablet')");
+    const left = await db.query("select 1 from public.workspaces where id = $1", [personal!.r.workspace_id]);
+    expect(left.rows).toHaveLength(0); // empty personal workspace removed
+    expect((await as<{ notes: string }>(d3, "select notes from public.video_progress where video_id = 'ai-facts-d001-v1'"))[0]?.notes).toBe("from laptop");
+
+    // anonymous (not signed in) callers can't join
+    await expect(as(null, "select public.join_shared_workspace('x-dev-00001', 'X')")).rejects.toThrow(/permission denied|not_authenticated/);
+  });
 });

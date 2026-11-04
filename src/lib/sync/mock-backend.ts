@@ -42,7 +42,7 @@ export class MockBackend implements SyncBackend {
   async getMembership(): Promise<Membership> {
     const server = await this.load();
     if (!server) return { status: "none" };
-    return { status: "active", workspaceId: server.snapshot.workspace.id, memberId: server.snapshot.memberId, role: "owner" };
+    return { status: "active", workspaceId: server.snapshot.workspace.id, memberId: server.snapshot.memberId, role: "owner", shared: false };
   }
 
   async createWorkspace(device: DeviceInfo) {
@@ -83,6 +83,10 @@ export class MockBackend implements SyncBackend {
       },
     });
     return { workspaceId };
+  }
+
+  async joinSharedWorkspace(device: DeviceInfo) {
+    return this.createWorkspace(device);
   }
 
   private activityRow(partial: Partial<ActivityRow> & Pick<ActivityRow, "action_type">): ActivityRow {

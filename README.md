@@ -61,6 +61,13 @@ IndexedDB, and pairing and cloud sync are disabled (a banner says so). This is h
 
 To use the app from your phone, deploy it to any Node host, for example Vercel (`vercel deploy`). Then add the two env vars there.
 
+## Shared workspace mode (no pairing code)
+
+Set `NEXT_PUBLIC_SHARED_WORKSPACE=true` (and apply migration `20261104010000_shared_workspace.sql`). Every device that opens
+the site then joins the one shared workspace automatically and sees the same up-to-date progress. Trade-off: anyone who
+has the site address can read and change that progress, so don't share the address. Without the variable, the secure
+pairing-code flow described above is used (the acceptance tests in `tests/e2e` run in that mode).
+
 ## Architecture
 
 ```

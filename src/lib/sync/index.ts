@@ -8,12 +8,14 @@ export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 export const SUPABASE_KEY =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "";
 export const CLOUD_CONFIGURED = Boolean(SUPABASE_URL && SUPABASE_KEY);
+/** One shared workspace for every device that opens the site (no pairing code). */
+export const SHARED_WORKSPACE = CLOUD_CONFIGURED && process.env.NEXT_PUBLIC_SHARED_WORKSPACE === "true";
 
 /** Browser-only singleton. Uses Supabase when configured, otherwise the local mock backend. */
 export function getEngine(): SyncEngine {
   if (typeof window === "undefined") throw new Error("getEngine() is browser-only");
   if (!engine) {
-    engine = new SyncEngine(CLOUD_CONFIGURED ? new SupabaseBackend(SUPABASE_URL, SUPABASE_KEY) : new MockBackend());
+    engine = new SyncEngine(CLOUD_CONFIGURED ? new SupabaseBackend(SUPABASE_URL, SUPABASE_KEY) : new MockBackend(), { shared: SHARED_WORKSPACE });
   }
   return engine;
 }

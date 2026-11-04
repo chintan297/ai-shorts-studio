@@ -84,7 +84,12 @@ export class SyncEngine {
 
   state: EngineState;
 
-  constructor(private backend: SyncBackend) {
+  private rejoins = 0;
+
+  constructor(
+    private backend: SyncBackend,
+    private options: { shared?: boolean } = {},
+  ) {
     this.state = {
       phase: "booting",
       backendKind: backend.kind,
@@ -187,9 +192,16 @@ export class SyncEngine {
     try {
       await this.backend.ensureSession();
       let membership = await this.backend.getMembership();
-      if (membership.status === "revoked") return this.markRevoked();
       let createdHere = false;
-      if (membership.status === "none") {
+      if (this.options.shared) {
+        // Shared mode: every device lands in the one shared workspace, with no code or login.
+        if (membership.status !== "active" || !membership.shared) {
+          await this.backend.joinSharedWorkspace(device);
+          membership = await this.backend.getMembership();
+        }
+      } else if (membership.status === "revoked") {
+        return this.markRevoked();
+      } else if (membership.status === "none") {
         await this.backend.createWorkspace(device);
         createdHere = true;
         membership = await this.backend.getMembership();
@@ -198,6 +210,7 @@ export class SyncEngine {
       await this.refresh();
       this.subscribeRealtime(membership.workspaceId);
       this.connected = true;
+      this.rejoins = 0;
       this.networkDown = false;
       this.backoff = 2_000;
       this.set({ phase: "ready", error: null, createdHere: createdHere || this.state.createdHere, online: true });
@@ -218,6 +231,13 @@ export class SyncEngine {
   }
 
   private markRevoked() {
+    // Shared mode has no revocation: a device that lost membership simply joins again (bounded retries).
+    if (this.options.shared && this.rejoins < 3) {
+      this.rejoins++;
+      this.connected = false;
+      void this.connect();
+      return;
+    }
     this.connected = false;
     this.unsubscribeRealtime?.();
     this.unsubscribeRealtime = null;

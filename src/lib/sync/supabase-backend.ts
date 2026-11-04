@@ -53,9 +53,9 @@ export class SupabaseBackend implements SyncBackend {
   async getMembership(): Promise<Membership> {
     const { data, error } = await this.client.rpc("get_my_membership");
     if (error) fail(error);
-    const m = data as { status: string; workspace_id?: string; member_id?: string; role?: "owner" | "member" };
+    const m = data as { status: string; workspace_id?: string; member_id?: string; role?: "owner" | "member"; shared?: boolean };
     if (m.status === "active" && m.workspace_id && m.member_id) {
-      return { status: "active", workspaceId: m.workspace_id, memberId: m.member_id, role: m.role ?? "member" };
+      return { status: "active", workspaceId: m.workspace_id, memberId: m.member_id, role: m.role ?? "member", shared: Boolean(m.shared) };
     }
     return { status: m.status === "revoked" ? "revoked" : "none" };
   }
@@ -66,6 +66,12 @@ export class SupabaseBackend implements SyncBackend {
       p_device_label: device.label,
       p_force: force,
     });
+    if (error) fail(error);
+    return { workspaceId: (data as { workspace_id: string }).workspace_id };
+  }
+
+  async joinSharedWorkspace(device: DeviceInfo) {
+    const { data, error } = await this.client.rpc("join_shared_workspace", { p_device_id: device.deviceId, p_device_label: device.label });
     if (error) fail(error);
     return { workspaceId: (data as { workspace_id: string }).workspace_id };
   }

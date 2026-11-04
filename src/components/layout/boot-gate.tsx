@@ -7,6 +7,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEngine, useSync } from "@/hooks/use-sync";
+import { SHARED_WORKSPACE } from "@/lib/sync";
 import { ConnectWorkspaceDialog } from "./connect-dialog";
 
 const BANNER_KEY = "ass.connect-banner-dismissed";
@@ -59,7 +60,7 @@ export function BootGate({ children }: { children: React.ReactNode }) {
           disabled. See the README to connect Supabase.
         </div>
       ) : null}
-      {createdHere && !bannerDismissed && kind === "supabase" ? (
+      {createdHere && !bannerDismissed && kind === "supabase" && !SHARED_WORKSPACE ? (
         <div className="mx-auto max-w-6xl px-4 pt-4 sm:px-6">
           <Alert>
             <Info />
