@@ -222,8 +222,7 @@ export function UploadTab({ pkg, entry, row, lock }: { pkg: VideoPackage; entry:
 }
 
 /**
- * Explicit "I uploaded this" confirmation. The URL can be pasted right in the dialog, so the
- * Upload Manager can record an upload without opening the workspace.
+ * Explicit "I uploaded this" confirmation. The URL can be pasted right in the dialog.
  */
 export function MarkUploadedDialog({
   entry,

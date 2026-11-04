@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarDays, Clapperboard, LayoutDashboard, Settings, Tv, UploadCloud } from "lucide-react";
+import { CalendarDays, Clapperboard, LayoutDashboard, Settings, Tv } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,6 @@ const NAV = [
   { href: "/", label: "Dashboard", short: "Home", icon: LayoutDashboard },
   { href: "/channels", label: "My Channels", short: "Channels", icon: Tv },
   { href: "/calendar", label: "Content Calendar", short: "Calendar", icon: CalendarDays },
-  { href: "/uploads", label: "Upload Manager", short: "Uploads", icon: UploadCloud },
   { href: "/settings", label: "Settings", short: "Settings", icon: Settings },
 ] as const;
 
@@ -73,7 +72,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </div>
 
       <nav
-        className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t bg-background/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden"
+        className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-4 border-t bg-background/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden"
         aria-label="Main"
       >
         {NAV.map((item) => {

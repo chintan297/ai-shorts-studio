@@ -1,9 +1,9 @@
 /* Shorts Studio service worker: keeps previously visited pages and static assets available offline.
  * Progress data never goes through here: it lives in IndexedDB and syncs directly with Supabase. */
-const VERSION = "v1";
+const VERSION = "v2";
 const STATIC_CACHE = `static-${VERSION}`;
 const PAGE_CACHE = `pages-${VERSION}`;
-const PRECACHE = ["/", "/channels", "/calendar", "/uploads", "/settings", "/manifest.webmanifest", "/icon.svg"];
+const PRECACHE = ["/", "/channels", "/calendar", "/settings", "/manifest.webmanifest", "/icon.svg"];
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
