@@ -13,7 +13,7 @@ your devices through Supabase. There's no login, and devices are paired with one
 Dashboard → open a channel's **next available video** →
 **Copy Image Prompt** → generate the image (any image AI) →
 **Copy Google Flow Prompt** → generate the 8-second video in Flow (Veo 3.x, 9:16, Frames-to-Video with your image) →
-generate the thumbnail from the **Thumbnail Prompt** → tick the **checklist** →
+generate the thumbnail from the **Thumbnail Prompt** →
 copy **title / description / tags** → upload in YouTube Studio →
 **Upload Details → Mark Uploaded…** (paste the URL and confirm) → the next video unlocks.
 

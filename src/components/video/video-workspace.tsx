@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 import { ChannelIcon } from "@/components/common/channel-style";
 import { ConfirmDialog } from "@/components/common/confirm-dialog";
 import { CopyButton, CopyField } from "@/components/common/copy-button";
-import { LockBadge, ProductionBadge, PublishingBadge, UploadBadge } from "@/components/common/status-badge";
+import { LockBadge, PublishingBadge, UploadBadge } from "@/components/common/status-badge";
 import { PageContainer } from "@/components/layout/app-shell";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +22,6 @@ import type { VideoIndexEntry, VideoPackage } from "@/lib/content/schema";
 import { promptKey } from "@/lib/progress/types";
 import { scorePackage } from "@/lib/quality/score";
 import { actions } from "@/lib/sync/actions";
-import { ChecklistCard } from "./checklist-card";
 import { HistoryTab } from "./history-tab";
 import { PromptPanel } from "./prompt-panel";
 import { QualityPanel } from "./quality-panel";
@@ -125,7 +124,6 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
             </p>
             <div className="flex flex-wrap gap-1.5" data-testid="video-badges">
               {lock ? <LockBadge state={lock} /> : null}
-              <ProductionBadge status={row?.production_status ?? "pending"} />
               <UploadBadge status={row?.upload_status ?? "not_uploaded"} />
               <PublishingBadge status={row?.publishing_status ?? "not_published"} />
               <Badge variant="outline">Quality {quality.score}</Badge>
@@ -200,7 +198,7 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
           <AlertTitle>Locked: not the next video yet</AlertTitle>
           <AlertDescription>
             <p>
-              You can view and copy everything, but the checklist and upload actions unlock only when the earlier videos are
+              You can view and copy everything, but the upload actions unlock only when the earlier videos are
               uploaded or skipped. Next up: <Link className="font-medium underline" href={videoHref(current)}>Day {current.dayNumber} · V{current.videoNumber}</Link>.
             </p>
           </AlertDescription>
@@ -472,7 +470,6 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
         </div>
 
         <aside className="space-y-4 lg:order-2">
-          <ChecklistCard entry={entry} row={row} lock={lock} />
           <Card size="sm">
             <CardHeader>
               <CardTitle>Quick copy</CardTitle>

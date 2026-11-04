@@ -75,13 +75,9 @@ test.describe.serial("acceptance", () => {
     await expect(laptop.getByText(/sign in|log in|password/i)).toHaveCount(0);
     await waitSynced(laptop);
 
-    // Complete Day 1 Video 1: checklist → upload confirmation.
+    // Complete Day 1 Video 1: upload confirmation.
     await laptop.goto(videoUrl(1, 1));
     await waitSynced(laptop);
-    for (const key of ["imageGenerated", "imageReviewed", "videoGenerated", "videoReviewed", "thumbnailReady", "youtubeDetailsReady", "readyForUpload"]) {
-      await laptop.getByTestId(`checklist-${key}`).click();
-      await expect(laptop.getByTestId(`checklist-${key}`)).toHaveAttribute("data-state", "checked");
-    }
     await recordUpload(laptop, "https://youtube.com/shorts/E2eTest0001");
     await expect(laptop.getByTestId("video-badges")).toContainText("Uploaded");
 
