@@ -1,0 +1,12 @@
+{
+  "name": "Shorts Studio — AI YouTube Content Manager",
+  "short_name": "Shorts Studio",
+  "description": "Plan, produce and track 90 days of YouTube Shorts across six channels.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#171717",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

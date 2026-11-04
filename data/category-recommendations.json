@@ -1,0 +1,180 @@
+{
+  "researchedAt": "2026-11-04",
+  "methodology": "Web research of 2026 Shorts trend coverage, creator-tool studies and YouTube policy reporting, judged against what a single 8-second Google Flow generation can do. Most sources are third-party or vendor analyses, so treat them as directional, not definitive.",
+  "disclaimer": "These are suggestions only. No new channel is created automatically, and nothing here guarantees views, subscribers or monetization.",
+  "sources": [
+    { "id": 1, "title": "Kapwing: Short-form video statistics 2026 (Shorts daily views growth)", "url": "https://www.kapwing.com/resources/short-form-video-statistics-tiktok-reels-and-shorts-by-the-numbers-in-2026/" },
+    { "id": 2, "title": "Metricool: YouTube Trends 2026 (share of views from the Shorts feed)", "url": "https://metricool.com/youtube-trends/" },
+    { "id": 3, "title": "Teleprompter: Trending YouTube Shorts 2026, top 10 formats", "url": "https://www.teleprompter.com/blog/trending-youtube-shorts" },
+    { "id": 4, "title": "Anijam: YouTube Shorts trends, October 2026", "url": "https://www.anijam.ai/blog/youtube-shorts-trends/" },
+    { "id": 5, "title": "OpenArt: AI YouTube channel ideas (historical POV growth, citing The Guardian)", "url": "https://openart.ai/blog/ai-youtube-channel-ideas/" },
+    { "id": 6, "title": "AI-Generated Mini Worlds: the next viral AI trend in 2026", "url": "https://aitrendwave.blogspot.com/2026/05/ai-generated-mini-worlds-2026.html" },
+    { "id": 7, "title": "Buro 247: Why is the internet obsessing over tiny AI-generated humans?", "url": "https://buro247.me/?p=93876" },
+    { "id": 8, "title": "CHOLY AI: Tiny chefs, giant burgers, the viral video trend", "url": "https://cholyai.beehiiv.com/p/tiny-chefs-giant-burgers-the-viral-video-trend-you-can-easily-recreate" },
+    { "id": 9, "title": "Plagiarism Today: YouTube targets “inauthentic” content (July 2025 YPP update)", "url": "https://www.plagiarismtoday.com/2025/07/08/youtube-targets-inauthentic-content/" },
+    { "id": 10, "title": "Android Central: YouTube will help creators use AI in 2026, as long as it's not ‘slop’", "url": "https://www.androidcentral.com/apps-software/youtube/youtube-will-help-creators-use-ai-in-2026-as-long-as-its-not-slop" },
+    { "id": 11, "title": "BetaNews: Study finds AI slop videos spreading fast across YouTube", "url": "https://betanews.com/article/study-finds-ai-slop-videos-spreading-fast-across-youtube-and-theres-a-lot-of-money-being-made" },
+    { "id": 12, "title": "Gyre: Top trending YouTube videos and channels in 2026 (long-form still earns more per view)", "url": "https://gyre.pro/blog/top-trending-youtube-videos-and-channels-whos-leading-the-charts" }
+  ],
+  "recommendations": [
+    {
+      "id": "miniature-worlds",
+      "name": "Miniature Worlds & Tiny Workers",
+      "targetAudience": "Broad, language-independent audience aged 13–45 that enjoys 'oddly satisfying' visuals",
+      "examples": [
+        "Tiny workers on a giant cutting board building a full-size jalebi spiral",
+        "A miniature construction crew restoring a cracked clay diya",
+        "A tiny street-food stall set up inside a teacup"
+      ],
+      "competition": "High",
+      "productionDifficulty": "Medium",
+      "growthPotential": "High",
+      "internationalPotential": "High",
+      "eightSecondFit": "Strong. One macro shot with one satisfying action and a reveal fits 8 s naturally, and Veo handles macro/tilt-shift looks well.",
+      "monetizationRisks": [
+        "Copy-paste templates can fall under YouTube's inauthentic, repetitive-content rule",
+        "The format is saturating fast, so originality has to come from settings and recurring characters",
+        "Shorts pay less per view than long-form"
+      ],
+      "strategy": "Build an original recurring 'tiny crew' with an Indian twist (festivals, street food, crafts). Vary the setting and payoff every video and keep a running story so episodes aren't interchangeable.",
+      "evidence": "Trend coverage calls AI mini worlds one of 2026's fastest-growing formats across Shorts, Reels and TikTok, and 'tiny worker' food clips are widely copied.",
+      "sourceIds": [6, 7, 8, 9]
+    },
+    {
+      "id": "historical-pov",
+      "name": "Historical POV Storytelling (Indian history)",
+      "targetAudience": "History-curious viewers aged 16–40, Hindi/English, India and the diaspora",
+      "examples": [
+        "POV: you wake up in a Harappan street, about 2500 BCE",
+        "POV: a morning at Nalanda University's library",
+        "POV: a spice trader arriving at a Calicut port"
+      ],
+      "competition": "Medium",
+      "productionDifficulty": "Medium",
+      "growthPotential": "High",
+      "internationalPotential": "High",
+      "eightSecondFit": "Good as a single immersive POV moment, with one establishing line of voice-over. Longer narratives would need a series.",
+      "monetizationRisks": [
+        "Historians have criticized inaccurate AI recreations; misleading history risks viewer trust and policy issues",
+        "Violent or disturbing eras (plague, war) are less advertiser-friendly",
+        "Needs clear AI and dramatization disclosure"
+      ],
+      "strategy": "Pair each POV with one sourced fact (Archaeological Survey of India, Britannica), avoid gore, and focus on everyday life in under-covered Indian eras. Treat it as a separate channel or a weekly series.",
+      "evidence": "Reporting on the 2026 'historical POV' wave cites single videos with tens of millions of views and fast follower growth, alongside accuracy criticism.",
+      "sourceIds": [5, 9, 10]
+    },
+    {
+      "id": "food-cinematics",
+      "name": "AI Food Cinematics & Food Transformations",
+      "targetAudience": "Food lovers aged 18–45; Indian cuisine has strong global curiosity",
+      "examples": [
+        "Macro slow-reveal of a sizzling tadka hitting dal",
+        "A single mango turning into a stack of mango kulfi",
+        "A giant samosa being folded by tiny chefs"
+      ],
+      "competition": "High",
+      "productionDifficulty": "Medium",
+      "growthPotential": "Medium",
+      "internationalPotential": "High",
+      "eightSecondFit": "Good for one hero moment (pour, sizzle, cut, reveal). Liquid and food physics need careful prompts and review.",
+      "monetizationRisks": [
+        "AI food can't be a real recipe, so never present it as cooking instructions",
+        "Physics glitches (melting, morphing) hurt quality and retention",
+        "Very crowded category"
+      ],
+      "strategy": "Position it as food art and food culture, not recipes. Include the real dish name and origin in the description, and build a 'regional dish of the day' series across Indian states.",
+      "evidence": "Food challenges and miniature-chef food clips appear repeatedly in 2026 Shorts format roundups.",
+      "sourceIds": [3, 8]
+    },
+    {
+      "id": "cinematic-transformations",
+      "name": "Cinematic Transformations (before → after)",
+      "targetAudience": "General audience aged 13–45; design, travel and home viewers",
+      "examples": [
+        "A dull room transforming into a cozy reading nook in one continuous shot",
+        "A village pond restored from dry to lush through the seasons",
+        "A pencil sketch of a temple turning into a photoreal scene"
+      ],
+      "competition": "Medium",
+      "productionDifficulty": "Medium",
+      "growthPotential": "High",
+      "internationalPotential": "High",
+      "eightSecondFit": "Excellent. Before, transform and after map directly onto the hook, action and payoff timeline.",
+      "monetizationRisks": [
+        "Implying a real renovation or real place happened is misleading, so label it as AI visualization",
+        "Morphing artifacts need review before upload"
+      ],
+      "strategy": "Pick one theme (homes, heritage restoration or nature recovery) and add real value: a design tip or a real fact per video.",
+      "evidence": "Before-and-after transformations are listed among the top Shorts formats of 2026.",
+      "sourceIds": [3, 2]
+    },
+    {
+      "id": "satisfying-asmr",
+      "name": "Satisfying / ASMR Visual Loops",
+      "targetAudience": "Relaxation and 'satisfying' viewers of all ages, language-independent",
+      "examples": [
+        "Cutting a crystal-clear honey cube with a glass knife",
+        "Kinetic sand in Holi colors being sliced",
+        "Rain on a tin roof in a Kerala homestay at night"
+      ],
+      "competition": "High",
+      "productionDifficulty": "Low",
+      "growthPotential": "Medium",
+      "internationalPotential": "High",
+      "eightSecondFit": "Strong for a single loop-able action. The quality of generated ASMR audio is uncertain and must be checked.",
+      "monetizationRisks": [
+        "The highest risk of being judged repetitive or mass-produced under YouTube's inauthentic-content policy",
+        "Low revenue per view",
+        "Generated audio licensing must be verified"
+      ],
+      "strategy": "Only worth doing with a strong creative angle (e.g. cultural materials and seasonal themes) and genuine variety. Otherwise reject it.",
+      "evidence": "'Oddly satisfying' miniature and tactile clips are a recurring viral pattern, but AI 'slop' studies show these are also the most copied formats.",
+      "sourceIds": [7, 9, 11]
+    },
+    {
+      "id": "travel-architecture",
+      "name": "Travel & Architecture Cinematics",
+      "targetAudience": "Travel and design viewers aged 18–45, India and international",
+      "examples": [
+        "Drone-style reveal of a stepwell at golden hour",
+        "Monsoon over a Konkan coastal village",
+        "A futuristic bamboo eco-resort concept in Meghalaya"
+      ],
+      "competition": "Medium",
+      "productionDifficulty": "Low",
+      "growthPotential": "Medium",
+      "internationalPotential": "High",
+      "eightSecondFit": "Very good. One sweeping camera move and a reveal works well in 8 s.",
+      "monetizationRisks": [
+        "AI versions of real landmarks can be inaccurate; never present them as real footage",
+        "Generic travel montages risk being seen as low-value"
+      ],
+      "strategy": "Mix real-place 'did you know' facts (with sources) and clearly labelled concept architecture. This overlaps partly with the Future AI channel, so it might work better as a series there.",
+      "evidence": "Shorts now drive the majority of organic YouTube views in large samples, and visual-first, language-light formats travel internationally; this category is supported by weaker direct evidence than the others.",
+      "sourceIds": [1, 2]
+    },
+    {
+      "id": "narrated-micro-fiction",
+      "name": "Narrated Micro-Fiction (sci-fi / mythology-inspired)",
+      "targetAudience": "Story lovers aged 16–35, Hindi-speaking",
+      "examples": [
+        "One-scene cliffhanger: a lighthouse keeper sees a second moon rise",
+        "An original Indian-folklore-inspired creature in a misty forest (fictional)",
+        "A sci-fi 'last message from Mars colony' moment"
+      ],
+      "competition": "Medium",
+      "productionDifficulty": "Medium",
+      "growthPotential": "Medium",
+      "internationalPotential": "Medium",
+      "eightSecondFit": "Limited. 8 s fits one dramatic moment, so stories need to be serialized as episodes.",
+      "monetizationRisks": [
+        "Generic AI voice-over stories are a named example of low-value mass production",
+        "Religious or mythological themes need sensitivity",
+        "Retention drops if episodes feel incomplete"
+      ],
+      "strategy": "Only with original characters, a consistent narrator and real serialized arcs. Treat it as a pilot experiment before committing a channel.",
+      "evidence": "Narrated fiction and POV micro-drama are cited as strong faceless formats in 2026 trend studies, but YouTube's policy explicitly targets generic AI-voiced storytelling.",
+      "sourceIds": [3, 4, 9, 10]
+    }
+  ]
+}

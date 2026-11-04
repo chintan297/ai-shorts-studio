@@ -1,0 +1,445 @@
+[
+  {
+    "id": "future-ai",
+    "name": "Future AI & Technology",
+    "shortName": "Future AI",
+    "niche": "Futuristic tech, AI inventions & cities of tomorrow",
+    "description": "Each 8-second Short shows one clear futuristic concept: AI inventions, humanoid robots, flying transport, smart homes, space tech and the cities of tomorrow.",
+    "icon": "Cpu",
+    "accent": "cyan",
+    "categories": [
+      "Future technology",
+      "Futuristic cities",
+      "AI innovations",
+      "Robots and humanoids",
+      "Advanced transportation",
+      "Future lifestyle",
+      "Space technology",
+      "Smart homes",
+      "Future architecture",
+      "Futuristic inventions",
+      "AI-generated concepts"
+    ],
+    "visualStyle": [
+      "Ultra-realistic",
+      "Cinematic environments",
+      "Futuristic lighting",
+      "Advanced technology",
+      "Professional camera angles",
+      "High-quality visual effects"
+    ],
+    "targetAudience": "Tech-curious Hindi-speaking viewers aged 16–40 in India",
+    "language": "Hindi / Hinglish voice-over · English visual instructions",
+    "targetCountry": "India",
+    "madeForKids": false,
+    "syntheticDisclosure": "required",
+    "defaultSlots": [
+      "12:30",
+      "19:30"
+    ],
+    "narrator": "Confident young Indian male narrator with a clear, slightly deep voice",
+    "identities": [
+      {
+        "title": "Visual identity",
+        "summary": "Believable near-future realism: premium, clean, optimistic technology. No dystopian horror, no toy-like sci-fi.",
+        "traits": [
+          {
+            "label": "Palette",
+            "value": "Electric cyan, deep navy, warm amber accents"
+          },
+          {
+            "label": "Lighting",
+            "value": "Clean volumetric light, neon edge lighting, golden-hour skylines"
+          },
+          {
+            "label": "Camera",
+            "value": "Smooth drone, dolly and orbit moves; 24–35 mm wides, 50–85 mm product close-ups"
+          },
+          {
+            "label": "Narration",
+            "value": "Hindi voice-over that names the concept in the first 2 seconds"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ai-fashion",
+    "name": "AI Fashion Model & Trending Girls Reels",
+    "shortName": "AI Fashion",
+    "niche": "Four AI models · bold modern glam, party, beach & Indian glam looks",
+    "description": "A recurring cast of four original fictional AI models — Meher, Valeria, Hana and Elara — in bold, modern glam looks: party and club wear, bodycon and slit dresses, beach and swimwear editorials, street style and athleisure, plus Indian glam (modern lehengas, designer-blouse sarees, Indo-western). Shot like a high-end fashion editorial with subtle, confident movement.",
+    "icon": "Shirt",
+    "accent": "pink",
+    "categories": [
+      "AI fashion models",
+      "Trending fashion reels",
+      "Luxury lifestyle",
+      "Beach fashion",
+      "Traditional Indian outfits",
+      "Western fashion",
+      "Party outfits",
+      "Summer fashion",
+      "Winter fashion",
+      "Beauty and styling",
+      "Fashion photography",
+      "Luxury destinations",
+      "Instagram-style fashion trends"
+    ],
+    "visualStyle": [
+      "Photorealistic high-glam fashion editorial",
+      "Bold modern styling",
+      "Four consistent model identities",
+      "Correct anatomy and hands",
+      "Subtle confident movement"
+    ],
+    "targetAudience": "Fashion and lifestyle viewers aged 18–35 in India and worldwide",
+    "language": "Hindi / Hinglish voice-over · English visual instructions",
+    "targetCountry": "India",
+    "madeForKids": false,
+    "syntheticDisclosure": "required",
+    "defaultSlots": [
+      "11:00",
+      "20:00"
+    ],
+    "narrator": "Confident, warm young female voice (used sparingly — most reels are music-led)",
+    "identities": [
+      {
+        "title": "Meher Anand",
+        "summary": "Permanent identity — an original fictional adult AI fashion model, a 25-year-old Indian woman with a mature adult face. Face: heart-shaped with high cheekbones and a softly pointed chin. Eyes: large almond-shaped deep-brown eyes with thick dark lashes and bold, softly arched black eyebrows. Nose: straight with a slightly rounded tip and a tiny gold stud on the left nostril (always present). Lips: full and well-defined. Skin: warm wheatish golden-brown with natural texture and a healthy glow. Hair: very long, thick, glossy jet-black hair with soft waves, reaching the waist. Body: about 168 cm tall with naturally curvy hourglass adult proportions and confident posture.",
+        "traits": [
+          {
+            "label": "Changes per video",
+            "value": "Outfit, styling, makeup, location, pose, expression, camera"
+          },
+          {
+            "label": "Never changes",
+            "value": "Face, eyes, skin tone, identity marker, hair colour/length, body proportions"
+          }
+        ]
+      },
+      {
+        "title": "Valeria Solis",
+        "summary": "Permanent identity — an original fictional adult AI fashion model, a 26-year-old Latina woman with a mature adult face. Face: oval with defined cheekbones and a soft jawline. Eyes: warm amber-brown eyes with long lashes and full dark eyebrows. Nose: small and straight. Lips: full, with a natural berry tone. Skin: sun-kissed caramel-tan with natural texture and one small beauty mark high on the right cheekbone (always present). Hair: long, voluminous dark-chocolate loose curls reaching mid-back. Body: about 170 cm tall with athletic, curvy adult proportions and confident posture.",
+        "traits": [
+          {
+            "label": "Changes per video",
+            "value": "Outfit, styling, makeup, location, pose, expression, camera"
+          },
+          {
+            "label": "Never changes",
+            "value": "Face, eyes, skin tone, identity marker, hair colour/length, body proportions"
+          }
+        ]
+      },
+      {
+        "title": "Hana Mori",
+        "summary": "Permanent identity — an original fictional adult AI fashion model, a 27-year-old East Asian woman with a mature adult face and poised, elegant presence. Face: soft oval with a defined jawline. Eyes: dark-brown almond eyes with soft monolids and straight, softly feathered eyebrows. Nose: small with a soft bridge. Lips: naturally rosy with a defined cupid's bow. Skin: fair with a neutral undertone, natural texture and a light flush. Hair: long, straight, glossy black hair reaching mid-back with soft curtain bangs (always present). Body: about 168 cm tall with slender, toned adult proportions and elegant posture.",
+        "traits": [
+          {
+            "label": "Changes per video",
+            "value": "Outfit, styling, makeup, location, pose, expression, camera"
+          },
+          {
+            "label": "Never changes",
+            "value": "Face, eyes, skin tone, identity marker, hair colour/length, body proportions"
+          }
+        ]
+      },
+      {
+        "title": "Elara Vey",
+        "summary": "Permanent identity — an original fictional adult AI fashion model, a 25-year-old woman with a global mixed-heritage look and a mature adult face. Face: soft oval with gently defined high cheekbones and a softly rounded chin. Eyes: almond-shaped hazel-green eyes with a warm amber ring, natural dark lashes and softly arched dark-brown eyebrows. Nose: straight, slim bridge with a softly rounded tip. Lips: medium-full with a defined cupid's bow. Skin: warm light-olive golden-beige with natural texture and one small beauty mark just above the left corner of her upper lip (always present). Hair: long, thick, softly wavy dark-chocolate-brown hair with subtle caramel highlights, reaching mid-back. Body: about 172 cm tall with slim-athletic adult proportions and graceful posture.",
+        "traits": [
+          {
+            "label": "Changes per video",
+            "value": "Outfit, styling, makeup, location, pose, expression, camera"
+          },
+          {
+            "label": "Never changes",
+            "value": "Face, eyes, skin tone, identity marker, hair colour/length, body proportions"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "galaxy-space",
+    "name": "Galaxy, Space & Universe",
+    "shortName": "Galaxy & Space",
+    "niche": "Cinematic galaxies, black holes, planets & cosmic facts",
+    "description": "Cinematic 8-second journeys through galaxies, black holes, nebulae and planets. Science-based Shorts cite a named source. Fictional alien worlds are always labelled fictional.",
+    "icon": "Orbit",
+    "accent": "violet",
+    "categories": [
+      "Galaxies",
+      "Black holes",
+      "Nebulas",
+      "Planets",
+      "Solar systems",
+      "Space exploration",
+      "Cosmic mysteries",
+      "Astronomical phenomena",
+      "Universe facts",
+      "Space discoveries",
+      "Fictional alien worlds"
+    ],
+    "visualStyle": [
+      "Cinematic cosmic environments",
+      "Realistic planetary textures",
+      "Deep-space atmosphere",
+      "Beautiful volumetric lighting",
+      "Smooth majestic camera movement"
+    ],
+    "targetAudience": "Space and science enthusiasts aged 13–45 in India",
+    "language": "Hindi / Hinglish voice-over · English visual instructions",
+    "targetCountry": "India",
+    "madeForKids": false,
+    "syntheticDisclosure": "required",
+    "defaultSlots": [
+      "13:00",
+      "21:00"
+    ],
+    "narrator": "Calm, deep Indian male documentary narrator with a subtle cinematic reverb",
+    "identities": [
+      {
+        "title": "Visual identity",
+        "summary": "Scientifically grounded, awe-inspiring space cinematography. Science videos show the fact and its source. Fictional worlds are clearly labelled.",
+        "traits": [
+          {
+            "label": "Palette",
+            "value": "Deep space black, violet and teal nebula glow, gold starlight"
+          },
+          {
+            "label": "Science rule",
+            "value": "Real phenomena follow the cited source; artistic scale is noted in the description"
+          },
+          {
+            "label": "Fiction rule",
+            "value": "Alien worlds carry a ‘fictional’ label in the voice-over or description"
+          },
+          {
+            "label": "Narration",
+            "value": "Calm documentary Hindi voice-over"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kids-learning",
+    "name": "Kids Entertainment & Learning",
+    "shortName": "Kids Learning",
+    "niche": "Cartoon learning: ABC, numbers, colors, shapes & tiny stories",
+    "description": "Safe, colorful 8-second cartoon lessons and tiny moral stories in simple Hindi, with an original recurring cast: Chiku, Mini, Bholu and Professor Gyanu. Made for kids.",
+    "icon": "ToyBrick",
+    "accent": "amber",
+    "categories": [
+      "ABC learning",
+      "Numbers",
+      "Colors",
+      "Shapes",
+      "Cute animals",
+      "Cartoon adventures",
+      "Short moral stories",
+      "Educational animations",
+      "Fun learning",
+      "Nursery-style entertainment",
+      "Simple science concepts"
+    ],
+    "visualStyle": [
+      "Soft 3D cartoon",
+      "Bright, friendly colors",
+      "Consistent original characters",
+      "Gentle, safe motion",
+      "Simple uncluttered scenes"
+    ],
+    "targetAudience": "Children aged 2–7 and their parents in Hindi-speaking homes",
+    "language": "Hindi / Hinglish voice-over · English visual instructions",
+    "targetCountry": "India",
+    "madeForKids": true,
+    "syntheticDisclosure": "not-required",
+    "defaultSlots": [
+      "10:00",
+      "17:30"
+    ],
+    "narrator": "Cheerful, gentle Indian female storyteller voice, slow and very clear, like a kind preschool teacher",
+    "identities": [
+      {
+        "title": "Chiku",
+        "summary": "a cheerful baby elephant with soft sky-blue skin, big round ears with pink insides, large shiny dark eyes, a short curled trunk, a tiny yellow scarf and stubby round feet.",
+        "traits": [
+          {
+            "label": "Role",
+            "value": "Original recurring cartoon character"
+          }
+        ]
+      },
+      {
+        "title": "Mini",
+        "summary": "a curious 6-year-old cartoon girl with a round face, warm brown skin, big brown eyes, two puffy black pigtails tied with red ribbons, a yellow T-shirt with a small white star, blue denim dungarees and white sneakers.",
+        "traits": [
+          {
+            "label": "Role",
+            "value": "Original recurring cartoon character"
+          }
+        ]
+      },
+      {
+        "title": "Bholu",
+        "summary": "a fluffy white baby bunny with one floppy ear and one upright ear, a pink nose, round black eyes and a little orange bow tie.",
+        "traits": [
+          {
+            "label": "Role",
+            "value": "Original recurring cartoon character"
+          }
+        ]
+      },
+      {
+        "title": "Professor Gyanu",
+        "summary": "a wise, friendly little brown owl with big golden eyes, round green spectacles and a small green bow tie, who loves explaining things.",
+        "traits": [
+          {
+            "label": "Role",
+            "value": "Original recurring cartoon character"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ai-facts",
+    "name": "Viral AI Facts & Interesting Discoveries",
+    "shortName": "AI Facts",
+    "niche": "One verified, mind-blowing fact per Short",
+    "description": "One well-established fact per Short (science, human body, animals, psychology, history, geography, inventions, nature), shown through a single striking visual demonstration. Every fact names its source.",
+    "icon": "Lightbulb",
+    "accent": "emerald",
+    "categories": [
+      "Amazing facts",
+      "Science facts",
+      "Human body facts",
+      "Animal facts",
+      "Psychology facts",
+      "Historical discoveries",
+      "Geography facts",
+      "Unusual inventions",
+      "Interesting comparisons",
+      "Natural phenomena",
+      "Mind-blowing discoveries"
+    ],
+    "visualStyle": [
+      "Photoreal explainer visuals",
+      "One clear visual demonstration",
+      "Vivid, clean composition",
+      "Documentary-quality detail"
+    ],
+    "targetAudience": "Curious Hindi-speaking viewers aged 13–45 in India",
+    "language": "Hindi / Hinglish voice-over · English visual instructions",
+    "targetCountry": "India",
+    "madeForKids": false,
+    "syntheticDisclosure": "required",
+    "defaultSlots": [
+      "12:00",
+      "18:30"
+    ],
+    "narrator": "Energetic, friendly young Indian female narrator, clear and expressive",
+    "identities": [
+      {
+        "title": "Editorial rules",
+        "summary": "Only well-established facts from named authoritative sources. The visual demonstrates the fact without exaggerating it. Each Short has one clear ending line.",
+        "traits": [
+          {
+            "label": "Fact rule",
+            "value": "Named authoritative source on every video; verify before publishing"
+          },
+          {
+            "label": "Hook",
+            "value": "A question or surprising visual in the first 1.5 s"
+          },
+          {
+            "label": "Palette",
+            "value": "Bright yellow, black, white, one bold red accent"
+          },
+          {
+            "label": "Narration",
+            "value": "Energetic Hindi voice-over, ≤ 20 words"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ai-animals",
+    "name": "AI Animals & Nature",
+    "shortName": "Animals & Nature",
+    "niche": "Cinematic wildlife, cute AI animals & breathtaking nature",
+    "description": "Photoreal wildlife moments, underwater worlds, landscapes and fantasy creatures, plus two recurring AI mascots, Momo and Pebble. AI scenarios are always labelled as not real footage.",
+    "icon": "PawPrint",
+    "accent": "green",
+    "categories": [
+      "Cute AI animals",
+      "Wildlife",
+      "Beautiful landscapes",
+      "Underwater worlds",
+      "Fantasy animals",
+      "Nature cinematics",
+      "Animal adventures",
+      "Animal facts",
+      "Birds",
+      "Ocean life",
+      "Natural environments"
+    ],
+    "visualStyle": [
+      "Photoreal nature cinematography",
+      "Species-accurate anatomy",
+      "Natural behavior and movement",
+      "Lush, beautiful environments"
+    ],
+    "targetAudience": "Animal and nature lovers of all ages (13+ audience setting) in India",
+    "language": "Hindi / Hinglish voice-over · English visual instructions",
+    "targetCountry": "India",
+    "madeForKids": false,
+    "syntheticDisclosure": "required",
+    "defaultSlots": [
+      "11:30",
+      "20:30"
+    ],
+    "narrator": "Warm, calm Indian male wildlife narrator",
+    "identities": [
+      {
+        "title": "Momo",
+        "summary": "a baby red panda with rusty-red fur, a cream-white face mask, dark tear-line markings under the eyes, small rounded white-edged ears, dark brown legs and a bushy tail with six alternating red and tan rings.",
+        "traits": [
+          {
+            "label": "Role",
+            "value": "Recurring AI mascot (fictional scenarios only)"
+          }
+        ]
+      },
+      {
+        "title": "Pebble",
+        "summary": "a young Asian small-clawed otter with sleek dark-brown fur, a pale cream throat and chin, small round ears, long white whiskers and tiny webbed paws.",
+        "traits": [
+          {
+            "label": "Role",
+            "value": "Recurring AI mascot (fictional scenarios only)"
+          }
+        ]
+      },
+      {
+        "title": "Wildlife rules",
+        "summary": "Species-accurate anatomy and behavior. Real-animal facts name a source. Fictional or fantasy scenes are labelled ‘AI-generated, not real footage’.",
+        "traits": [
+          {
+            "label": "Palette",
+            "value": "Emerald green, golden-hour amber, sky blue"
+          },
+          {
+            "label": "Narration",
+            "value": "Warm, calm Hindi wildlife voice-over"
+          }
+        ]
+      }
+    ]
+  }
+]

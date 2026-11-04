@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+node_modules
+.next
+test-results
+playwright-report
+tests
+supabase/.temp
+content-src/seeds/ai-fashion/_archive-v1-classic
