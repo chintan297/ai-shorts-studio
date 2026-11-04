@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, CheckCircle2, ExternalLink, Save, Undo2, UploadCloud, XCircle } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Save, Undo2, UploadCloud, XCircle } from "lucide-react";
 import { useState } from "react";
 import { ConfirmDialog } from "@/components/common/confirm-dialog";
 import { PUBLISHING_LABEL, PublishingBadge, UploadBadge } from "@/components/common/status-badge";
@@ -24,20 +24,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { useSchedule } from "@/hooks/use-progress";
 import type { VideoIndexEntry, VideoPackage } from "@/lib/content/schema";
 import type { LockState } from "@/lib/progress/sequence";
-import { extractYoutubeId } from "@/lib/progress/transitions";
 import { PUBLISHING_STATUSES, type Analytics, type PublishingStatus, type VideoProgressRow } from "@/lib/progress/types";
 import { actions } from "@/lib/sync/actions";
 
 /** Form state resets when the synced upload fields change (see `uploadFormKey`). */
 export function uploadFormKey(row: VideoProgressRow | undefined) {
-  return [row?.youtube_url, row?.youtube_video_id, row?.uploaded_at, row?.published_at, row?.notes, row?.upload_status].join("|");
+  return [row?.published_at, row?.notes, row?.upload_status].join("|");
 }
 
 export function UploadTab({ pkg, entry, row, lock }: { pkg: VideoPackage; entry: VideoIndexEntry; row: VideoProgressRow | undefined; lock: LockState | undefined }) {
   const { today } = useSchedule();
-  const [url, setUrl] = useState(row?.youtube_url ?? "");
-  const [videoId, setVideoId] = useState(row?.youtube_video_id ?? "");
-  const [uploadedAt, setUploadedAt] = useState(row?.uploaded_at ?? today);
   const [publishedAt, setPublishedAt] = useState(row?.published_at ?? "");
   const [notes, setNotes] = useState(row?.notes ?? "");
 
@@ -46,7 +42,6 @@ export function UploadTab({ pkg, entry, row, lock }: { pkg: VideoPackage; entry:
   const skipped = uploadStatus === "skipped";
   const uploaded = uploadStatus === "uploaded";
   const locked = lock === "locked";
-  const idValid = !videoId || /^[A-Za-z0-9_-]{11}$/.test(videoId);
 
   return (
     <div className="space-y-4">
@@ -56,8 +51,8 @@ export function UploadTab({ pkg, entry, row, lock }: { pkg: VideoPackage; entry:
             Upload status <UploadBadge status={uploadStatus} /> <PublishingBadge status={publishing} />
           </CardTitle>
           <CardDescription>
-            Upload the video yourself in YouTube Studio or the YouTube app, then record it here. Saving a URL does not mark the
-            video as uploaded; that needs the explicit confirmation below.
+            Upload the video yourself in YouTube Studio or the YouTube app, then confirm it here. The next video unlocks only after
+            you confirm.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -75,57 +70,14 @@ export function UploadTab({ pkg, entry, row, lock }: { pkg: VideoPackage; entry:
             </Alert>
           ) : null}
 
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="space-y-1.5 sm:col-span-2">
-              <Label htmlFor="yt-url">YouTube video URL</Label>
-              <Input
-                id="yt-url"
-                inputMode="url"
-                placeholder="https://youtube.com/shorts/…"
-                value={url}
-                disabled={skipped}
-                data-testid="youtube-url"
-                onChange={(e) => {
-                  setUrl(e.target.value);
-                  const id = extractYoutubeId(e.target.value);
-                  if (id) setVideoId(id);
-                }}
-              />
-            </div>
-            <div className="space-y-1.5">
-              <Label htmlFor="yt-id">YouTube video ID</Label>
-              <Input id="yt-id" value={videoId} disabled={skipped} onChange={(e) => setVideoId(e.target.value.trim())} aria-invalid={!idValid} className="font-mono" />
-              {!idValid ? <p className="text-xs text-destructive">A YouTube video ID has 11 characters (letters, numbers, - or _).</p> : null}
-            </div>
-            <div className="space-y-1.5">
-              <Label htmlFor="yt-uploaded">Actual upload date</Label>
-              <Input id="yt-uploaded" type="date" value={uploadedAt} disabled={skipped} onChange={(e) => setUploadedAt(e.target.value)} />
-            </div>
-          </div>
           <div className="flex flex-wrap gap-2">
-            <Button
-              variant="outline"
-              disabled={skipped || !idValid}
-              onClick={() =>
-                void actions.saveUploadDetails(entry, {
-                  youtube_url: url.trim() || null,
-                  youtube_video_id: videoId || null,
-                  uploaded_at: uploadedAt || null,
-                })
-              }
-            >
-              <Save data-icon="inline-start" /> Save details
-            </Button>
             {!uploaded ? (
               <MarkUploadedDialog
                 entry={entry}
                 title={pkg.seo.title}
                 madeForKids={pkg.madeForKids}
                 syntheticRequired={pkg.compliance.syntheticDisclosure === "required"}
-                initialUrl={url.trim()}
-                initialVideoId={videoId}
-                initialUploadedAt={uploadedAt || today}
-                disabled={locked || skipped || !idValid}
+                disabled={locked || skipped}
               />
             ) : null}
             {!uploaded && !skipped ? (
@@ -156,13 +108,6 @@ export function UploadTab({ pkg, entry, row, lock }: { pkg: VideoPackage; entry:
                 withReason
                 onConfirm={(reason) => actions.revertUpload(entry, reason || undefined)}
               />
-            ) : null}
-            {row?.youtube_url ? (
-              <Button asChild variant="ghost">
-                <a href={row.youtube_url} target="_blank" rel="noreferrer noopener">
-                  <ExternalLink data-icon="inline-start" /> Open on YouTube
-                </a>
-              </Button>
             ) : null}
           </div>
         </CardContent>
@@ -222,16 +167,13 @@ export function UploadTab({ pkg, entry, row, lock }: { pkg: VideoPackage; entry:
 }
 
 /**
- * Explicit "I uploaded this" confirmation. The URL can be pasted right in the dialog.
+ * Explicit "I uploaded this" confirmation (no URL needed). The upload date is set to today automatically.
  */
 export function MarkUploadedDialog({
   entry,
   title,
   madeForKids,
   syntheticRequired,
-  initialUrl = "",
-  initialVideoId = "",
-  initialUploadedAt,
   disabled,
   trigger,
 }: {
@@ -239,19 +181,13 @@ export function MarkUploadedDialog({
   title: string;
   madeForKids: boolean;
   syntheticRequired: boolean;
-  initialUrl?: string;
-  initialVideoId?: string;
-  initialUploadedAt: string;
   disabled: boolean;
   trigger?: React.ReactNode;
 }) {
   const [open, setOpen] = useState(false);
-  const [url, setUrl] = useState(initialUrl);
-  const [videoId, setVideoId] = useState(initialVideoId);
-  const [uploadedAt, setUploadedAt] = useState(initialUploadedAt);
   const [checks, setChecks] = useState({ uploaded: false, settings: false, audio: false });
   const confirmItems = [
-    { key: "uploaded" as const, label: "I uploaded this video to YouTube myself and the URL is correct." },
+    { key: "uploaded" as const, label: "I uploaded this video to YouTube myself." },
     {
       key: "settings" as const,
       label: `I set the audience to ${madeForKids ? "“Made for kids”" : "“Not made for kids”"}${
@@ -261,17 +197,13 @@ export function MarkUploadedDialog({
     { key: "audio" as const, label: "I checked the rights for the music and sound in this video (generated audio licensing isn’t verified by this app)." },
   ];
   const allChecked = Object.values(checks).every(Boolean);
-  const idValid = !videoId || /^[A-Za-z0-9_-]{11}$/.test(videoId);
-  const canConfirm = allChecked && Boolean(url.trim()) && idValid && Boolean(uploadedAt);
+  const canConfirm = allChecked;
 
   return (
     <Dialog
       open={open}
       onOpenChange={(next) => {
         if (next) {
-          setUrl(initialUrl);
-          setVideoId(initialVideoId || extractYoutubeId(initialUrl) || "");
-          setUploadedAt(initialUploadedAt);
           setChecks({ uploaded: false, settings: false, audio: false });
         }
         setOpen(next);
@@ -292,32 +224,6 @@ export function MarkUploadedDialog({
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-3 text-sm">
-          <div className="space-y-1.5">
-            <Label htmlFor={`dlg-url-${entry.id}`}>YouTube video URL</Label>
-            <Input
-              id={`dlg-url-${entry.id}`}
-              inputMode="url"
-              placeholder="https://youtube.com/shorts/…"
-              value={url}
-              data-testid="dialog-youtube-url"
-              onChange={(e) => {
-                setUrl(e.target.value);
-                const id = extractYoutubeId(e.target.value);
-                if (id) setVideoId(id);
-              }}
-            />
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            <div className="space-y-1.5">
-              <Label htmlFor={`dlg-id-${entry.id}`}>Video ID</Label>
-              <Input id={`dlg-id-${entry.id}`} value={videoId} onChange={(e) => setVideoId(e.target.value.trim())} aria-invalid={!idValid} className="font-mono" />
-            </div>
-            <div className="space-y-1.5">
-              <Label htmlFor={`dlg-date-${entry.id}`}>Upload date</Label>
-              <Input id={`dlg-date-${entry.id}`} type="date" value={uploadedAt} onChange={(e) => setUploadedAt(e.target.value)} />
-            </div>
-          </div>
-          {!idValid ? <p className="text-xs text-destructive">A YouTube video ID has 11 characters.</p> : null}
           {confirmItems.map((item) => (
             <label key={item.key} className="flex cursor-pointer items-start gap-3">
               <Checkbox
@@ -335,7 +241,7 @@ export function MarkUploadedDialog({
             disabled={!canConfirm}
             data-testid="confirm-upload-button"
             onClick={async () => {
-              const ok = await actions.markUploaded(entry, { youtube_url: url.trim(), youtube_video_id: videoId || null, uploaded_at: uploadedAt });
+              const ok = await actions.markUploaded(entry);
               if (ok) setOpen(false);
             }}
           >

@@ -56,8 +56,8 @@ export const actions = {
   saveUploadDetails: (entry: Entry, details: { youtube_url?: string | null; youtube_video_id?: string | null; uploaded_at?: string | null; published_at?: string | null }) =>
     run({ type: "save_upload_details", ...videoOp(entry), payload: details }, "Upload details saved"),
 
-  markUploaded: (entry: Entry, details: { youtube_url: string; youtube_video_id: string | null; uploaded_at: string }) =>
-    run({ type: "mark_uploaded", ...videoOp(entry), payload: details }, "Marked as uploaded. The next video is unlocked."),
+  markUploaded: (entry: Entry) =>
+    run({ type: "mark_uploaded", ...videoOp(entry), payload: {} }, "Marked as uploaded. The next video is unlocked."),
 
   markUploadFailed: (entry: Entry, reason?: string) =>
     run({ type: "mark_upload_failed", ...videoOp(entry), payload: { reason } }, "Upload marked as failed. The next video stays locked."),

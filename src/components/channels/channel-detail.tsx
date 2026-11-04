@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ExternalLink, RotateCcw, Sparkles } from "lucide-react";
+import { ArrowRight, RotateCcw, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ChannelIcon, ProgressBar } from "@/components/common/channel-style";
@@ -278,13 +278,6 @@ export function ChannelDetail({ channelId }: { channelId: ChannelId }) {
                     {row.publishing_status === "published" ? " · published" : ""}
                   </p>
                 </Link>
-                {row.youtube_url ? (
-                  <Button asChild size="icon-sm" variant="ghost">
-                    <a href={row.youtube_url} target="_blank" rel="noreferrer noopener" aria-label="Open on YouTube">
-                      <ExternalLink />
-                    </a>
-                  </Button>
-                ) : null}
               </div>
             ))}
           </CardContent>

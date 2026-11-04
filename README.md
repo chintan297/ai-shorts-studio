@@ -15,16 +15,15 @@ Dashboard → open a channel's **next available video** →
 **Copy Google Flow Prompt** → generate the 8-second video in Flow (Veo 3.x, 9:16, Frames-to-Video with your image) →
 generate the thumbnail from the **Thumbnail Prompt** →
 copy **title / description / tags** → upload in YouTube Studio →
-**Upload Details → Mark Uploaded…** (paste the URL and confirm) → the next video unlocks.
+**Upload Details → Mark Uploaded…** (confirm) → the next video unlocks.
 
 Rules the app enforces (in the database, not just the UI):
 
 - Each channel has its own sequence. A video unlocks only when every earlier one is **Uploaded** or **Skipped**.
   Failed uploads, drafts, copied prompts and generated videos never unlock anything.
-- A URL alone never marks a video uploaded; that needs the explicit confirmation dialog.
+- A video is only marked uploaded after the explicit confirmation dialog.
 - Skipping never deletes content, and skipped videos never count as uploaded or completed.
   **Restore** brings back the previous status.
-- One YouTube video can only be recorded against one planned video.
 
 ## Quick start (local-only mock mode)
 

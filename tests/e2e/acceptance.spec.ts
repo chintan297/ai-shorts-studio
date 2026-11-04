@@ -31,11 +31,11 @@ async function confirmDialog(page: Page, button: string, reason?: string) {
   await expect(dialog).toBeHidden();
 }
 
-async function recordUpload(page: Page, url: string) {
+async function recordUpload(page: Page) {
   await page.getByRole("tab", { name: "Upload Details" }).click();
   await page.getByTestId("mark-uploaded").click();
   const dialog = page.getByRole("dialog");
-  await dialog.getByTestId("dialog-youtube-url").fill(url);
+  await expect(dialog.getByTestId("confirm-upload-button")).toBeDisabled();
   for (const key of ["uploaded", "settings", "audio"]) await dialog.getByTestId(`confirm-${key}`).click();
   await dialog.getByTestId("confirm-upload-button").click();
   await expect(dialog).toBeHidden();
@@ -78,7 +78,7 @@ test.describe.serial("acceptance", () => {
     // Complete Day 1 Video 1: upload confirmation.
     await laptop.goto(videoUrl(1, 1));
     await waitSynced(laptop);
-    await recordUpload(laptop, "https://youtube.com/shorts/E2eTest0001");
+    await recordUpload(laptop);
     await expect(laptop.getByTestId("video-badges")).toContainText("Uploaded");
 
     // Skip Day 1 Video 2.
@@ -135,7 +135,7 @@ test.describe.serial("acceptance", () => {
     await expect(laptop.getByTestId(`video-row-${vid(3, 1)}`)).toHaveAttribute("data-lock", "skipped");
   });
 
-  test("5. manual upload: copy details, paste URL, confirm, next video unlocks", async () => {
+  test("5. manual upload: copy details, confirm, next video unlocks", async () => {
     await laptop.goto(videoUrl(3, 2));
     await waitSynced(laptop);
     await laptop.getByRole("button", { name: "Copy YouTube Title" }).click();
@@ -144,14 +144,10 @@ test.describe.serial("acceptance", () => {
     await laptop.getByRole("button", { name: "Copy Description" }).click();
     await laptop.getByRole("button", { name: "Copy Tags" }).click();
 
-    // A URL alone doesn't mark it uploaded.
-    await laptop.getByRole("tab", { name: "Upload Details" }).click();
-    await laptop.getByTestId("youtube-url").fill("https://youtube.com/shorts/E2eTest0002");
-    await laptop.getByRole("button", { name: "Save details" }).click();
-    await waitSynced(laptop);
+    // Nothing is marked uploaded until the explicit confirmation.
     await expect(laptop.getByTestId("video-badges")).toContainText("Not Uploaded");
 
-    await recordUpload(laptop, "https://youtube.com/shorts/E2eTest0002");
+    await recordUpload(laptop);
     await expect(laptop.getByTestId("video-badges")).toContainText("Uploaded");
     await waitSynced(laptop);
     await laptop.goto(`/channels/${CH}`);
