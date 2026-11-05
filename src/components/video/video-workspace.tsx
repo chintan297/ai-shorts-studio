@@ -16,7 +16,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useChannelSequence, useSchedule } from "@/hooks/use-progress";
 import { useSync } from "@/hooks/use-sync";
 import { channelEntries, getChannel, indexEntry, videoHref } from "@/lib/content/catalog";
-import { allDetailsText, flowLitePromptText, flowPromptText, imagePromptText, storyboardText, thumbnailPromptText } from "@/lib/content/copy-format";
+import { allDetailsText, flowPromptText, imagePromptText, storyboardText, thumbnailPromptText } from "@/lib/content/copy-format";
 import { formatDate, formatSlot, plannedDate, slotFor } from "@/lib/content/schedule";
 import type { VideoIndexEntry, VideoPackage } from "@/lib/content/schema";
 import { promptKey } from "@/lib/progress/types";
@@ -352,26 +352,15 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
               <PromptPanel
                 entry={entry}
                 promptType="flow"
-                title="Complete Google Flow video + audio prompt"
+                title="Google Flow video + audio prompt"
                 copyLabel="Google Flow Prompt"
                 originalText={flowPromptText(pkg)}
                 progress={flowProgress}
                 templateVersion={pkg.templateVersion}
               >
-                <Card size="sm" className="border-amber-500/40">
-                  <CardContent className="space-y-3">
-                    <CopyField
-                      label="Short safe prompt: use this if Flow says “might violate our policies”"
-                      value={flowLitePromptText(pkg)}
-                      copyLabel="Short Flow Prompt"
-                      maxHeight="max-h-60"
-                      hint="About a quarter of the length: fewer details, fewer chances for a filter to object. Use the generated image as the start frame to keep the same face."
-                    />
-                  </CardContent>
-                </Card>
                 <Card size="sm">
                   <CardHeader>
-                    <CardTitle>Audio included in the prompt</CardTitle>
+                    <CardTitle>Sound included in the prompt</CardTitle>
                     <CardDescription>The voice-over, music, sound effects and ambience above are generated together with the video. There’s no separate audio step.</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-3 text-sm">
@@ -411,7 +400,7 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
                 </Card>
                 <Alert>
                   <Info />
-                  <AlertTitle>Google Flow notes</AlertTitle>
+                  <AlertTitle>How to use this in Google Flow</AlertTitle>
                   <AlertDescription>
                     <ul className="ml-4 list-disc space-y-1">
                       {pkg.flowPrompt.notes.map((n) => (
@@ -437,7 +426,7 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
               >
                 <Card size="sm">
                   <CardContent className="space-y-3 text-sm">
-                    <CopyField label="Thumbnail text (add it in an editor)" value={pkg.thumbnail.textSuggestion} copyLabel="thumbnail text" maxHeight="max-h-20" />
+                    <CopyField label="Headline written on the thumbnail (already inside the prompt)" value={pkg.thumbnail.textSuggestion} copyLabel="thumbnail text" maxHeight="max-h-20" />
                     <p>
                       <span className="text-muted-foreground">Font style: </span>
                       {pkg.thumbnail.fontStyle}
@@ -449,6 +438,10 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
                     <p>
                       <span className="text-muted-foreground">First-frame hook (Shorts feed): </span>
                       {pkg.thumbnail.firstFrameHook}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Tip: image models that render text well (Gemini image / Imagen) write the headline for you. If a
+                      letter comes out wrong, generate again or fix just the text in Canva.
                     </p>
                   </CardContent>
                 </Card>
@@ -480,9 +473,6 @@ export function VideoWorkspace({ pkg }: { pkg: VideoPackage }) {
               </CopyButton>
               <CopyButton text={flowPromptText(pkg, overrides.flow)} label="Google Flow Video + Audio Prompt" className="justify-start">
                 Copy Google Flow Prompt
-              </CopyButton>
-              <CopyButton text={flowLitePromptText(pkg)} label="Short Flow Prompt" className="justify-start">
-                Copy Short Flow Prompt
               </CopyButton>
               <CopyButton text={thumbnailPromptText(pkg, overrides.thumbnail)} label="Thumbnail Prompt" className="justify-start">
                 Copy Thumbnail Prompt

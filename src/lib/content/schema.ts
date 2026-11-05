@@ -101,7 +101,8 @@ export const seedSchema = z.object({
     sfx: z.array(soundCueSchema).min(1),
     ambience: nonEmpty,
   }),
-  thumbnail: z.object({ text: nonEmpty, concept: nonEmpty }),
+  /** `overlay`: Latin-script headline (1–4 words) rendered inside the thumbnail; set from content-src/thumbnail-text. */
+  thumbnail: z.object({ text: nonEmpty, concept: nonEmpty, overlay: z.string().optional() }),
   seo: z.object({
     title: nonEmpty,
     altTitles: z.tuple([nonEmpty, nonEmpty, nonEmpty]),
@@ -196,7 +197,7 @@ export const videoPackageSchema = z.object({
   madeForKids: z.boolean(),
   storyboard: storyboardSchema,
   imagePrompt: z.object({ prompt: nonEmpty, negativePrompt: nonEmpty }),
-  flowPrompt: z.object({ prompt: nonEmpty, lite: nonEmpty, notes: z.array(nonEmpty) }),
+  flowPrompt: z.object({ prompt: nonEmpty, notes: z.array(nonEmpty) }),
   audio: z.object({
     mode: z.enum(["voiceover", "dialogue", "music-only"]),
     voice: z.string().nullable(),

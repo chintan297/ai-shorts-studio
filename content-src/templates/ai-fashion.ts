@@ -8,23 +8,27 @@ import { LANGUAGE, TARGET_COUNTRY } from "./shared";
 export const FASHION_MODELS: Record<string, CastMember> = {
   meher: {
     name: "Meher Anand",
+    promptLabel: "the Indian model",
     description:
-      "an original fictional AI fashion model, an Indian woman. Face: heart-shaped with high cheekbones and a softly pointed chin. Eyes: large almond-shaped deep-brown eyes with thick dark lashes and bold, softly arched black eyebrows. Nose: straight with a slightly rounded tip and a tiny gold stud on the left nostril (always present). Lips: full and well-defined. Skin: warm wheatish golden-brown with natural texture and a healthy glow. Hair: very long, thick, glossy jet-black hair with soft waves, reaching the waist. Height: about 168 cm, graceful posture.",
+      "a woman with a heart-shaped face, high cheekbones, large almond-shaped deep-brown eyes with thick dark lashes, bold softly arched black eyebrows, a tiny gold stud on her left nostril, full well-defined lips, warm wheatish golden-brown skin and very long, glossy jet-black hair with soft waves.",
   },
   valeria: {
     name: "Valeria Solis",
+    promptLabel: "the Latina model",
     description:
-      "an original fictional AI fashion model, a Latina woman. Face: oval with defined cheekbones and a soft jawline. Eyes: warm amber-brown eyes with long lashes and full dark eyebrows. Nose: small and straight. Lips: full, with a natural berry tone. Skin: sun-kissed caramel-tan with natural texture and one small beauty mark high on the right cheekbone (always present). Hair: long, voluminous dark-chocolate loose curls reaching mid-back. Height: about 170 cm, graceful posture.",
+      "a woman with an oval face, defined cheekbones, warm amber-brown eyes with long lashes, full dark eyebrows, a small beauty mark high on her right cheekbone, full lips with a natural berry tone, sun-kissed caramel-tan skin and long, voluminous dark-chocolate curls.",
   },
   hana: {
     name: "Hana Mori",
+    promptLabel: "the East Asian model",
     description:
-      "an original fictional AI fashion model, a East Asian woman. Face: soft oval with a defined jawline. Eyes: dark-brown almond eyes with soft monolids and straight, softly feathered eyebrows. Nose: small with a soft bridge. Lips: naturally rosy with a defined cupid's bow. Skin: fair with a neutral undertone, natural texture and a light flush. Hair: long, straight, glossy black hair reaching mid-back with soft curtain bangs (always present). Height: about 168 cm, graceful posture.",
+      "a woman with a soft oval face, dark-brown almond eyes, straight softly feathered eyebrows, naturally rosy lips, fair skin with a light natural flush and long, straight, glossy black hair with soft curtain bangs.",
   },
   elara: {
     name: "Elara Vey",
+    promptLabel: "the hazel-eyed model",
     description:
-      "an original fictional AI fashion model, a woman with a global mixed-heritage look. Face: soft oval with gently defined high cheekbones and a softly rounded chin. Eyes: almond-shaped hazel-green eyes with a warm amber ring, natural dark lashes and softly arched dark-brown eyebrows. Nose: straight, slim bridge with a softly rounded tip. Lips: medium-full with a defined cupid's bow. Skin: warm light-olive golden-beige with natural texture and one small beauty mark just above the left corner of her upper lip (always present). Hair: long, thick, softly wavy dark-chocolate-brown hair with subtle caramel highlights, reaching mid-back. Height: about 172 cm, graceful posture.",
+      "a woman with a global mixed-heritage look, a soft oval face, almond-shaped hazel-green eyes with a warm amber ring, softly arched dark-brown eyebrows, a small beauty mark above the left corner of her upper lip, warm light-olive skin and long, thick, softly wavy dark-chocolate-brown hair with caramel highlights.",
   },
 };
 
@@ -69,7 +73,7 @@ export const aiFashionTemplate: ChannelTemplate = {
     narrator: "Confident, warm female voice (used sparingly — most reels are music-led)",
     identities: Object.values(FASHION_MODELS).map((m) => ({
       title: m.name,
-      summary: `Permanent identity — ${m.description}`,
+      summary: `Original fictional AI model (not a real person). Permanent look: ${m.description}`,
       traits: [
         { label: "Changes per video", value: "Outfit, styling, makeup, location, pose, expression, camera" },
         { label: "Never changes", value: "Face, eyes, skin tone, identity marker, hair colour/length, body proportions" },
@@ -77,14 +81,16 @@ export const aiFashionTemplate: ChannelTemplate = {
     })),
   },
   cast: FASHION_MODELS,
+  genre: "fashion reel",
   imageStyle:
     "Photorealistic fashion editorial photograph, stylish modern look shot like a luxury magazine campaign, full-length or three-quarter framing.",
   videoStyle:
     "Photorealistic fashion film: stylish modern look, soft professional lighting, confident editorial energy, full-length or three-quarter framing.",
+  trendLook: "high-end fashion campaign color grade, soft bloom, crisp detail and a trending Instagram-reel glow",
   consistencyRules:
     "The model keeps exactly her own face, eye colour, skin tone, identity marker and hair colour as described, in every frame; outfit and accessories stay the same throughout the clip; hands look natural with five fingers each.",
   motionRules:
-    "Only subtle, confident movement: a slow head turn, an over-the-shoulder glance, a soft smile, a hair flip or the breeze moving hair and fabric, a slight weight shift, at most one slow hand movement (touching hair, sunglasses or an earring). She does not walk, run, dance or spin; hands stay relaxed and natural.",
+    "She stays in place with subtle, confident movement: a slow head turn, an over-the-shoulder glance, a soft smile, hair and fabric moving in the breeze, at most one slow hand movement; hands relaxed and natural.",
   imageNegatives: [
     "unflattering angle",
     "extra legs",
@@ -95,12 +101,7 @@ export const aiFashionTemplate: ChannelTemplate = {
     "different face",
     "inconsistent identity",
   ],
-  videoNegatives: [
-    "no walking, dancing or spinning",
-    "no complex hand gestures",
-    "no drift in facial features",
-  ],
-  thumbnailPalette: "hot pink, glossy black and champagne gold (party) or turquoise and sunset coral (beach)",
+  thumbnailPalette: "rich fashion-campaign colors that match the outfit, with glossy highlights and clean contrast",
   thumbnailFont: "bold modern sans-serif (Montserrat ExtraBold style) in white with a soft pink glow",
   defaultVoice: "Confident, warm Indian female voice",
   defaultTone: "confident, stylish and playful",

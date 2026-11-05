@@ -298,7 +298,7 @@ const seeds: VideoSeed[] = [
       tone: "bold and futuristic",
       lines: [
         { start: 1.4, end: 4.7, text: "इतनी ऊँचाई पर… सफ़ाई करेगा spider robot!" },
-        { start: 5.1, end: 7.3, text: "इंसानों को… अब खतरा नहीं।" },
+        { start: 5.1, end: 7.3, text: "इंसान अब… पूरी तरह सुरक्षित।" },
       ],
       music: "tense-to-bright electronic pulse with metallic percussion and a soaring synth lead",
       sfx: [
@@ -883,7 +883,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Space technology",
-    concept: "A space-debris cleanup satellite casts a large net around a tumbling dead satellite high above Earth and tows it away.",
+    concept: "A space-debris cleanup satellite casts a large net around a tumbling defunct satellite high above Earth and tows it away.",
     hook: "A broken, tumbling old satellite with a snapped solar panel spins toward the lens against the glowing blue curve of Earth.",
     subject: "A compact silver cleanup spacecraft with a front launcher that fires a wide golden net, and a defunct boxy satellite with frayed foil and a cracked panel",
     environment: "Low Earth orbit over the night side of Earth, with glowing city lights below, a thin blue atmospheric line and the Sun just rising at the edge",

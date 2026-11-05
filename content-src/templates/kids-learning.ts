@@ -66,16 +66,17 @@ export const kidsLearningTemplate: ChannelTemplate = {
   },
   cast: KIDS_CAST,
   learningSymbolsAllowed: true,
+  genre: "kids cartoon short",
   imageStyle:
     "Bright, soft 3D cartoon illustration for preschool children: rounded shapes, smooth clay-like textures, big friendly eyes, cozy and safe.",
   videoStyle:
     "Soft 3D cartoon animation for toddlers and preschoolers: rounded friendly shapes, bright saturated colors, gentle bouncy motion, a cozy and safe atmosphere.",
+  trendLook: "bright toy-like 3D cartoon, soft rounded shapes, cheerful primary-and-pastel palette and bouncy pop-in animation",
   consistencyRules:
     "Every character keeps exactly the same design, proportions, colors and clothing as described, in every frame. The art style never changes. Every letter, number, shape and color being taught is drawn correctly and is easy to recognize.",
   motionRules:
-    "Gentle, bouncy, cheerful movement at a calm pace. Nothing scary, no sudden loud moments, no dangerous actions.",
-  imageNegatives: ["scary", "dark mood", "sharp teeth", "creepy", "horror", "cluttered background"],
-  videoNegatives: ["nothing frightening or dangerous", "no sudden loud noises", "no flashing or strobing lights"],
+    "Gentle, bouncy, cheerful movement at a calm, friendly pace; everything feels safe, cozy and happy.",
+  imageNegatives: ["gloomy colors", "sharp edges", "cluttered background", "realistic textures"],
   thumbnailPalette: "sunny yellow, sky blue, grass green and candy pink",
   thumbnailFont: "rounded extra-bold kids font (Baloo / Fredoka style), white with a thick colorful outline",
   defaultVoice:

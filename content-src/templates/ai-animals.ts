@@ -65,19 +65,16 @@ export const aiAnimalsTemplate: ChannelTemplate = {
     ],
   },
   cast: ANIMAL_CAST,
+  genre: "wildlife and nature short",
   imageStyle: "Award-winning documentary-grade wildlife and nature photograph, photorealistic, with rich natural detail.",
   videoStyle:
     "Photorealistic nature-documentary cinematography: accurate animal anatomy, natural behavior, lush environments, gentle cinematic camera work.",
+  trendLook: "nature-documentary close-up, shallow depth of field, rich natural colors, warm sunlight and a heartwarming moment",
   consistencyRules:
     "The same individual animal keeps identical markings, fur or feather pattern, colors and size throughout, with the correct number of legs, ears, eyes and tail for its species.",
   motionRules:
-    "Animals move with a species-accurate gait and natural timing. No human-like behavior unless the video is labelled fictional.",
+    "Animals move with a species-accurate gait and natural timing, calm and true to life.",
   imageNegatives: ["extra legs", "missing legs", "wrong number of eyes", "fused animals", "clothing on animals", "cartoon"],
-  videoNegatives: [
-    "no limbs merging or splitting",
-    "no species-incorrect anatomy",
-    "no animals harmed or in distress",
-  ],
   thumbnailPalette: "lush emerald green, golden-hour amber and sky blue",
   thumbnailFont: "bold rounded sans-serif (Poppins Black style), white with a dark green outline",
   defaultVoice: "Warm, calm Indian male wildlife narrator",

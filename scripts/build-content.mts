@@ -8,6 +8,7 @@
  *   --channel <id>    only this channel (index.json is merged with existing entries)
  *   --check           validate only, write nothing
  *   --allow-partial   allow fewer than 180 seeds (pilot / work-in-progress)
+ *   --max-errors <n>  how many errors to print per channel (default 60)
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -30,6 +31,7 @@ import { MAX_SIMILARITY, scorePackage } from "../src/lib/quality/score";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SEEDS_DIR = path.join(ROOT, "content-src", "seeds");
+const HEADLINES_DIR = path.join(ROOT, "content-src", "thumbnail-text");
 const DATA_DIR = path.join(ROOT, "data");
 const CONTENT_DIR = path.join(DATA_DIR, "content");
 
@@ -101,6 +103,21 @@ async function loadSeeds(channelId: ChannelId): Promise<{ seeds: VideoSeed[]; er
         seeds.push(result.data);
       }
     });
+  }
+  // Thumbnail headlines (Latin-script text rendered inside the thumbnail) live in their own file, one per seed.
+  const headlineFile = path.join(HEADLINES_DIR, `${channelId}.ts`);
+  if (existsSync(headlineFile)) {
+    const mod = (await import(pathToFileURL(headlineFile).href)) as { default: unknown };
+    const headlines = z.array(z.string().trim().min(1)).safeParse(mod.default);
+    if (!headlines.success) errors.push(`${channelId}: thumbnail-text must export an array of strings`);
+    else {
+      if (headlines.data.length !== seeds.length) {
+        errors.push(`${channelId}: thumbnail-text has ${headlines.data.length} headlines for ${seeds.length} seeds`);
+      }
+      headlines.data.forEach((text, i) => {
+        if (seeds[i]) seeds[i] = { ...seeds[i]!, thumbnail: { ...seeds[i]!.thumbnail, overlay: text } };
+      });
+    }
   }
   return { seeds, errors };
 }
@@ -230,8 +247,9 @@ async function main() {
     const avg = scores.length ? (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(1) : "-";
     const min = scores.length ? Math.min(...scores) : "-";
     console.log(`\n■ ${r.channelId}: ${r.packages.length} packages · avg quality ${avg} · min ${min} · ${r.errors.length} errors · ${r.warnings.length} warnings`);
-    for (const e of r.errors.slice(0, 60)) console.log(`  ✗ ${e}`);
-    if (r.errors.length > 60) console.log(`  … ${r.errors.length - 60} more errors`);
+    const maxErrors = Number(option("--max-errors") ?? 60);
+    for (const e of r.errors.slice(0, maxErrors)) console.log(`  ✗ ${e}`);
+    if (r.errors.length > maxErrors) console.log(`  … ${r.errors.length - maxErrors} more errors (use --max-errors N)`);
     if (flag("--warnings")) for (const w of r.warnings) console.log(`  ! ${w}`);
     totalErrors += r.errors.length;
   }

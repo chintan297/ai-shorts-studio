@@ -4,7 +4,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Futuristic inventions",
     concept: "A palm-sized drone umbrella unfolds and hovers above its owner, keeping her dry as she walks hands-free through a heavy Mumbai monsoon downpour.",
-    hook: "Extreme close-up of fat monsoon raindrops exploding on a wet Mumbai pavement; a matte-black disc no bigger than a palm whirs up into frame and blooms open into a glowing translucent canopy.",
+    hook: "Extreme close-up of fat monsoon raindrops splashing into tiny crowns on a wet Mumbai pavement; a matte-black disc no bigger than a palm whirs up into frame and blooms open into a glowing translucent canopy.",
     subject: "A compact flying umbrella drone with four whisper-quiet ducted rotors under a translucent smoke-grey canopy edged with a thin cyan light ring, hovering above a young Indian woman in a bright yellow raincoat",
     environment: "A rain-soaked South Mumbai street at dusk with glistening black tarmac, old stone arcades, black-and-yellow taxis streaking past, puddles reflecting warm shop lights and a heavy monsoon downpour",
     action: "The woman steps off the curb and the drone glides along above her head at a steady height, tilting its canopy into the wind so the rain sheets off its edge while she walks hands-free, sipping a small glass of cutting chai.",
@@ -227,7 +227,7 @@ const seeds: VideoSeed[] = [
       music: "driving electronic pulse with fast arpeggios and taiko-style percussion",
       sfx: [
         { at: 0.3, sound: "low magnetic hum building under the train" },
-        { at: 2.2, sound: "explosive whoosh as the train blasts past" },
+        { at: 2.2, sound: "powerful rushing whoosh as the train zooms past" },
         { at: 6.3, sound: "fading high-speed rush echoing through the valley" },
       ],
       ambience: "cold mountain wind and the soft hiss of settling snow",

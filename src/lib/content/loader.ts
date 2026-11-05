@@ -8,12 +8,12 @@ import kidsLearning from "@data/content/kids-learning.json";
 import type { ChannelId, VideoPackage } from "./schema";
 
 const PACKAGES: Record<ChannelId, VideoPackage[]> = {
-  "future-ai": futureAi as VideoPackage[],
-  "ai-fashion": aiFashion as VideoPackage[],
-  "galaxy-space": galaxySpace as VideoPackage[],
-  "kids-learning": kidsLearning as VideoPackage[],
-  "ai-facts": aiFacts as VideoPackage[],
-  "ai-animals": aiAnimals as VideoPackage[],
+  "future-ai": futureAi as unknown as VideoPackage[],
+  "ai-fashion": aiFashion as unknown as VideoPackage[],
+  "galaxy-space": galaxySpace as unknown as VideoPackage[],
+  "kids-learning": kidsLearning as unknown as VideoPackage[],
+  "ai-facts": aiFacts as unknown as VideoPackage[],
+  "ai-animals": aiAnimals as unknown as VideoPackage[],
 };
 
 export function getPackage(channelId: string, videoId: string): VideoPackage | undefined {

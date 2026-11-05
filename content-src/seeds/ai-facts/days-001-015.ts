@@ -57,7 +57,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       lines: [
         { start: 1.4, end: 5.0, text: "Octopus के पास एक नहीं, तीन दिल होते हैं!" },
-        { start: 5.6, end: 7.4, text: "और खून नीला!" },
+        { start: 5.6, end: 7.4, text: "तीनों का अपना-अपना काम!" },
       ],
       music: "playful, mysterious underwater instrumental with soft marimba and airy pads",
       sfx: [
@@ -251,7 +251,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Natural phenomena",
     concept: "Night waves on an Andaman beach burst into electric-blue light as tiny plankton glow wherever the water is disturbed.",
-    hook: "A dark wave curls toward the lens and explodes into electric-blue sparks as it breaks.",
+    hook: "A dark wave curls toward the lens and bursts into electric-blue sparks as it breaks.",
     subject: "Breaking night waves glowing bright blue with bioluminescent plankton",
     environment: "A quiet tropical beach in the Andaman Islands at night, smooth wet sand, silhouetted palms and a starry sky",
     action: "The camera tracks low along the shoreline as wave after wave crashes and lights up blue along its crest, and a hand sweeps through the shallow water leaving a glittering trail of blue sparks.",
@@ -968,7 +968,7 @@ const seeds: VideoSeed[] = [
     hook: "A giraffe's head swings down into the frame chewing acacia leaves, its long eyelashes catching the sunset.",
     subject: "An adult reticulated giraffe with a long patterned neck and gentle eyes",
     environment: "East African savanna at sunset, flat-topped acacia trees, golden grass and distant hills",
-    action: "As the giraffe lifts its head back up to the acacia, its neck becomes gently translucent and seven long glowing vertebrae light up one after another from the skull down to the shoulders.",
+    action: "As the giraffe lifts its head back up to the acacia, its neck becomes gently translucent and seven long glowing vertebrae light up one after another from the base of the head down to the shoulders.",
     payoff: "The seven glowing vertebrae shine together once, then fade as the giraffe keeps browsing against the orange sky.",
     camera: { angle: "Low angle looking up along the neck", movement: "Smooth crane-up following the neck", lens: "70 mm telephoto" },
     lighting: "Warm sunset backlight with a golden rim on the giraffe",
@@ -1004,10 +1004,10 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Geography facts",
-    concept: "A drone rises from glittering salt crystals at the Dead Sea's edge to reveal the shore lying at the bottom of a deep desert basin, the lowest land on Earth.",
+    concept: "A drone rises from glittering salt crystals at the edge of the salt sea between Jordan and Israel to reveal the shore lying at the bottom of a deep desert basin, the lowest land on Earth.",
     hook: "White salt crystals sparkle like snow at the edge of glassy turquoise water under a hazy sun.",
-    subject: "The Dead Sea shoreline with thick white salt formations and calm turquoise water",
-    environment: "The Dead Sea basin at midday: salt-crusted shore, calm mineral-rich water and tall brown desert cliffs on both sides",
+    subject: "The salt sea's shoreline with thick white salt formations and calm turquoise water",
+    environment: "The salt sea's deep desert basin between Jordan and Israel at midday: salt-crusted shore, calm mineral-rich water and tall brown desert cliffs on both sides",
     action: "The drone pulls up and back from the salt crystals, rising high to reveal the long shoreline sitting deep in a vast basin between steep desert mountains.",
     payoff: "A high wide view of the turquoise sea and white salt shore far below the surrounding cliffs, holding steady.",
     camera: { angle: "Low macro view rising to a high aerial", movement: "Smooth continuous drone pull-back and rise", lens: "macro framing at the start, ending ultra-wide" },
@@ -1016,7 +1016,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.2, end: 4.8, text: "Dead Sea का किनारा — धरती की सबसे नीची ज़मीन!" },
+        { start: 1.2, end: 4.8, text: "डेड सी का किनारा — धरती की सबसे नीची ज़मीन!" },
         { start: 5.0, end: 7.5, text: "400 मीटर से भी ज़्यादा नीचे!" },
       ],
       music: "spacious, warm instrumental with an oud-like plucked melody and airy pads",
@@ -1031,7 +1031,7 @@ const seeds: VideoSeed[] = [
       statement: "The shore of the Dead Sea is the lowest land on Earth, more than 400 m below sea level.",
       sourceName: "Encyclopaedia Britannica — Dead Sea",
     },
-    thumbnail: { text: "समुद्र से 400m नीचे!", concept: "Aerial view of turquoise Dead Sea water and white salt shore in a deep desert basin" },
+    thumbnail: { text: "समुद्र से 400m नीचे!", concept: "Aerial view of turquoise salt-sea water and a white salt shore in a deep desert basin" },
     seo: {
       title: "धरती की सबसे नीची ज़मीन कहाँ है? 🏜️",
       altTitles: ["The Dead Sea Shore Is the Lowest Land on Earth", "समुद्र तल से 400 मीटर नीचे की ज़मीन", "Dead Sea: Earth का Lowest Point"],
@@ -1131,12 +1131,12 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Historical discoveries",
-    concept: "Rows of life-size clay warriors stand in a vast excavation pit in China, the Terracotta Army that farmers stumbled upon while digging a well in 1974.",
-    hook: "A life-size clay warrior's face, with a carved beard and topknot, stares straight into the lens.",
-    subject: "Life-size terracotta warrior statues standing in long ordered rows, each with a different face",
+    concept: "Rows of life-size clay figures stand in a vast excavation pit in China, the famous terracotta statues that farmers stumbled upon while digging a well in 1974.",
+    hook: "A life-size clay figure's face, with a carved beard and topknot, gazes straight into the lens.",
+    subject: "Life-size terracotta statues standing in long ordered rows, each with a different face",
     environment: "A huge covered excavation pit near Xi'an, China, with earthen walls dividing the rows and soft light from a high roof",
-    action: "The camera glides back from the warrior's face, low along a row of soldiers, then cranes smoothly up to reveal hundreds of figures lined up across the pit.",
-    payoff: "A high wide view of the vast silent army in the pit, holding steady in the soft light.",
+    action: "The camera glides back from the statue's face, low along a row of clay statues, then cranes smoothly up to reveal hundreds of figures lined up across the pit.",
+    payoff: "A high wide view of the vast silent rows of clay figures in the pit, holding steady in the soft light.",
     camera: { angle: "Eye-level close-up rising to a high wide view", movement: "Smooth dolly-back into a crane-up", lens: "35 mm" },
     lighting: "Soft diffused overhead daylight with gentle shadows between rows",
     colorGrade: "Earthy terracotta, dusty beige and muted grey",
@@ -1146,7 +1146,7 @@ const seeds: VideoSeed[] = [
         { start: 1.2, end: 4.4, text: "1974, China — कुआँ खोदते किसानों को मिली…" },
         { start: 4.7, end: 7.4, text: "हज़ारों मिट्टी के सैनिकों की सेना!" },
       ],
-      music: "solemn, epic instrumental with deep war drums, low strings and a distant horn",
+      music: "solemn, epic instrumental with deep ceremonial drums, low strings and a distant horn",
       sfx: [
         { at: 0.4, sound: "low echoing stone hum" },
         { at: 2.4, sound: "soft scrape of a shovel in dry earth" },
@@ -1158,7 +1158,7 @@ const seeds: VideoSeed[] = [
       statement: "In 1974, farmers digging a well in China discovered the Terracotta Army: thousands of life-size clay warriors about 2,200 years old.",
       sourceName: "UNESCO World Heritage Centre — Mausoleum of the First Qin Emperor",
     },
-    thumbnail: { text: "किसानों ने खोजी सेना!", concept: "Rows of life-size terracotta warriors in a vast excavation pit" },
+    thumbnail: { text: "किसानों ने खोजी सेना!", concept: "Rows of life-size terracotta figures in a vast excavation pit" },
     seo: {
       title: "कुआँ खोदते किसानों को मिली मिट्टी की सेना 🏺",
       altTitles: ["Farmers Found the Terracotta Army While Digging a Well", "चीन की लगभग 2,200 साल पुरानी मिट्टी की सेना", "Terracotta Army की Accidental खोज"],

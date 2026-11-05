@@ -172,7 +172,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Space exploration",
     concept: "ISRO's Chandrayaan-3 Vikram lander descends on its engines and touches down softly near the Moon's south pole.",
-    hook: "A four-legged gold-foil lander hangs just above a cratered grey surface, its engine plumes blasting a ring of lunar dust outward.",
+    hook: "A four-legged gold-foil lander hangs just above a cratered grey surface, its engine plumes sweeping a ring of lunar dust outward.",
     subject: "ISRO's Vikram lander from Chandrayaan-3: a boxy gold-foil-wrapped body with four landing legs and side solar panels, descending on its throttled engines",
     environment: "Rugged, heavily cratered terrain near the Moon's south pole, with long low-angle sunlight, deep black shadows and a black sky",
     action: "The lander sinks slowly and steadily on its engines as fine grey dust sprays outward in clean radial streaks, and the long shadows of crater rims stretch across the ground.",
@@ -1167,7 +1167,7 @@ const seeds: VideoSeed[] = [
       ],
       music: "mysterious orchestral-electronic score with ticking percussion and dark strings",
       sfx: [
-        { at: 0.5, sound: "deep rushing blast echo" },
+        { at: 0.5, sound: "deep rushing whoosh with a long echo" },
         { at: 3.0, sound: "rapid rhythmic pulsing tick" },
         { at: 6.0, sound: "low resonant drone" },
       ],

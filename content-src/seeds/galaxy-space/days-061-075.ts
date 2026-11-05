@@ -3,7 +3,7 @@ import type { VideoSeed } from "@/lib/content/schema";
 const seeds: VideoSeed[] = [
   {
     category: "Black holes",
-    concept: "A jet of particles blasts out of the core of the giant galaxy Messier 87, powered by its supermassive black hole, at nearly the speed of light.",
+    concept: "A jet of particles streams out of the core of the giant galaxy Messier 87, powered by its supermassive black hole, at nearly the speed of light.",
     hook: "A thin, brilliant blue-white beam shoots out of a glowing golden galactic core and stretches straight across the frame.",
     subject: "The jet of Messier 87: a narrow blue-white stream of particles launched from the supermassive black hole at the heart of a giant elliptical galaxy",
     environment: "The golden, softly glowing core of the giant elliptical galaxy Messier 87, surrounded by thousands of faint star clusters",
@@ -214,7 +214,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Nebulas",
-    concept: "The camera pushes into the glowing shell of Cassiopeia A, the expanding debris of a star whose explosion light first reached Earth roughly 340 years ago.",
+    concept: "The camera pushes into the glowing shell of Cassiopeia A, the expanding debris of a star whose supernova light first reached Earth roughly 340 years ago.",
     hook: "A ragged sphere of glowing green, red and blue debris fills the frame, filaments flying outward in every direction.",
     subject: "Cassiopeia A: a roughly spherical, expanding shell of supernova debris with knotted filaments in green, red, orange and blue",
     environment: "Deep space about 11,000 light-years away in the constellation Cassiopeia, with dust-dimmed background stars",
@@ -227,7 +227,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.3, end: 4.1, text: "इस तारे के धमाके की रोशनी…" },
+        { start: 1.3, end: 4.1, text: "इस सुपरनोवा की रोशनी…" },
         { start: 4.5, end: 7.4, text: "लगभग 340 साल पहले धरती तक पहुँची!" },
       ],
       music: "dark, mysterious orchestral-ambient score with deep cello drones and shimmering high strings",
@@ -299,12 +299,12 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Universe facts",
-    concept: "Instead of a blast into empty space, the Big Bang is shown as space itself stretching, carrying galaxies apart like points on an expanding grid.",
+    concept: "Rather than a burst into empty space, the Big Bang is shown as space itself stretching, carrying galaxies apart like points on an expanding grid.",
     hook: "A glowing three-dimensional grid of faint light lines starts stretching in every direction, with galaxies pinned at its crossings.",
     subject: "An illustrative grid representing space itself, with small galaxies fixed at its intersections, expanding evenly",
     environment: "An abstract cosmic volume with a deep black background and a faint distant glow",
     action: "The camera holds near one galaxy as the whole grid stretches evenly in all directions, every neighboring galaxy drifting away with no center or edge anywhere.",
-    payoff: "The grid has grown vast and the galaxies sit far apart, with no explosion point anywhere in view.",
+    payoff: "The grid has grown vast and the galaxies sit far apart, with no single center point anywhere in view.",
     camera: { angle: "Eye-level view inside the grid", movement: "Very slow pull-back as the grid expands", lens: "24 mm" },
     lighting: "Soft cyan grid lines and warm galaxy glows",
     colorGrade: "Cyan, gold and deep black",
@@ -312,7 +312,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.2, end: 4.3, text: "Big Bang खाली जगह में धमाका नहीं था…" },
+        { start: 1.2, end: 4.3, text: "Big Bang किसी खाली जगह में नहीं हुआ…" },
         { start: 4.7, end: 7.4, text: "Space ख़ुद फैलता गया!" },
       ],
       music: "contemplative electronic-ambient score with slow arpeggios and wide pads",
@@ -595,7 +595,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Galaxies",
-    concept: "The Cigar Galaxy, a starburst galaxy forming new stars about 10 times faster than the Milky Way, blasts glowing red plumes of gas from its core.",
+    concept: "The Cigar Galaxy, a starburst galaxy forming new stars about 10 times faster than the Milky Way, sends glowing red plumes of gas streaming from its core.",
     hook: "Fiery red plumes of gas erupt above and below a bright, cigar-shaped galaxy seen edge-on.",
     subject: "The Cigar Galaxy (Messier 82): an edge-on disk crowded with bright blue star clusters, crossed by dark dust and topped by red filaments of glowing hydrogen streaming outward",
     environment: "Deep space in the constellation Ursa Major, with faint background galaxies",
@@ -656,7 +656,7 @@ const seeds: VideoSeed[] = [
       ],
       music: "intense, triumphant orchestral score with racing strings and heavy brass hits",
       sfx: [
-        { at: 0.4, sound: "roaring blast of solar plasma" },
+        { at: 0.4, sound: "roaring rush of solar plasma" },
         { at: 3.0, sound: "high-speed rushing whoosh" },
         { at: 6.0, sound: "deep triumphant boom" },
       ],
@@ -724,10 +724,10 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Astronomical phenomena",
-    concept: "A massive star collapses and fires the twin beams of a gamma-ray burst, the most powerful kind of explosion known in the universe.",
+    concept: "A massive star collapses and launches the twin beams of a gamma-ray burst, the most powerful kind of outburst known in the universe.",
     hook: "A giant blue star suddenly caves inward and two blinding beams of light shoot out of its poles.",
     subject: "A collapsing massive star launching two narrow, blinding jets from its poles: a long gamma-ray burst",
-    environment: "A distant star-forming galaxy, with clouds of gas and young stars around the dying star",
+    environment: "A distant star-forming galaxy, with clouds of gas and young stars around the collapsing star",
     action: "The camera pulls back steadily as the twin beams punch out through the star's outer layers and stretch across space, flooding nearby gas clouds with harsh light.",
     payoff: "Two brilliant beams cross the frame from the collapsed star, the surrounding galaxy lit up by their glare.",
     camera: { angle: "Side view perpendicular to the jets", movement: "Steady pull-back", lens: "28 mm" },
@@ -738,9 +738,9 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       lines: [
         { start: 1.2, end: 4.2, text: "विशाल तारे के ढहने से निकली ये किरणें…" },
-        { start: 4.6, end: 7.4, text: "ब्रह्मांड के सबसे ताक़तवर ज्ञात धमाके!" },
+        { start: 4.6, end: 7.4, text: "ब्रह्मांड की सबसे ताक़तवर ज्ञात चमक!" },
       ],
-      music: "explosive orchestral-electronic score with huge drums, distorted synth bass and soaring strings",
+      music: "powerful orchestral-electronic score with huge drums, distorted synth bass and soaring strings",
       sfx: [
         { at: 0.5, sound: "deep implosion thud" },
         { at: 2.5, sound: "blinding high-energy crackle" },
@@ -1150,7 +1150,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Nebulas",
-    concept: "The camera drifts along the delicate, lace-like filaments of the Veil Nebula, part of the Cygnus Loop left by a star that exploded thousands of years ago.",
+    concept: "The camera drifts along the delicate, lace-like filaments of the Veil Nebula, part of the Cygnus Loop left by a star that went supernova thousands of years ago.",
     hook: "Wispy ribbons of glowing blue and red gas twist across the frame like strands of torn silk.",
     subject: "The Veil Nebula: thin, braided filaments of glowing hydrogen and oxygen, part of the huge Cygnus Loop supernova remnant",
     environment: "Deep space in the constellation Cygnus, with a rich Milky Way star field behind the filaments",

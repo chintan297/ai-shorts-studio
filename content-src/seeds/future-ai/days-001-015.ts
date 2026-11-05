@@ -500,7 +500,7 @@ const seeds: VideoSeed[] = [
       tone: "proud and confident",
       lines: [
         { start: 1.3, end: 4.6, text: "खेत का नया साथी… laser वाला farm robot!" },
-        { start: 5.0, end: 7.3, text: "बिना दवा, बिना ज़हर!" },
+        { start: 5.0, end: 7.3, text: "बिना केमिकल, बिना दवा!" },
       ],
       music: "uplifting folk-inspired plucked melody over a modern electronic beat and dhol-like percussion",
       sfx: [

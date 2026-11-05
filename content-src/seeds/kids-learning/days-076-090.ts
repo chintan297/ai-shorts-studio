@@ -509,7 +509,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Simple science concepts",
-    concept: "Mini listens to Chiku's heartbeat with a toy stethoscope: thump-thump, the heart pumps blood all around the body.",
+    concept: "Mini listens to Chiku's heartbeat with a toy stethoscope: thump-thump, the heart is a hard-working pump that sends oxygen all around the body.",
     hook: "Mini puts on a bright toy stethoscope and presses it gently to Chiku's chest.",
     subject: "Mini with a colorful toy stethoscope listening to the heartbeat of Chiku the baby elephant",
     environment: "Pretend-play doctor corner with a little cot, a teddy patient and a toy doctor's kit",
@@ -524,7 +524,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       lines: [
         { start: 1.3, end: 3.4, text: "धक… धक… धक…" },
-        { start: 4.0, end: 7.2, text: "दिल पूरे शरीर में… खून पहुँचाता है!" },
+        { start: 4.0, end: 7.2, text: "दिल पूरे शरीर में… ऑक्सीजन पहुँचाता है!" },
       ],
       music: "gentle, warm kids instrumental with soft piano and a heartbeat-like low drum",
       sfx: [

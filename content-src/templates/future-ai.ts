@@ -53,15 +53,16 @@ export const futureAiTemplate: ChannelTemplate = {
       },
     ],
   },
+  genre: "futuristic tech short",
   imageStyle: "Ultra-realistic cinematic concept photograph of the near future, premium commercial look.",
   videoStyle:
     "Ultra-realistic cinematic sci-fi realism with a premium commercial look: believable near-future technology, clean futuristic lighting, high-end visual effects.",
+  trendLook: "sleek premium sci-fi commercial look, glowing holographic accents, crisp HDR detail and a satisfying reveal moment",
   consistencyRules:
     "Keep the same subject design, materials, colors and environment layout in every frame. Technology looks plausible and well-engineered. No random new objects appear.",
   motionRules:
     "Machines and vehicles move smoothly with believable mass and momentum. Any people move naturally and calmly in the background.",
-  imageNegatives: ["cartoon", "toy-like", "plastic look", "cluttered sci-fi clichés", "dystopian ruins"],
-  videoNegatives: ["no robotic stuttering", "no impossible geometry glitches"],
+  imageNegatives: ["cartoon", "toy-like", "plastic look", "cluttered sci-fi clichés", "gloomy ruins"],
   thumbnailPalette: "electric cyan, deep navy and warm orange accents",
   thumbnailFont: "extra-bold condensed sans-serif (Anton / Bebas Neue style), white with a cyan glow outline",
   defaultVoice: "Confident Indian male narrator with a clear, slightly deep voice",

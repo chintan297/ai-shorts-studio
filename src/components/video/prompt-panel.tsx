@@ -62,7 +62,7 @@ export function PromptPanel({
           <CardDescription>
             {custom
               ? "You're using your edited version. The original template is kept and can be restored."
-              : "Ready to copy, with nothing to write yourself."}
+              : "Ready to copy: paste it as-is, nothing to write yourself."}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

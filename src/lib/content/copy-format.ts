@@ -18,10 +18,6 @@ export function flowPromptText(pkg: VideoPackage, override?: string | null): str
   return override ?? pkg.flowPrompt.prompt;
 }
 
-export function flowLitePromptText(pkg: VideoPackage): string {
-  return pkg.flowPrompt.lite;
-}
-
 export function storyboardText(pkg: VideoPackage): string {
   const s = pkg.storyboard;
   return [

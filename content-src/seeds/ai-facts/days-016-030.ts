@@ -169,7 +169,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Animal facts",
-    concept: "An orange sea star in a rocky Konkan tide pool turns translucent to show seawater, not blood, flowing through the channels of its five arms.",
+    concept: "An orange sea star in a rocky Konkan tide pool turns translucent to show plain filtered seawater flowing through the water-vascular channels of its five arms.",
     hook: "Hundreds of tiny tube feet wave under an orange sea star pressed against crystal-clear water, in extreme macro.",
     subject: "A vivid orange five-armed sea star with textured skin and rows of tiny tube feet",
     environment: "A sunlit rocky tide pool of dark basalt on the Konkan coast at low tide, with small snails and seaweed",
@@ -182,7 +182,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.2, end: 4.4, text: "Starfish के शरीर में खून होता ही नहीं!" },
+        { start: 1.2, end: 4.4, text: "Starfish के शरीर में समुद्री पानी दौड़ता है!" },
         { start: 4.7, end: 7.5, text: "उसकी जगह समुद्र का पानी बहता है!" },
       ],
       music: "light, playful instrumental with kalimba and soft shakers",
@@ -542,7 +542,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Mind-blowing discoveries",
-    concept: "Dawn light rakes across the carved T-shaped stone pillars of Göbekli Tepe, raised by hunter-gatherers about 11,000 years ago.",
+    concept: "Dawn light rakes across the carved T-shaped stone pillars of Göbekli Tepe, raised by prehistoric foragers about 11,000 years ago.",
     hook: "Low dawn light rakes across a weathered limestone pillar carved with a running fox, in extreme close-up.",
     subject: "Massive T-shaped limestone pillars carved with animal reliefs, arranged in round stone enclosures",
     environment: "A dusty hilltop excavation in southeastern Turkey at sunrise, with rolling dry plains beyond",
@@ -555,7 +555,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       lines: [
         { start: 1.3, end: 4.5, text: "लगभग 11000 साल पुराने ये विशाल पत्थर…" },
-        { start: 4.8, end: 7.5, text: "शिकारी-संग्राहकों ने खड़े किए थे!" },
+        { start: 4.8, end: 7.5, text: "खेती से भी पहले बने थे!" },
       ],
       music: "ancient, mysterious instrumental with frame drum and low reed flute",
       sfx: [
@@ -805,7 +805,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       lines: [
         { start: 1.2, end: 4.4, text: "1928 में एक गलती से हुई बड़ी खोज…" },
-        { start: 4.8, end: 7.5, text: "इस fungus ने bacteria मार दिए — penicillin!" },
+        { start: 4.8, end: 7.5, text: "इस fungus ने bacteria रोक दिए — penicillin!" },
       ],
       music: "thoughtful, gently suspenseful instrumental with piano and soft clarinet",
       sfx: [
@@ -835,7 +835,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Natural phenomena",
     concept: "On a blazing Thar Desert road, a shimmering pool of 'water' reflects the sky ahead and keeps moving away as the camera glides toward it: a mirage made by bending light.",
-    hook: "Heat haze ripples violently over golden sand dunes beside a straight desert road at noon.",
+    hook: "Heat haze shimmers and ripples strongly over golden sand dunes beside a straight desert road at noon.",
     subject: "A shimmering mirage pool on a hot asphalt road that reflects the blue sky and an upside-down distant camel cart",
     environment: "A straight empty highway through the Thar Desert near Jaisalmer, golden dunes on both sides, midday heat",
     action: "The camera glides forward just above the hot road; ahead, a silvery 'lake' reflects the sky and an inverted image of a distant camel cart, and as the camera advances the shimmering pool keeps sliding away.",
@@ -1041,10 +1041,10 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Human body facts",
-    concept: "Inside a glowing blood vessel, the camera follows one red blood cell through weeks of journeys until it grows pale and a fresh cell takes its place, showing its roughly 120-day life.",
-    hook: "Red, doughnut-shaped blood cells tumble straight toward the lens through a glowing vessel.",
-    subject: "A single red blood cell among many, flexible and doughnut-shaped, slowly turning paler with age",
-    environment: "The inside of human blood vessels and narrow capillaries, warm and softly glowing",
+    concept: "Inside a glowing vessel of the human circulatory system, the camera follows one red cell (erythrocyte) through weeks of journeys until it grows pale and a fresh cell takes its place, showing its roughly 120-day life.",
+    hook: "Red, doughnut-shaped cells tumble straight toward the lens through a glowing vessel.",
+    subject: "A single red cell (erythrocyte) among many, flexible and doughnut-shaped, slowly turning paler with age",
+    environment: "The inside of human circulatory vessels and narrow capillaries, warm and softly glowing",
     action: "The camera tracks the cell as it squeezes through narrow capillaries again and again while the surrounding light cycles between warm and cool to suggest weeks passing, and the cell gradually grows paler and stiffer.",
     payoff: "The old pale cell drifts aside out of the stream while a bright new red cell slides into its place.",
     camera: { angle: "Inside-vessel point of view", movement: "Smooth forward tracking glide", lens: "24 mm macro probe" },
@@ -1054,7 +1054,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.2, end: 4.4, text: "हर red blood cell लगभग 120 दिन जीती है…" },
+        { start: 1.2, end: 4.4, text: "हर रेड ब्लड सेल लगभग 120 दिन जीती है…" },
         { start: 4.8, end: 7.5, text: "फिर नई cell उसकी जगह लेती है!" },
       ],
       music: "flowing, gentle electronic instrumental with soft pulses and warm pads",
@@ -1063,10 +1063,10 @@ const seeds: VideoSeed[] = [
         { at: 2.5, sound: "soft squishing flow" },
         { at: 6.0, sound: "bright gentle chime as the new cell arrives" },
       ],
-      ambience: "muffled rhythmic blood-flow whoosh",
+      ambience: "muffled rhythmic circulation whoosh",
     },
     fact: { statement: "Red blood cells live for about 120 days before they are broken down and replaced.", sourceName: "NIH MedlinePlus — Red blood cell lifespan" },
-    thumbnail: { text: "सिर्फ़ 120 दिन की उम्र!", concept: "Glowing red blood cells flowing through a vessel, one pale old cell beside a bright new one" },
+    thumbnail: { text: "सिर्फ़ 120 दिन की उम्र!", concept: "Glowing red cells flowing through a vessel, one pale old cell beside a bright new one" },
     seo: {
       title: "Red Blood Cell की उम्र कितनी होती है? 🩸",
       altTitles: ["Red Blood Cells Live About 120 Days", "खून की कोशिकाएँ लगभग 4 महीने जीती हैं", "Blood Cells का Life Cycle"],

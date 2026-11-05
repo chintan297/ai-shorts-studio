@@ -157,7 +157,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       tone: "confident and warm",
       lines: [
-        { start: 1.3, end: 3.0, text: "मैं हूँ Valeria…" },
+        { start: 1.3, end: 3.0, text: "ये है मेरा vibe…" },
         { start: 4.4, end: 6.4, text: "Bold, always!" },
       ],
       music: "groovy Afro-house instrumental with warm percussion, a rolling bassline and bright marimba hits",

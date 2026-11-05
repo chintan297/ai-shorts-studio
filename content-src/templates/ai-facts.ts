@@ -51,14 +51,15 @@ export const aiFactsTemplate: ChannelTemplate = {
       },
     ],
   },
+  genre: "fact explainer short",
   imageStyle: "Photorealistic cinematic explainer visual, crisp and vivid, with documentary-quality detail.",
   videoStyle:
     "Cinematic photoreal explainer with one striking visual demonstration of the fact: vivid colors, clean composition, premium documentary feel.",
+  trendLook: "bold explainer look, satisfying macro detail, vivid colors and a clean, high-contrast composition with one clear wow moment",
   consistencyRules:
     "The demonstrated object or scene keeps a consistent shape, scale and color throughout. The visual demonstration is accurate to the fact and never exaggerates it.",
   motionRules: "Motion is clear and easy to follow, one main movement at a time, with realistic physics.",
   imageNegatives: ["fake infographic text", "wrong scale", "misleading exaggeration", "cartoon"],
-  videoNegatives: ["no exaggerated or false depiction of the fact", "no fake charts or numbers on screen"],
   thumbnailPalette: "bright yellow, black and white with one bold red accent",
   thumbnailFont: "heavy impact-style sans-serif in yellow with a thick black outline",
   defaultVoice: "Energetic, friendly Indian female narrator, clear and expressive",

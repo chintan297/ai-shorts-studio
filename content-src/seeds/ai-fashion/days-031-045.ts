@@ -960,7 +960,7 @@ const seeds: VideoSeed[] = [
       tone: "elegant and confident",
       lines: [
         { start: 1.3, end: 3.1, text: "Bow drama…" },
-        { start: 4.5, end: 6.7, text: "Cobalt में Valeria!" },
+        { start: 4.5, end: 6.7, text: "Cobalt में queen vibes!" },
       ],
       music: "sweeping cinematic orchestral-pop instrumental with lush strings, harp glissandos and a soft beat",
       sfx: [

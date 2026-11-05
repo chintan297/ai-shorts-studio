@@ -218,7 +218,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Fictional alien worlds",
     concept: "A fictional frozen world where giant natural ice arches span a valley and geysers erupt beneath green and pink auroras.",
-    hook: "A tall geyser blasts a column of glittering ice crystals up through a colossal blue ice arch.",
+    hook: "A tall geyser sends a column of glittering ice crystals soaring up through a colossal blue ice arch.",
     subject: "A fictional valley of towering translucent blue ice arches, steaming geysers and an aurora-filled sky",
     environment: "A fictional frozen planet at night, with a pale ringed moon and green and pink auroras rippling overhead",
     action: "The camera glides slowly under the arches as geysers erupt one after another, their ice-crystal plumes catching the colored aurora light.",
@@ -812,9 +812,9 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Nebulas",
-    concept: "The two glowing wings of the Butterfly Nebula spread from a dying star hidden in its dusty center.",
+    concept: "The two glowing wings of the Butterfly Nebula spread from a star in its final stage, hidden in the nebula's dusty center.",
     hook: "Two vast translucent wings of glowing gas flare outward on either side of a dark, dusty waist.",
-    subject: "The Butterfly Nebula (NGC 6302): a planetary nebula with two broad, rippled wings of glowing gas and a dark dust band hiding the dying star at its center",
+    subject: "The Butterfly Nebula (NGC 6302): a planetary nebula with two broad, rippled wings of glowing gas and a dark dust band hiding the aging central star",
     environment: "Deep space in the Milky Way, with a dense field of background stars",
     action: "The camera rises slowly from below the dusty waist, sweeping up across the wings as their ripples and streaks of glowing gas reveal fine detail.",
     payoff: "The full butterfly shape holds in frame, both wings glowing symmetrically against the stars.",
@@ -825,7 +825,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.2, end: 4.2, text: "ये पंख… एक मरते तारे की गैस हैं।" },
+        { start: 1.2, end: 4.2, text: "ये पंख… एक बूढ़े तारे की गैस हैं।" },
         { start: 4.5, end: 7.4, text: "नाम मिला — Butterfly Nebula!" },
       ],
       music: "delicate, elegant orchestral score with harp, flute and soft strings",
@@ -1034,7 +1034,7 @@ const seeds: VideoSeed[] = [
     camera: { angle: "Elevated view above the orbital plane", movement: "Slow push-in, then a steady hold as the ripples pass", lens: "35 mm" },
     lighting: "Bent starlight with glowing distortions along the ripple fronts",
     colorGrade: "Deep blue, silver and violet",
-    vfx: "Illustrative spacetime ripples distorting the background stars, with no explosion",
+    vfx: "Illustrative spacetime ripples gently distorting the background stars",
     audio: {
       mode: "voiceover",
       lines: [
@@ -1217,7 +1217,7 @@ const seeds: VideoSeed[] = [
         { at: 3.2, sound: "dry gravel trickle" },
         { at: 6.0, sound: "heavy resonant thud" },
       ],
-      ambience: "dead silence with a faint low hum",
+      ambience: "complete silence with a faint low hum",
     },
     fact: {
       statement: "Mercury has been shrinking as its interior cools, and its crust has buckled into long cliffs called lobate scarps.",

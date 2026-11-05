@@ -320,7 +320,7 @@ const seeds: VideoSeed[] = [
       ],
       music: "fierce orchestral score with racing strings and pounding drums",
       sfx: [
-        { at: 0.3, sound: "howling wind blast" },
+        { at: 0.3, sound: "howling rush of wind" },
         { at: 3.0, sound: "tearing whoosh of passing clouds" },
         { at: 6.2, sound: "deep roaring gust fading away" },
       ],

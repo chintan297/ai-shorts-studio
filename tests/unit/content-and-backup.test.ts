@@ -10,8 +10,9 @@ import { backupSchema, buildBackup } from "@/lib/backup/schema";
 import { allDetailsText } from "@/lib/content/copy-format";
 import { videoPackageSchema, type VideoPackage } from "@/lib/content/schema";
 import { emptyVideoRow } from "@/lib/progress/transitions";
+import { HINDI_VIOLENCE_TERMS, hindiPlain } from "@/lib/quality/score";
 
-const ALL = [futureAi, aiFashion, galaxySpace, kidsLearning, aiFacts, aiAnimals].flat() as VideoPackage[];
+const ALL = [futureAi, aiFashion, galaxySpace, kidsLearning, aiFacts, aiAnimals].flat() as unknown as VideoPackage[];
 
 describe("static content library", () => {
   it("every package validates and passed the quality gate", () => {
@@ -29,7 +30,7 @@ describe("static content library", () => {
   });
 
   it("each channel is a contiguous day 1… sequence with 2 videos per day", () => {
-    for (const list of [futureAi, aiFashion, galaxySpace, kidsLearning, aiFacts, aiAnimals] as VideoPackage[][]) {
+    for (const list of [futureAi, aiFashion, galaxySpace, kidsLearning, aiFacts, aiAnimals] as unknown as VideoPackage[][]) {
       list.forEach((p, i) => {
         expect(p.sequence).toBe(i + 1);
         expect(p.dayNumber).toBe(Math.floor(i / 2) + 1);
@@ -39,7 +40,7 @@ describe("static content library", () => {
   });
 
   it("kids packages are made for kids and have no comment prompts", () => {
-    for (const pkg of kidsLearning as VideoPackage[]) {
+    for (const pkg of kidsLearning as unknown as VideoPackage[]) {
       expect(pkg.madeForKids).toBe(true);
       expect(pkg.seo.pinnedComment).toBeNull();
     }
@@ -47,9 +48,33 @@ describe("static content library", () => {
 
   it("every Flow prompt carries audio instructions with copyright-safe music", () => {
     for (const pkg of ALL) {
-      expect(pkg.flowPrompt.prompt).toMatch(/AUDIO — generate together with the video/);
-      expect(pkg.flowPrompt.prompt).toMatch(/ORIGINAL instrumental/);
-      expect(pkg.flowPrompt.prompt).toMatch(/exactly 8 seconds/);
+      expect(pkg.flowPrompt.prompt).toMatch(/SOUND: /);
+      expect(pkg.flowPrompt.prompt).toMatch(/original instrumental/);
+      expect(pkg.flowPrompt.prompt).toMatch(/8-second vertical \(9:16\)/);
+    }
+  });
+
+  it("prompts never name the realistic fashion models and never list unwanted content", () => {
+    for (const pkg of ALL) {
+      const copied = `${pkg.flowPrompt.prompt}\n${pkg.imagePrompt.prompt}\n${pkg.thumbnail.prompt}`;
+      expect(copied, pkg.id).not.toMatch(/\b(Meher|Valeria|Hana|Elara)\b/);
+      expect(pkg.flowPrompt.prompt, pkg.id).not.toMatch(/\bAVOID\b/);
+    }
+  });
+
+  it("thumbnail prompts render a short Latin-script headline", () => {
+    for (const pkg of ALL) {
+      expect(pkg.thumbnail.textSuggestion, pkg.id).toMatch(/^[A-Za-z0-9][A-Za-z0-9 '’!?&:+,.%#-]*$/);
+      expect(pkg.thumbnail.prompt, pkg.id).toContain(`"${pkg.thumbnail.textSuggestion}"`);
+    }
+  });
+
+  it("the Hindi violence guard flags harsh words but not look-alike words", () => {
+    for (const text of ["एक तारे का धमाका…", "ख़तरनाक रास्ता", "और खून नीला!", "एक मरते तारे की गैस"]) {
+      expect(HINDI_VIOLENCE_TERMS.test(hindiPlain(text)), text).toBe(true);
+    }
+    for (const text of ["लगभग नाखून बढ़ने की रफ़्तार से!", "दुनिया का सबसे लंबा ज़हरीला साँप", "पेड़ की चोटी पर", "Cylinder में मिला सफ़ेद पाउडर!"]) {
+      expect(HINDI_VIOLENCE_TERMS.test(hindiPlain(text)), text).toBe(false);
     }
   });
 });

@@ -89,7 +89,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Nebulas",
-    concept: "The camera drifts into the Helix Nebula, the glowing layers shed by a dying Sun-like star, toward the small white dwarf left at its center.",
+    concept: "The camera drifts into the Helix Nebula, the glowing layers shed by a Sun-like star in its final stage, toward the small white dwarf left at its center.",
     hook: "A vast glowing ring of red and teal gas stares out of the darkness like a giant cosmic eye.",
     subject: "The Helix Nebula: concentric shells of glowing gas, teal inside and red outside, with thousands of comet-like knots and a small white dwarf at the center",
     environment: "Deep space in the constellation Aquarius with sparse background stars",
@@ -735,7 +735,7 @@ const seeds: VideoSeed[] = [
     camera: { angle: "Wide oblique view over the outer solar system", movement: "Slow drifting dolly", lens: "35 mm" },
     lighting: "Very faint distant sunlight and a soft glow on the orbit paths",
     colorGrade: "Cold blue-grey, faint cyan paths and deep black",
-    vfx: "Illustrative glowing orbit paths and a translucent ghost planet that clearly reads as hypothetical",
+    vfx: "Illustrative glowing orbit paths and a translucent, faintly outlined planet that clearly reads as hypothetical",
     audio: {
       mode: "voiceover",
       lines: [
@@ -811,9 +811,9 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Black holes",
-    concept: "A massive blue supergiant runs out of fuel, its core collapses and the star explodes as a supernova, leaving a stellar-mass black hole behind.",
+    concept: "A massive blue supergiant runs out of fuel, its core collapses and the star bursts into a brilliant supernova, leaving a stellar-mass black hole behind.",
     hook: "A swollen blue-white giant star shudders as its glowing surface begins to cave inward.",
-    subject: "A very massive blue supergiant whose core collapses, followed by a supernova blast and a newborn black hole at the center",
+    subject: "A very massive blue supergiant whose core collapses, followed by a supernova bursting into an expanding shell of light and a newborn black hole at the center",
     environment: "A star-forming region of a spiral galaxy with faint pink nebulae in the background",
     action: "The star's surface caves inward, then rebounds in a brilliant expanding supernova shell, and as the glowing debris rushes outward a small dark shadow with a thin ring of bent light remains at the center.",
     payoff: "The expanding glowing shell frames a tiny black hole sitting silently at its center.",
@@ -830,7 +830,7 @@ const seeds: VideoSeed[] = [
       music: "dramatic orchestral score with a tense build, crashing cymbals and deep brass",
       sfx: [
         { at: 0.6, sound: "deep groaning implosion" },
-        { at: 3.0, sound: "massive blast roar" },
+        { at: 3.0, sound: "massive rising roar" },
         { at: 6.2, sound: "eerie stillness with a low hum" },
       ],
       ambience: "rumbling stellar interior fading to stillness",
@@ -1066,7 +1066,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Astronomical phenomena",
     concept: "A coronal mass ejection bursts from the Sun and races outward to Earth, where it can trigger geomagnetic storms and auroras.",
-    hook: "A gigantic loop of glowing plasma on the Sun's edge snaps and blasts a billowing cloud out into space.",
+    hook: "A gigantic loop of glowing plasma on the Sun's edge snaps and launches a billowing cloud out into space.",
     subject: "A coronal mass ejection: a huge expanding cloud of magnetized solar plasma erupting from the Sun",
     environment: "Space beside the Sun's limb, with a tiny Earth far in the distance and distances compressed",
     action: "The camera tracks alongside the expanding plasma cloud as it billows outward carrying twisted magnetic loops and heads toward the tiny distant Earth.",
@@ -1083,7 +1083,7 @@ const seeds: VideoSeed[] = [
       ],
       music: "driving cinematic score with fast strings, pounding drums and a synth pulse",
       sfx: [
-        { at: 0.4, sound: "explosive plasma whoosh" },
+        { at: 0.4, sound: "powerful plasma whoosh" },
         { at: 3.0, sound: "crackling magnetic roar" },
         { at: 6.2, sound: "shimmering auroral hum" },
       ],

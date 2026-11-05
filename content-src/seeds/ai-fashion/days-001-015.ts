@@ -377,7 +377,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       tone: "warm and confident",
       lines: [
-        { start: 1.2, end: 3.0, text: "मिलिए Elara से…" },
+        { start: 1.2, end: 3.0, text: "सबकी नज़रें यहीं…" },
         { start: 4.6, end: 6.6, text: "Emerald glam queen।" },
       ],
       music: "cinematic strings instrumental with a slow pulsing synth bass and a rising cello line",

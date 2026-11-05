@@ -355,7 +355,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Ocean life",
     concept: "A spinner dolphin bursts from a calm sunrise sea off the Andaman Islands, spins several times in mid-air and splashes back down.",
-    hook: "A sleek grey dolphin explodes out of glassy golden water right in front of the lens.",
+    hook: "A sleek grey dolphin bursts out of glassy golden water right in front of the lens.",
     subject: "A slender spinner dolphin with a long thin beak, dark grey back, lighter grey sides and a pale belly",
     environment: "Open Andaman Sea at sunrise: glassy calm water, a distant forested island silhouette and a pink-gold sky",
     action: "The dolphin rockets upward and spins rapidly around its long axis, water spraying off in a spiral, then twists and drops back toward the sea.",
@@ -603,7 +603,7 @@ const seeds: VideoSeed[] = [
       music: "epic, swelling instrumental with deep brass, timpani rolls and soaring strings",
       sfx: [
         { at: 0.4, sound: "rushing water as the whale erupts" },
-        { at: 2.8, sound: "deep exhale blast from the blowhole" },
+        { at: 2.8, sound: "deep whooshing exhale from the blowhole" },
         { at: 5.0, sound: "massive splash impact" },
       ],
       ambience: "open ocean swell and wind",

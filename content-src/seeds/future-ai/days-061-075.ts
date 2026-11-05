@@ -284,7 +284,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Future lifestyle",
-    concept: "Kids wearing light AR glasses chase a glowing treasure hunt across a Mysuru park at golden hour.",
+    concept: "Kids wearing light AR glasses follow a glowing treasure trail across a Mysuru park at golden hour.",
     hook: "A child's hand reaches into empty air and a glowing translucent golden key appears in her palm in a burst of sparkles, her face lighting up in delight.",
     subject: "Three cheerful Indian kids aged about ten wearing slim, colourful AR glasses, chasing a trail of glowing floating clues: golden keys, spinning stars and a shimmering treasure chest",
     environment: "A lush Mysuru park at golden hour with manicured lawns, flowering trees, a fountain, old stone lamp posts and the silhouette of a domed heritage palace in the distance",
@@ -298,7 +298,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       tone: "upbeat and joyful",
       lines: [
-        { start: 1.4, end: 4.8, text: "भविष्य का खेल… AR glasses वाला treasure hunt!" },
+        { start: 1.4, end: 4.8, text: "भविष्य का खेल… AR glasses से खज़ाने की खोज!" },
         { start: 5.4, end: 7.4, text: "Park ही बन गया game!" },
       ],
       music: "bright, bouncy adventure melody with xylophone, light drums and sparkling synth bells",

@@ -399,7 +399,7 @@ const seeds: VideoSeed[] = [
   {
     category: "Amazing facts",
     concept: "Lightning strikes a desert dune at night, and a cross-section of the sand shows the heat fusing the grains into a branching tube of natural glass called a fulgurite.",
-    hook: "A blinding bolt of lightning hits a sand dune right in front of the lens with a violent white flash.",
+    hook: "A blinding bolt of lightning hits a sand dune right in front of the lens with a brilliant white flash.",
     subject: "A branching, hollow tube of rough natural glass (a fulgurite) forming in sand, shown in a clean cross-section of the dune",
     environment: "A desert dune at night under a stormy violet sky, shown with a cutaway view of the sand layers below the surface",
     action: "Where the bolt struck, an orange-hot glow spreads downward through the sand in branching roots; the camera pushes in on the cutaway as the glowing grains fuse and cool into a crusty, glassy tube.",
@@ -598,7 +598,7 @@ const seeds: VideoSeed[] = [
     category: "Interesting comparisons",
     concept: "A drone rises beside a giant coast redwood in a California forest while a to-scale translucent model of Delhi's Qutub Minar stands next to it, reaching just under two-thirds of the tree's height.",
     hook: "The camera starts at the base of an enormous reddish redwood trunk, ferns brushing the lens.",
-    subject: "A towering coast redwood tree and a translucent, to-scale ghost model of the red sandstone Qutub Minar standing beside it",
+    subject: "A towering coast redwood tree and a translucent, to-scale holographic model of the red sandstone Qutub Minar standing beside it",
     environment: "A misty old-growth redwood forest in northern California in the morning: ferns, soft shafts of sunlight and other tall redwoods",
     action: "The drone rises smoothly up the trunk; the translucent minaret's top passes by while the redwood keeps climbing much higher into the misty canopy.",
     payoff: "At the treetop, the camera pulls back to show the full tree towering over the minaret model, holding steady.",
@@ -873,9 +873,9 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Historical discoveries",
-    concept: "Hand-carved wooden pieces of the ancient Indian game chaturanga (elephants, horses, chariots and foot soldiers) stand on a cloth board in a palace courtyard as one piece is moved.",
+    concept: "Hand-carved wooden pieces of the ancient Indian game chaturanga (elephants, horses, chariots and pawns) stand on a cloth board in a palace courtyard as one piece is moved.",
     hook: "A carved wooden elephant piece is placed on a cloth game board with a soft wooden knock.",
-    subject: "A set of hand-carved wooden chaturanga pieces (a king, a counsellor, elephants, horses, chariots and foot soldiers) on an eight-by-eight checkered cloth board",
+    subject: "A set of hand-carved wooden chaturanga pieces (a king, a counsellor, elephants, horses, chariots and pawns) on an eight-by-eight checkered cloth board",
     environment: "A sandstone palace courtyard in ancient India at dusk, with oil lamps, carved pillars and silk cushions",
     action: "An anonymous hand slides a carved horse piece forward in an L-shaped move; the camera lowers to board level and glides along the rows of pieces facing each other.",
     payoff: "The camera rises above the board to show the full set in formation, lit by flickering oil lamps, holding steady.",
@@ -1149,7 +1149,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Animal facts",
-    concept: "A king cobra glides across the leaf-covered floor of a Western Ghats rainforest, its long body stretching along a fallen log to show it is the world's longest venomous snake.",
+    concept: "A king cobra glides across the leaf-covered floor of a Western Ghats rainforest, its long body stretching along a fallen log to show just how long this record-holding snake can grow.",
     hook: "A king cobra raises its head and spreads its narrow hood at eye level, tongue flicking.",
     subject: "A large adult olive-brown king cobra with pale crossbands, long and sleek",
     environment: "A humid Western Ghats rainforest near Agumbe, Karnataka, after rain: wet leaf litter, moss-covered roots, ferns and dripping leaves",

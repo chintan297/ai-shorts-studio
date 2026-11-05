@@ -8,12 +8,17 @@ import {
   type VideoSeed,
 } from "./schema";
 
-export const TEMPLATE_VERSION = "v1";
+export const TEMPLATE_VERSION = "v2";
 export const GENERATION_PLATFORM = "Google Flow (Veo 3.1 — video + native audio)";
 
 export interface CastMember {
   name: string;
   description: string;
+  /**
+   * How prompts refer to this character instead of the name (e.g. "the Indian model"). Image/video filters
+   * treat full names as possible real people, so realistic characters are never named inside prompts.
+   */
+  promptLabel?: string;
 }
 
 /** Everything a channel needs to turn seeds into complete, copy-ready packages. */
@@ -23,12 +28,15 @@ export interface ChannelTemplate {
   cast?: Record<string, CastMember>;
   /** Permanent identity text injected into every image + Flow prompt (fashion model). */
   permanentIdentity?: string;
+  /** What the clip is, for the opening line of the Flow prompt (e.g. "fashion reel"). */
+  genre: string;
   imageStyle: string;
   videoStyle: string;
+  /** Current Shorts look for this niche (grade, texture, energy). Positive wording only. */
+  trendLook: string;
   consistencyRules: string;
   motionRules: string;
   imageNegatives: string[];
-  videoNegatives: string[];
   thumbnailPalette: string;
   thumbnailFont: string;
   defaultVoice: string;
@@ -71,22 +79,6 @@ const SHARED_IMAGE_NEGATIVES = [
   "cropped subject",
 ];
 
-const SHARED_VIDEO_NEGATIVES = [
-  "no on-screen text, subtitles, captions or watermarks",
-  "no logos or brand names",
-  "no scene cuts, transitions or sudden scene changes",
-  "no flicker or frame-to-frame texture boiling",
-  "no camera shake or jitter",
-  "no morphing or melting shapes",
-  "no extra fingers, extra hands or extra limbs",
-  "no distorted anatomy",
-  "no face or identity changes between frames",
-  "no floating or disconnected objects",
-  "no broken physics",
-  "no unnatural or frozen expressions",
-  "no copyrighted or recognizable music, no song lyrics",
-];
-
 export const AUDIO_LICENSE_NOTE =
   "This app cannot verify the license of AI-generated audio. Before publishing, check the Google generative-AI terms that apply to your account. If you are unsure, mute the generated music and add a track from YouTube Studio's Audio Library instead. Never add commercial songs.";
 
@@ -99,27 +91,48 @@ function imageNegatives(tpl: ChannelTemplate, extra: string[] = []): string {
   return [...shared, ...extra, ...tpl.imageNegatives].join(", ");
 }
 
-function videoNegatives(tpl: ChannelTemplate): string {
-  const shared = tpl.learningSymbolsAllowed
-    ? [
-        "no subtitles, captions or watermarks; no text except the single learning letter, number or shape named in this prompt, drawn correctly",
-        ...SHARED_VIDEO_NEGATIVES.slice(1),
-      ]
-    : SHARED_VIDEO_NEGATIVES;
-  return [...shared, ...tpl.videoNegatives].join("; ");
-}
-
 const fmt = (n: number) => (Number.isInteger(n) ? `${n.toFixed(1)}` : `${n}`);
 
+function castMembers(tpl: ChannelTemplate, seed: VideoSeed): CastMember[] {
+  if (!seed.characters?.length || !tpl.cast) return [];
+  return seed.characters.map((key) => {
+    const member = tpl.cast?.[key];
+    if (!member) throw new Error(`Unknown character "${key}" for ${tpl.channel.id}`);
+    return member;
+  });
+}
+
+/** Human-readable cast text (storyboard / UI): uses the characters' names. */
 function castText(tpl: ChannelTemplate, seed: VideoSeed): string | null {
-  if (!seed.characters?.length || !tpl.cast) return null;
-  return seed.characters
-    .map((key) => {
-      const member = tpl.cast?.[key];
-      if (!member) throw new Error(`Unknown character "${key}" for ${tpl.channel.id}`);
-      return `${member.name}: ${member.description}`;
-    })
+  const members = castMembers(tpl, seed);
+  return members.length ? members.map((m) => `${m.name}: ${m.description}`).join(" ") : null;
+}
+
+const capitalize = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
+const escapeRe = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/** Cast text for prompts: realistic characters are described, never named. */
+function castPromptText(tpl: ChannelTemplate, seed: VideoSeed): string | null {
+  const members = castMembers(tpl, seed);
+  if (!members.length) return null;
+  return members
+    .map((m) => (m.promptLabel ? `${capitalize(m.promptLabel)} is ${m.description}` : `${m.name}: ${m.description}`))
     .join(" ");
+}
+
+/** Replaces names of characters that have a promptLabel ("Meher's" → "the Indian model's"). */
+export function depersonalize(tpl: ChannelTemplate, text: string): string {
+  let out = text;
+  for (const m of Object.values(tpl.cast ?? {})) {
+    if (!m.promptLabel) continue;
+    const first = m.name.split(" ")[0] ?? m.name;
+    const re = new RegExp(`\\b(?:${escapeRe(m.name)}|${escapeRe(first)})\\b`, "g");
+    out = out.replace(re, (_match, offset: number, whole: string) => {
+      const sentenceStart = /(^|[.!?•\n]\s*)$/.test(whole.slice(0, offset));
+      return sentenceStart ? capitalize(m.promptLabel!) : m.promptLabel!;
+    });
+  }
+  return out;
 }
 
 /** Character / subject appearance text shared by storyboard, image and Flow prompts. */
@@ -160,28 +173,30 @@ function storyboard(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["storyb
 }
 
 function imagePrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["imagePrompt"] {
+  const p = (t: string) => depersonalize(tpl, t);
   const lines = [
     `${tpl.imageStyle} Vertical 9:16 portrait image, 1080×1920.`,
-    `This image is the FIRST FRAME of an 8-second video: ${seed.hook}`,
-    `MAIN SUBJECT: ${seed.subject}.`,
+    `This image is the FIRST FRAME of an 8-second video: ${p(seed.hook)}`,
+    `MAIN SUBJECT: ${p(seed.subject)}.`,
   ];
-  const identity = [tpl.permanentIdentity, castText(tpl, seed)].filter(Boolean).join(" ");
+  const identity = [tpl.permanentIdentity, castPromptText(tpl, seed)].filter(Boolean).join(" ");
   if (identity) lines.push(`CHARACTER (keep identical in every image): ${identity}`);
   if (seed.look) {
     lines.push(
-      `OUTFIT: ${seed.look.outfit}.`,
-      `ACCESSORIES: ${seed.look.accessories}.`,
-      `HAIR: ${seed.look.hairStyling}.`,
-      `POSE: ${seed.look.pose}.`,
-      `EXPRESSION: ${seed.look.expression}.`,
+      `OUTFIT: ${p(seed.look.outfit)}.`,
+      `ACCESSORIES: ${p(seed.look.accessories)}.`,
+      `HAIR: ${p(seed.look.hairStyling)}.`,
+      `POSE: ${p(seed.look.pose)}.`,
+      `EXPRESSION: ${p(seed.look.expression)}.`,
     );
   }
   lines.push(
-    `ENVIRONMENT & BACKGROUND: ${seed.environment}.`,
+    `ENVIRONMENT & BACKGROUND: ${p(seed.environment)}.`,
     `CAMERA: ${seed.camera.angle}, ${seed.camera.lens} lens.`,
     `LIGHTING: ${seed.lighting}.`,
     `COLOR GRADE: ${seed.colorGrade}.`,
-    "COMPOSITION: main subject in the central vertical band, clean negative space at the top and bottom 12% for YouTube Shorts UI, clear subject separation from the background.",
+    `LOOK: ${tpl.trendLook}.`,
+    "COMPOSITION: main subject in the central vertical band, clean space at the top and bottom 12% for the YouTube Shorts interface, clear subject separation from the background.",
     "QUALITY: ultra-detailed, sharp focus on the subject, natural textures, high dynamic range, professional color accuracy.",
     `CONSISTENCY: ${tpl.consistencyRules}`,
   );
@@ -191,158 +206,146 @@ function imagePrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["image
   };
 }
 
-function audioBlock(tpl: ChannelTemplate, seed: VideoSeed): string {
+const lowerFirst = (t: string) => t.charAt(0).toLowerCase() + t.slice(1);
+const withArticle = (t: string) => `${/^[aeiou]/i.test(t) ? "an" : "a"} ${t}`;
+
+/** One sentence-style sound direction (Veo generates the audio together with the video). */
+function soundDirection(tpl: ChannelTemplate, seed: VideoSeed): string {
+  const p = (t: string) => depersonalize(tpl, t);
   const { audio } = seed;
-  const voice = audio.voice ?? tpl.defaultVoice;
-  const tone = audio.tone ?? tpl.defaultTone;
-  const out: string[] = ["AUDIO — generate together with the video, fully synchronized:"];
-
-  if (audio.mode === "music-only" || audio.lines.length === 0) {
-    out.push("• Voice: none — no voice-over and no dialogue in this clip.");
-  } else {
-    out.push(
-      `• Voice: ${voice}. Language: Hindi (natural Hinglish, Indian accent). Tone: ${tone}. Pace: unhurried, about 2 words per second, crisp and clear pronunciation. The voice is the loudest audio layer.`,
+  const parts: string[] = [];
+  const spoken = audio.mode === "music-only" ? [] : audio.lines;
+  if (spoken.length && audio.mode === "voiceover") {
+    const voice = lowerFirst(audio.voice ?? tpl.defaultVoice);
+    const tone = audio.tone ?? tpl.defaultTone;
+    parts.push(
+      `Off-screen voice-over by ${withArticle(voice)}, speaking Hindi in ${withArticle(tone)} tone: ${spoken
+        .map((l) => `at ${fmt(l.start)}s "${l.text}"`)
+        .join(", then ")}.`,
     );
-    if (audio.mode === "voiceover") {
-      out.push("• Voice-over (off-screen narrator — nobody on screen speaks, no lip movement):");
-    } else {
-      out.push("• Dialogue (spoken on screen — lip movement must match the words exactly):");
-    }
-    for (const line of audio.lines) {
-      const who = line.speaker ? `${line.speaker}: ` : "";
-      out.push(`   – ${fmt(line.start)}–${fmt(line.end)} s — ${who}"${line.text}"`);
-    }
+  } else if (spoken.length) {
+    const voice = p(audio.voice ?? tpl.defaultVoice);
+    parts.push(
+      `Spoken dialogue in Hindi with matching lip movement (${voice}; ${audio.tone ?? tpl.defaultTone}): ${spoken
+        .map((l) => `${p(l.speaker ?? "the character")} at ${fmt(l.start)}s: "${l.text}"`)
+        .join("; ")}.`,
+    );
+  } else {
+    parts.push("No voice: music and natural sound only.");
   }
-
-  const musicMix =
-    audio.mode === "music-only" || audio.lines.length === 0
-      ? "Music is the lead layer at a moderate, pleasant volume."
-      : "Mix the music about 25% quieter than the voice (roughly −18 dB under it) so every word stays clear.";
-  out.push(
-    `• Background music: ORIGINAL instrumental score — ${audio.music}. No vocals, no lyrics, no humming; it must not imitate or resemble any existing song, artist or commercial melody. ${musicMix} Gentle swell on the payoff around 6 s, then a natural fade-out from 7.0 s to 8.0 s.`,
-    "• Sound effects (original, synchronized with the visuals):",
-    ...audio.sfx.map((cue) => `   – ${fmt(cue.at)} s — ${cue.sound}`),
-    `• Ambience: ${audio.ambience}; subtle and continuous under everything.`,
-    "• Ending: all audio layers resolve and fade to silence by 8.0 s — no abrupt cut.",
+  parts.push(
+    `Music: original instrumental, ${audio.music}, no vocals, with a gentle lift at the 6-second reveal and a soft fade-out by 8 seconds.`,
+    `Sound effects: ${audio.sfx.map((c) => `${c.sound} (${fmt(c.at)}s)`).join(", ")}.`,
+    `Ambience: ${audio.ambience}.`,
   );
-  return out.join("\n");
+  return parts.join(" ");
 }
+
+/** Payoffs that already end on a held frame ("…, holding steady.") skip the closing hold sentence. */
+const HELD_FRAME =
+  /\b(?:frame|shot|camera|scene|image|view|moment)s? (?:then )?(?:holds?|rests?|settles?)\b|\bhold(?:s|ing)? (?:steady|still)\b|\b(?:and|then) holds?\b(?! (?:a|an|the|its|his|her|their|up|out|half|on to|onto)\b)/i;
 
 /**
- * Compact version of the Flow prompt (~700–1,000 chars): fewer descriptors means fewer things for a content
- * filter to object to. Character consistency then comes from using the generated image as the start frame.
+ * The single Google Flow (Veo 3.1) prompt. Built the way Google recommends for Veo: scene, subject, action
+ * beats, camera, look and sound, in positive wording only. It never lists unwanted things (filters read the
+ * whole prompt) and never names a realistic person.
  */
-function liteFlowPrompt(tpl: ChannelTemplate, seed: VideoSeed): string {
-  const { audio } = seed;
-  const lines = [
-    `Vertical 9:16 video, 8 seconds, one continuous shot. ${seed.concept}`,
-    `Look: ${tpl.videoStyle.split(":")[0]}.`,
-    seed.look ? `Outfit: ${seed.look.outfit}. Accessories: ${seed.look.accessories}. Hair: ${seed.look.hairStyling}.` : `Subject: ${seed.subject}.`,
-    `Setting: ${seed.environment}.`,
-    `Start: ${seed.hook}`,
-    `Middle: ${seed.action}`,
-    `End: ${seed.payoff}`,
-    `Camera: ${seed.camera.angle}; ${seed.camera.movement}; ${seed.camera.lens}. Lighting: ${seed.lighting}.`,
-  ];
-  const spoken = audio.mode === "music-only" ? [] : audio.lines;
-  const sound: string[] = [];
-  if (spoken.length) {
-    const who = audio.mode === "dialogue" ? "On-screen speech in Hindi" : "Off-screen narrator speaking Hindi";
-    sound.push(`${who}: ${spoken.map((l) => `“${l.text}”`).join(" then ")}`);
-  }
-  sound.push(`original instrumental music (${audio.music}, no vocals)`);
-  sound.push(audio.sfx.map((c) => c.sound).join(", "));
-  sound.push(audio.ambience);
-  lines.push(`Audio: ${sound.join("; ")}.`);
-  lines.push("Smooth stabilized motion, natural physics, consistent look throughout, no text or logos on screen.");
-  return lines.join("\n");
-}
-
 function flowPrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["flowPrompt"] {
-  const appearance = characterAppearance(tpl, seed);
+  const p = (t: string) => depersonalize(tpl, t);
+  const who = castPromptText(tpl, seed);
+  const duo = (seed.characters?.length ?? 0) > 1;
+  const plural = (t: string) => (duo ? t.replace(/^She stays/, "Both models stay").replace(/^The model keeps/, "Each model keeps") : t);
+  const lens = /\blens\b|framing/i.test(seed.camera.lens) ? seed.camera.lens : `${seed.camera.lens} lens`;
   const lines = [
-    "GOOGLE FLOW (Veo 3.1) — VIDEO + AUDIO PROMPT",
-    "Duration: exactly 8 seconds · Aspect ratio: 9:16 vertical (1080×1920) · One continuous shot, no cuts.",
-    "Start frame: use the image generated from this video's Image Prompt (Frames to Video).",
+    `A scroll-stopping 8-second vertical (9:16) ${tpl.genre}, filmed as one smooth continuous take. ${p(seed.concept)}`,
     "",
-    `CONCEPT: ${seed.concept}`,
-    `STYLE: ${tpl.videoStyle}`,
-    `MAIN SUBJECT: ${seed.subject}.`,
-    `APPEARANCE: ${appearance}`,
+    `SCENE: ${p(seed.environment)}.`,
+    who ? `CHARACTER: ${who}` : `SUBJECT: ${p(seed.subject)}.`,
   ];
   if (seed.look) {
     lines.push(
-      `POSE & BODY MOVEMENT: starts in this pose — ${seed.look.pose}. ${tpl.motionRules}`,
-      `FACIAL EXPRESSION: ${seed.look.expression}.`,
+      `STYLING: Outfit: ${p(seed.look.outfit)}. Accessories: ${p(seed.look.accessories)}. Hair: ${p(seed.look.hairStyling)}. Starting pose: ${p(seed.look.pose)}. Expression: ${p(seed.look.expression)}.`,
     );
   }
   lines.push(
-    `ENVIRONMENT & BACKGROUND: ${seed.environment}.`,
     "",
-    "TIMELINE (8.0 s total):",
-    `• 0.0–2.0 s — HOOK: ${seed.hook}`,
-    `• 2.0–6.0 s — MAIN ACTION: ${seed.action}`,
-    `• 6.0–8.0 s — PAYOFF & ENDING FRAME: ${seed.payoff} Hold the final composition steady for the last half second.`,
+    "ACTION:",
+    `0–2s: ${p(seed.hook)}`,
+    `2–6s: ${p(seed.action)}`,
+    `6–8s: ${p(seed.payoff)}${HELD_FRAME.test(seed.payoff) ? "" : " The final frame holds steady."}`,
+    `Movement: ${plural(tpl.motionRules)}`,
     "",
-    `CAMERA: ${seed.camera.angle}. Movement: ${seed.camera.movement}. Lens: ${seed.camera.lens}. Smooth, stabilized, cinematic motion; no shake, no sudden zooms.`,
-    `LIGHTING & COLOR: ${seed.lighting}. Color grade: ${seed.colorGrade}.`,
-  );
-  if (seed.vfx) lines.push(`VISUAL EFFECTS: ${seed.vfx}.`);
-  lines.push(
-    `MOTION & PHYSICS: realistic physics and natural motion speed (not sped-up, not slow-motion unless stated). ${seed.look ? "" : tpl.motionRules}`.trim(),
-    `CONSISTENCY: ${tpl.consistencyRules}`,
+    `CAMERA: ${seed.camera.angle}; ${lowerFirst(seed.camera.movement)}; ${lens}; smooth and stabilized.`,
+    `LOOK: ${tpl.videoStyle.split(":")[0]}. ${capitalize(tpl.trendLook)}. Lighting: ${lowerFirst(seed.lighting)}. Color grade: ${lowerFirst(seed.colorGrade)}.${seed.vfx ? ` Effects: ${lowerFirst(p(seed.vfx))}.` : ""}`,
     "",
-    audioBlock(tpl, seed),
+    `SOUND: ${soundDirection(tpl, seed)}`,
     "",
-    `AVOID: ${videoNegatives(tpl)}.`,
+    `KEEP CONSISTENT: ${plural(tpl.consistencyRules)} Clean frame without captions, subtitles or logos.`,
   );
 
   const notes = [
-    "In Flow, pick a Veo 3.x model that generates audio and set the aspect ratio to 9:16 before generating.",
-    "Flow generates about 8 seconds per clip, and this package is timed for exactly 8 seconds. Use Extend only if you deliberately want a 10-second version.",
-    "Best consistency: generate the image first, then use Frames to Video with that image as the start frame.",
+    "Flow settings: choose Veo 3.1, aspect ratio Portrait (9:16). Each clip is 8 seconds.",
+    who
+      ? "Same face every time: use Frames to Video (or Ingredients to Video) with the image you made from the Image Prompt."
+      : "Best quality: use Frames to Video with the image you made from the Image Prompt as the first frame.",
   ];
   if (seed.audio.mode === "voiceover") {
-    notes.push(
-      "Hindi speech quality is not guaranteed by Veo. The voice is kept off-screen so there's no lip-sync to break. If pronunciation is poor, regenerate or record the line yourself.",
-    );
+    notes.push("Hindi voice: if the pronunciation isn't clear, generate again, or record the line yourself and add it in YouTube.");
   }
   if (seed.audio.mode === "dialogue") {
-    notes.push(
-      "On-screen dialogue lip-sync can drift, especially in Hindi. Check the mouth movement closely and regenerate if it doesn't match.",
-    );
+    notes.push("Check that the lip movement matches the Hindi words; generate again if it drifts.");
   }
   notes.push(
-    "If your Flow mode outputs silent video, don't add commercial music. Use an original track from YouTube Studio's Audio Library.",
+    "If Flow says “might violate our policies”: wait 5–10 minutes and try the same prompt once more (busy servers fail too). If it fails again, report the video number.",
+    "Silent result? Add a track from YouTube Studio's Audio Library, never a commercial song.",
   );
-  return { prompt: lines.join("\n"), lite: liteFlowPrompt(tpl, seed), notes };
+  return { prompt: lines.join("\n"), notes };
+}
+
+const EMOJI = /\p{Extended_Pictographic}|\uFE0F|\u200D/gu;
+
+/** Text rendered inside the thumbnail: the seed's Latin-script overlay, or its emoji-free thumbnail text. */
+export function thumbnailHeadline(seed: VideoSeed): string {
+  return (seed.thumbnail.overlay ?? seed.thumbnail.text).replace(EMOJI, "").replace(/\s+/g, " ").trim();
 }
 
 function thumbnail(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["thumbnail"] {
-  const identity = [tpl.permanentIdentity, castText(tpl, seed)].filter(Boolean).join(" ");
-  const textPlacement = "Upper third, centered, inside the Shorts safe area (away from the bottom UI)";
+  const p = (t: string) => depersonalize(tpl, t);
+  const who = castPromptText(tpl, seed);
+  const headline = thumbnailHeadline(seed);
+  const textPlacement = "Upper third, centered, inside the Shorts safe area (away from the bottom buttons)";
   const prompt = [
-    "Eye-catching YouTube Shorts cover frame, vertical 9:16 (1080×1920), designed to stop the scroll.",
-    `THUMBNAIL CONCEPT: ${seed.thumbnail.concept}`,
-    `SUBJECT: ${seed.subject}${seed.look ? `, expression: ${seed.look.expression}` : ""}.`,
-    identity ? `CHARACTER (identical to the video): ${identity}` : "",
-    `BACKGROUND: ${seed.environment}, simplified and softly blurred for depth.`,
-    "COMPOSITION: subject large and close, filling the middle and lower two-thirds; leave clean, uncluttered space in the upper third for the title text.",
-    `LIGHTING: ${seed.lighting}, with extra rim light to separate the subject from the background.`,
-    `COLORS: ${tpl.thumbnailPalette}; strong visual contrast between subject, background and text area.`,
-    `TEXT: do NOT render text in the image. Add "${seed.thumbnail.text}" afterwards in an editor (Canva / YouTube editor) — ${tpl.thumbnailFont}; placement: ${textPlacement}.`,
-    "QUALITY: crisp, high detail, professional finish.",
+    `Scroll-stopping YouTube Shorts cover image, vertical 9:16 (1080×1920). ${p(seed.thumbnail.concept)}.`,
+    who ? `CHARACTER (same as in the video): ${who}` : `SUBJECT: ${p(seed.subject)}.`,
+    seed.look ? `STYLING: Outfit: ${p(seed.look.outfit)}. Accessories: ${p(seed.look.accessories)}. Expression: ${p(seed.look.expression)}.` : "",
+    `BACKGROUND: ${p(seed.environment)}, simplified and softly blurred for depth.`,
+    `HEADLINE TEXT: the words "${headline}" written in ${tpl.thumbnailFont}, large and centered in the upper third, spelled exactly as written, crisp and easy to read on a phone. This headline is the only text in the image.`,
+    "COMPOSITION: subject big and close in the middle and lower two-thirds, clean uncluttered space behind the headline, strong contrast between subject, background and text.",
+    `LIGHTING & COLORS: ${seed.lighting}, with a rim light that separates the subject from the background; palette: ${tpl.thumbnailPalette}.`,
+    `LOOK: ${capitalize(tpl.trendLook)}. Sharp, high detail, polished professional finish.`,
   ]
     .filter(Boolean)
     .join("\n");
   return {
     prompt,
-    negativePrompt: imageNegatives(tpl, ["clutter", "busy background"]),
+    negativePrompt: [
+      "blurry",
+      "low resolution",
+      "misspelled words",
+      "extra words",
+      "distorted letters",
+      "watermark",
+      "logo",
+      "extra fingers",
+      "distorted face",
+      "cluttered background",
+      ...tpl.imageNegatives,
+    ].join(", "),
     concept: seed.thumbnail.concept,
-    textSuggestion: seed.thumbnail.text,
+    textSuggestion: headline,
     fontStyle: tpl.thumbnailFont,
     textPlacement,
-    firstFrameHook: `The first 0.5 s must already show the hook, with no fade-in from black: ${seed.hook}`,
+    firstFrameHook: `The first 0.5 s already shows the hook, starting on a strong frame: ${seed.hook}`,
   };
 }
 

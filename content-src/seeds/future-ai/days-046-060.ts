@@ -171,7 +171,7 @@ const seeds: VideoSeed[] = [
     hook: "Top-down shot of a sand-coloured yoga mat on the beach as rings of soft cyan light ripple outward from beneath two bare feet, timed like a slow breath.",
     subject: "A thin, sand-beige smart yoga mat with embedded light threads, and a woman in her thirties in a simple teal cotton yoga outfit practising calmly",
     environment: "Chennai's wide beach at sunrise, with wet sand reflecting a peach sky, gentle Bay of Bengal waves and a few distant fishing boats on the horizon",
-    action: "As she rises into a warrior pose, glowing guide lines under her hands and feet shift from amber to calm green, and a slow wave of light travels along the mat with each breath.",
+    action: "As she rises into a graceful high lunge, glowing guide lines under her hands and feet shift from amber to calm green, and a slow wave of light travels along the mat with each breath.",
     payoff: "She settles into a balanced tree pose, the whole mat glowing a steady green, silhouetted against the golden sun lifting over the sea.",
     camera: { angle: "Top-down overhead start, ending at a low side angle", movement: "Smooth crane-down and arc from overhead to a low side silhouette", lens: "35 mm" },
     lighting: "Soft peach sunrise backlight with a gentle cyan-to-green glow from the mat",

@@ -582,9 +582,9 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Western fashion",
-    concept: "Hana Mori in an olive cargo co-ord with a crop top, cargo midi skirt and combat boots inside an industrial warehouse with tall steel windows.",
-    hook: "Close-up of chunky black combat boots on a dusty concrete floor as a shaft of sunlight cuts through the warehouse haze.",
-    subject: "Hana Mori in an olive utility crop top and cargo midi skirt with combat boots",
+    concept: "Hana Mori in an olive cargo co-ord with a crop top, cargo midi skirt and chunky lace-up boots inside an industrial warehouse with tall steel windows.",
+    hook: "Close-up of chunky black lace-up boots on a dusty concrete floor as a shaft of sunlight cuts through the warehouse haze.",
+    subject: "Hana Mori in an olive utility crop top and cargo midi skirt with chunky lace-up boots",
     environment: "Industrial warehouse with tall grid steel windows, exposed brick, steel beams, light dust in sunbeams and a vintage freight trolley",
     action: "The camera cranes up from the boots to a full-length shot as she stands in a sunbeam, slips one hand into a cargo pocket and turns her head toward the lens.",
     payoff: "She gives a cool, unbothered half-smile, the steel-window light pattern falling across the concrete behind her.",
@@ -594,7 +594,7 @@ const seeds: VideoSeed[] = [
     characters: ["hana"],
     look: {
       outfit: "Olive utility co-ord: a fitted cropped utility top with snap pockets and a matching cargo midi skirt with a side slit",
-      accessories: "Black lace-up combat boots, a black webbing belt with a silver buckle, silver hoop earrings, a mini crossbody bag",
+      accessories: "Chunky black lace-up utility boots, a black webbing belt with a silver buckle, silver hoop earrings, a mini crossbody bag",
       hairStyling: "High sleek ponytail with her curtain bangs framing her face",
       pose: "Standing full length in the sunbeam, one hand in a cargo pocket",
       expression: "Cool, unbothered half-smile",
@@ -614,7 +614,7 @@ const seeds: VideoSeed[] = [
       ],
       ambience: "hollow warehouse air with faint pigeons",
     },
-    thumbnail: { text: "Utility Glam 🖤", concept: "Hana in the olive cargo co-ord and combat boots standing in a warehouse sunbeam" },
+    thumbnail: { text: "Utility Glam 🖤", concept: "Hana in the olive cargo co-ord and chunky lace-up boots standing in a warehouse sunbeam" },
     seo: {
       title: "Olive Cargo Co-ord + Combat Boots — Warehouse Look 🪖",
       altTitles: ["Utility Cargo Skirt Outfit for Street Style", "ऑलिव कार्गो को-ऑर्ड वाला स्ट्रीट स्टाइल", "Cargo Skirt Ko Glam Banane Ka Tarika"],

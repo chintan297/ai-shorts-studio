@@ -429,10 +429,10 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Universe facts",
-    concept: "A dying star sheds glowing shells of gas rich in carbon, oxygen and iron, the same elements that end up in planets and in our bodies.",
+    concept: "An aging star in its final stage sheds glowing shells of gas rich in carbon, oxygen and iron, the same elements that end up in planets and in our bodies.",
     hook: "A swollen red star sheds a glowing shell of gas that billows outward like a smoke ring.",
-    subject: "Glowing gas and sparkling dust rich in carbon, oxygen and iron streaming away from a dying red star",
-    environment: "Interstellar space with a dying red star on one side and a dusty planet-forming disk around a young star in the distance",
+    subject: "Glowing gas and sparkling dust rich in carbon, oxygen and iron streaming away from an aging red giant star",
+    environment: "Interstellar space with an aging red giant star on one side and a dusty planet-forming disk around a young star in the distance",
     action: "The camera drifts with the expanding glowing shells as sparkling motes of dust in amber, blue and silver stream away from the star toward the distant young solar system.",
     payoff: "The sparkling dust settles into the young disk around the new star, where tiny planets are taking shape.",
     camera: { angle: "Side view riding along with the dust", movement: "Smooth continuous tracking drift", lens: "28 mm" },
@@ -457,7 +457,7 @@ const seeds: VideoSeed[] = [
       statement: "Elements such as the carbon, oxygen and iron in our bodies were made inside stars and spread through space when those stars died.",
       sourceName: "NASA Science — Stars",
     },
-    thumbnail: { text: "हम तारों से बने ✨", concept: "Sparkling dust streaming from a dying red star toward a young planet-forming disk" },
+    thumbnail: { text: "हम तारों से बने ✨", concept: "Sparkling dust streaming from an aging red giant star toward a young planet-forming disk" },
     seo: {
       title: "हम सब तारों की धूल से बने हैं ✨",
       altTitles: ["We Are Made of Star Stuff", "आपके शरीर के तत्व तारों में बने", "Carbon, Oxygen और Iron कहाँ से आए?"],
@@ -687,7 +687,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Fictional alien worlds",
-    concept: "A fictional lava world where rivers of molten rock pour past towering cliffs of black volcanic glass under a blood-red sky.",
+    concept: "A fictional lava world where rivers of molten rock pour past towering cliffs of black volcanic glass under a deep crimson sky.",
     hook: "A glowing river of molten rock spills over a ledge of shiny black glass in a slow, heavy cascade.",
     subject: "A fictional lava planet: rivers and falls of bright orange molten rock flowing between cliffs of glossy black volcanic glass",
     environment: "A fictional volcanic landscape under a deep red sky with drifting ash and a dim, swollen orange sun on the horizon",
@@ -695,7 +695,7 @@ const seeds: VideoSeed[] = [
     payoff: "The canyon opens onto a vast glowing lava lake beneath the red sky and the huge dim sun.",
     camera: { angle: "Low flying view inside the canyon", movement: "Smooth forward glide, then a gentle rise", lens: "24 mm" },
     lighting: "Intense orange underglow from the lava, dim red sky light and glossy reflections on the glass cliffs",
-    colorGrade: "Molten orange, obsidian black and blood red",
+    colorGrade: "Molten orange, obsidian black and deep crimson",
     vfx: "Thick, slow lava flow, rising embers and heat haze",
     isFictional: true,
     audio: {
@@ -869,13 +869,13 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.2, end: 3.9, text: "एक तारे का धमाका…" },
+        { start: 1.2, end: 3.9, text: "एक तारे का आख़िरी उजाला…" },
         { start: 4.2, end: 7.4, text: "कुछ समय के लिए पूरी galaxy से ज़्यादा चमक!" },
       ],
-      music: "explosive orchestral crescendo with booming timpani and blazing brass",
+      music: "soaring orchestral crescendo with booming timpani and blazing brass",
       sfx: [
         { at: 0.5, sound: "soft cosmic hum" },
-        { at: 2.5, sound: "sudden deep blast swelling" },
+        { at: 2.5, sound: "sudden deep surge swelling" },
         { at: 6.0, sound: "ringing high shimmer" },
       ],
       ambience: "low cosmic hum",
@@ -1135,7 +1135,7 @@ const seeds: VideoSeed[] = [
         { at: 3.5, sound: "sudden icy wind-like tone" },
         { at: 6.0, sound: "deep resonant chord" },
       ],
-      ambience: "dead-silent, airless stillness",
+      ambience: "perfectly silent, airless stillness",
     },
     fact: {
       statement: "Mercury's surface temperature swings from about 430 °C during the day to about −180 °C at night, because it has almost no atmosphere to hold heat.",

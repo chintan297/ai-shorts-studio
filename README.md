@@ -99,6 +99,20 @@ Static content (content-src seeds + templates → data/*.json at build time)
 - Pairing tables aren't accessible to clients at all, and the service-role key exists only inside the Edge Function.
 - Removing a device revokes its membership. RLS then denies it immediately, and the device wipes its local copy.
 
+## How the prompts are written
+
+- **One Google Flow prompt per video** (Veo 3.1), built the way Google recommends: an opening line, SCENE, CHARACTER,
+  ACTION in three beats (0–2s hook, 2–6s action, 6–8s payoff), CAMERA, LOOK (current trending style for the niche),
+  SOUND (Hindi voice-over, original instrumental, sound effects, ambience) and KEEP CONSISTENT.
+- **Positive wording only.** Prompts never list unwanted things ("no …"), because content filters read the whole prompt.
+  The build fails if any copied prompt contains filter-trigger or violent words, in English or in the Hindi voice lines
+  (check P4 in `src/lib/quality/score.ts`).
+- **No person names inside prompts.** The fashion models appear as "the Indian model", "the Latina model", etc., with a
+  fixed description, because filters treat full names as possible real people. Voice lines never say their names
+  either (a unit test checks every package).
+- **Thumbnail prompts render the headline** from `content-src/thumbnail-text/<channel>.ts` (1–4 words, Roman script).
+- Preview any composed prompt: `npx tsx scripts/preview-prompts.mts <channel> <index 0-179>`.
+
 ## Editing content
 
 Each video is one seed. The channel template turns the seed into the full package, so improving a template after your

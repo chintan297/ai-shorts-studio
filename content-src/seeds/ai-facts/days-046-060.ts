@@ -730,7 +730,7 @@ const seeds: VideoSeed[] = [
       mode: "voiceover",
       lines: [
         { start: 1.2, end: 4.8, text: "Bullet train की नाक kingfisher की चोंच से प्रेरित!" },
-        { start: 5.2, end: 7.4, text: "Tunnel से निकलते वक़्त कम धमाका!" },
+        { start: 5.2, end: 7.4, text: "Tunnel से निकलते वक़्त कम शोर!" },
       ],
       music: "sleek, uplifting instrumental with light koto-like plucks and smooth synth pulses",
       sfx: [
@@ -844,11 +844,11 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Human body facts",
-    concept: "An extreme macro of a human eye shows the crystal-clear cornea with no blood vessels, while tiny illustrative oxygen particles drift in from the air into its tear film.",
+    concept: "An extreme macro of a human eye shows the crystal-clear cornea, completely free of vessels, while tiny illustrative oxygen particles drift in from the air into its tear film.",
     hook: "Extreme macro: a dark brown human eye opens, and the glistening clear dome of the cornea catches a window reflection.",
     subject: "A healthy human eye in extreme close-up, the transparent cornea dome highlighted",
     environment: "Soft-lit minimal studio with a bright window reflected in the eye",
-    action: "The camera slowly arcs to a side profile of the eye; fine red blood vessels in the white of the eye stop right at the cornea's edge, while tiny glowing oxygen particles drift from the air into the thin tear film over the clear dome.",
+    action: "The camera slowly arcs to a side profile of the eye; fine red capillaries in the white of the eye stop right at the cornea's edge, while tiny glowing oxygen particles drift from the air into the thin tear film over the clear dome.",
     payoff: "Back to a front view: the cornea glows crystal clear with no vessels at all, and the eye blinks once softly, held steady.",
     camera: { angle: "Extreme macro, eye-level", movement: "Slow smooth arc from front to side profile and back", lens: "100 mm macro" },
     lighting: "Soft diffused key light with a crisp window catchlight",
@@ -857,7 +857,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "voiceover",
       lines: [
-        { start: 1.2, end: 4.8, text: "आँख के cornea में एक भी blood vessel नहीं!" },
+        { start: 1.2, end: 4.8, text: "आँख के cornea में एक भी ब्लड वेसल नहीं!" },
         { start: 5.2, end: 7.4, text: "ज़्यादातर oxygen हवा से लेता है!" },
       ],
       music: "clean, gentle instrumental with soft piano notes and airy synth pads",

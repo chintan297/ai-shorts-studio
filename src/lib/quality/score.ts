@@ -41,6 +41,26 @@ const MISLEADING_TITLE = [/guarantee/i, /100%\s*real/i, /real footage/i, /\bproo
 export const FILTER_RISK_TERMS =
   /\b(nude|nudity|naked|nipples?|lingerie|underwear|panties|thong|sexual\w*|sexy|seductive|sensual|erotic|cleavage|topless|see-?through|upskirt|sexualized|teen\w*|school-?girls?|childlike|gore|gory|bloody|weapons?|gun|guns|kill\w*|suicide|terror\w*|drugs?|cocaine|alcohol|mature (?:adult )?(?:face|woman)|adult (?:woman|face|proportions|model)|revealing (?:clothing|clothes|outfit|dress)|ill-fitting clothing|body proportions)\b/i;
 
+/**
+ * Violence / fear wording. Veo refuses or blocks violent prompts, so visuals are described gently
+ * (e.g. a supernova "bursts into an expanding shell of light" rather than "explodes").
+ */
+export const VIOLENCE_TERMS =
+  /\b(explosions?|explodes?|exploded|exploding|explosive\w*|blasts?|blasting|blasted|bombs?|bombing|missiles?|weapons?|guns?|gunfire|attack\w*|fights?|fighting|battles?|battlefield|wars?|warfare|warriors?|combat|soldiers?|army|armies|military|kill\w*|dead|death|deaths|dying|blood\w*|injur\w*|wounds?|wounded|destroy\w*|destruction|smash\w*|devour\w*|prey|predators?|hunt\w*|venom\w*|poison\w*|toxic|scary|terrif\w*|horror\w*|frighten\w*|creepy|monsters?|zombies?|ghosts?|skulls?|apocalyp\w*|disasters?|catastroph\w*|violen\w*|danger\w*|wildfires?|corpses?|crimes?|criminals?)\b/i;
+
+/**
+ * The same wording in the Hindi voice lines, which are quoted inside the Flow prompt. Devanagari has no \b, so a
+ * term must start a word (नाखून is fine). Match against hindiPlain() text; ज़हरीला stays allowed for snake facts.
+ */
+export const HINDI_VIOLENCE_TERMS =
+  /(?<![\p{L}\p{M}])(?:धमाक|विस्फोट|खून|मौत|मृत्यु|हत्या|हमला|हमले|हमलों|मरत|मरन|मार डाल|मार दि|तबाह|बंदूक|गोली|युद्ध|लडाई|घायल|हथियार|कत्ल|शिकार|खतर|जहर(?!ील))[\p{L}\p{M}]*/u;
+
+/** Hindi text without nukta dots, so ख़/ख, ज़/ज and ड़/ड spellings match the same term. */
+export const hindiPlain = (text: string) => text.normalize("NFD").replace(/़/g, "");
+
+/** Thumbnail headline: Latin script only (image models misspell Devanagari), no emoji, 1–4 words. */
+export const HEADLINE_PATTERN = /^[A-Za-z0-9][A-Za-z0-9 '’!?&:+,.%#-]*$/;
+
 export function countWords(text: string): number {
   return text
     .replace(/[“”"'.,!?।…:;()\-–—]/g, " ")
@@ -98,31 +118,32 @@ export function scorePackage(pkg: Pkg, ctx: QualityContext): QualityReport {
 
   // Prompt clarity
   const placeholder = /\{|\}|TODO|lorem|undefined|null\b/i;
-  add("promptClarity", "P1", "Flow prompt is complete but not bloated", flow.length >= 1200 && flow.length <= 6500, true, "Flow prompt should be 1,200–6,500 characters.");
+  add("promptClarity", "P1", "Flow prompt is complete but not bloated", flow.length >= 600 && flow.length <= 4000, true, "Flow prompt should be 600–4,000 characters.");
   add("promptClarity", "P2", "Image prompt is complete", image.length >= 400 && image.length <= 3500, false, "Image prompt should be 400–3,500 characters.");
-  const copied = [flow, pkg.flowPrompt.lite, image, pkg.imagePrompt.negativePrompt, pkg.thumbnail.prompt, pkg.thumbnail.negativePrompt].join("\n");
-  const risky = FILTER_RISK_TERMS.exec(copied)?.[0];
+  const copied = [flow, image, pkg.imagePrompt.negativePrompt, pkg.thumbnail.prompt, pkg.thumbnail.negativePrompt].join("\n");
+  const risky =
+    FILTER_RISK_TERMS.exec(copied)?.[0] ?? VIOLENCE_TERMS.exec(copied)?.[0] ?? HINDI_VIOLENCE_TERMS.exec(hindiPlain(copied))?.[0];
   add("promptClarity", "P4", `Prompts contain no safety-filter trigger words${risky ? ` (found “${risky}”)` : ""}`, !risky, true, "Rewrite that part positively and tastefully; never mention banned content, even to exclude it.");
   add("promptClarity", "P3", "No placeholders or unresolved values", !placeholder.test(flow) && !placeholder.test(image) && !placeholder.test(pkg.thumbnail.prompt), true, "Remove the placeholder text.");
 
   // Google Flow compatibility
-  add("flowCompatibility", "F1", "8-second, 9:16 single generation", pkg.durationSeconds === 8 && /exactly 8 seconds/.test(flow) && /9:16/.test(flow), true);
+  add("flowCompatibility", "F1", "8-second, 9:16 single generation", pkg.durationSeconds === 8 && /8-second/.test(flow) && /9:16/.test(flow), true);
   add("flowCompatibility", "F2", "Voice timings fit inside 0–8 s without overlap", voiceLinesValid(voiceLines), true, "Fix the voice line timestamps.");
   add("flowCompatibility", "F3", `Voice script fits in 8 s (≤ ${MAX_VOICE_WORDS} words)`, voiceWords <= MAX_VOICE_WORDS && voiceLines.every((l) => countWords(l.text) / (l.end - l.start) <= MAX_WORDS_PER_SECOND), true, "Shorten the voice-over or widen its time window.");
-  add("flowCompatibility", "F4", "One continuous shot (no multi-clip story)", /One continuous shot, no cuts/.test(flow), true);
+  add("flowCompatibility", "F4", "One continuous take (no multi-clip story)", /one smooth continuous take/.test(flow), true);
   add("flowCompatibility", "F5", "Voice ends before the final fade (≤ 7.5 s)", voiceLines.every((l) => l.end <= 7.5), false, "End the voice by 7.5 s so the audio can fade naturally.");
 
   // Character consistency
-  add("characterConsistency", "C1", "Character identity is repeated in the image and Flow prompts", !ctx.hasCharacters || (image.includes("CHARACTER") && flow.includes("APPEARANCE")), true, "Inject the character bible into both prompts.");
-  add("characterConsistency", "C2", "Consistency rules are present in both prompts", image.includes("CONSISTENCY:") && flow.includes("CONSISTENCY:"), true);
+  add("characterConsistency", "C1", "Character identity is repeated in the image and Flow prompts", !ctx.hasCharacters || (image.includes("CHARACTER") && flow.includes("CHARACTER:")), true, "Inject the character description into both prompts.");
+  add("characterConsistency", "C2", "Consistency rules are present in both prompts", image.includes("CONSISTENCY:") && flow.includes("KEEP CONSISTENT:"), true);
 
   // Audio
   const audioText = [pkg.audio.music, pkg.audio.ambience, ...pkg.audio.sfx.map((s) => s.sound)].join(" ");
   add("audio", "A1", "Music, sound effects and ambience are all specified", pkg.audio.music.length > 5 && pkg.audio.sfx.length > 0 && pkg.audio.ambience.length > 3, true);
-  add("audio", "A2", "Copyright-safe music instruction (original, no vocals/lyrics)", /ORIGINAL instrumental/.test(flow) && /must not imitate/.test(flow), true);
+  add("audio", "A2", "Copyright-safe music instruction (original instrumental, no vocals)", /original instrumental/.test(flow) && /no vocals/.test(flow), true);
   add("audio", "A3", "No copyrighted-song references", !BANNED_AUDIO.some((re) => re.test(audioText)), true, "Remove references to existing songs or artists.");
-  add("audio", "A4", "Natural audio ending (fade by 8 s)", /fade to silence by 8\.0 s/.test(flow), false);
-  add("audio", "A5", "Voice type, language, tone and pace are defined", pkg.audio.mode === "music-only" || (/Language: Hindi/.test(flow) && /Pace:/.test(flow)), true);
+  add("audio", "A4", "Natural audio ending (fade-out by 8 s)", /soft fade-out by 8 seconds/.test(flow), false);
+  add("audio", "A5", "Voice language and tone are defined", pkg.audio.mode === "music-only" || /speaking Hindi|dialogue in Hindi/.test(flow), true);
 
   // SEO
   const titleLength = [...pkg.seo.title].length;
@@ -137,8 +158,8 @@ export function scorePackage(pkg: Pkg, ctx: QualityContext): QualityReport {
   add("seo", "S7", "No misleading clickbait wording", !MISLEADING_TITLE.some((re) => re.test(pkg.seo.title) || pkg.seo.altTitles.some((t) => re.test(t))), true, "Remove the exaggerated claims.");
 
   // Thumbnail
-  add("thumbnail", "T1", "Thumbnail text is short (≤ 5 words)", countWords(pkg.thumbnail.textSuggestion) <= 5, true, "Cut the thumbnail text to 5 words or fewer.");
-  add("thumbnail", "T2", "Thumbnail concept and negative prompt are present", pkg.thumbnail.concept.length > 10 && pkg.thumbnail.negativePrompt.length > 10, true);
+  add("thumbnail", "T1", "Thumbnail headline is short Latin-script text (1–4 words, no emoji)", HEADLINE_PATTERN.test(pkg.thumbnail.textSuggestion) && countWords(pkg.thumbnail.textSuggestion) <= 4 && pkg.thumbnail.textSuggestion.length <= 28, true, "Write 1–4 words in English or Roman Hinglish, no emoji or Devanagari.");
+  add("thumbnail", "T2", "Thumbnail prompt renders the headline text", pkg.thumbnail.prompt.includes(`"${pkg.thumbnail.textSuggestion}"`) && pkg.thumbnail.negativePrompt.length > 10, true);
   add("thumbnail", "T3", "First-frame hook is defined for the Shorts feed", pkg.thumbnail.firstFrameHook.length > 20, false);
 
   // Policy

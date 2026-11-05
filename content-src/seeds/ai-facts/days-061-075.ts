@@ -483,7 +483,7 @@ const seeds: VideoSeed[] = [
     hook: "A sprinter's fingertips press onto the track at the starting line, muscles tense, in tight close-up.",
     subject: "An athletic young Indian sprinter in plain running kit, with a translucent glowing overlay of the nervous system",
     environment: "An empty outdoor athletics stadium at sunrise with a red track and white lane lines",
-    action: "A translucent overlay reveals the nervous system; a bright pulse races from the brain down the spinal cord and along the leg nerves in a blink, and the sprinter explodes off the line.",
+    action: "A translucent overlay reveals the nervous system; a bright pulse races from the brain down the spinal cord and along the leg nerves in a blink, and the sprinter bursts off the line.",
     payoff: "The camera pulls back as the athlete powers down the empty track into the sunrise, faint light trails fading along the nerves.",
     camera: { angle: "Low ground-level close-up at the starting line", movement: "Smooth pull-back into a low tracking view", lens: "50 mm" },
     lighting: "Golden sunrise backlight with a cool electric-blue glow from the nerve overlay",

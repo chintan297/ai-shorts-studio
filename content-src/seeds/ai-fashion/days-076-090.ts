@@ -1187,13 +1187,13 @@ const seeds: VideoSeed[] = [
       ],
       music: "dramatic cinematic instrumental with deep taiko-like drums, swelling strings and an ethereal synth choir pad",
       sfx: [
-        { at: 0.4, sound: "smoke canister hiss" },
+        { at: 0.4, sound: "soft airy whoosh of colored mist" },
         { at: 3.0, sound: "satin swish in the wind" },
-        { at: 6.2, sound: "deep cinematic boom" },
+        { at: 6.2, sound: "warm cinematic swell" },
       ],
       ambience: "open hilltop wind",
     },
-    thumbnail: { text: "Smoke Bomb Editorial 💙💗", concept: "Meher in cobalt satin between clouds of blue and pink smoke at dusk" },
+    thumbnail: { text: "Colour Smoke Editorial 💙💗", concept: "Meher in cobalt satin between clouds of blue and pink smoke at dusk" },
     seo: {
       title: "Cobalt Satin Gown + Coloured Smoke Shoot 💙",
       altTitles: ["Coloured Smoke Fashion Photography Idea", "रंगीन धुएँ के बीच कोबाल्ट गाउन शूट", "Hilltop Pe Dramatic Smoke Editorial"],
