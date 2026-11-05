@@ -1085,7 +1085,7 @@ const seeds: VideoSeed[] = [
       title: "X-Ray की खोज एक Accident थी 💡",
       altTitles: ["X-Rays Were Discovered by Accident in 1895", "1895 की वो खोज जिसने हड्डियाँ दिखा दीं", "X-Ray Discovery Story in Hindi"],
       summaryHi: "X-rays की खोज 1895 में cathode-ray tube के प्रयोगों के दौरान संयोग से हुई थी। कुछ ही समय में इनसे शरीर के अंदर की हड्डियाँ देखी जाने लगीं।",
-      summaryEn: "X-rays were discovered by accident in 1895 during experiments with cathode-ray tubes, a famous accidental discovery.",
+      summaryEn: "X-rays were discovered by accident in 1895 during experiments with cathode-ray tubes, a celebrated accidental discovery.",
       primaryKeywords: ["accidental discovery", "x ray history"],
       secondaryKeywords: ["historical discoveries", "science history hindi", "x ray facts"],
       hashtags: ["#XRay", "#ScienceHistory"],

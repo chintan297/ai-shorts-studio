@@ -107,9 +107,11 @@ Static content (content-src seeds + templates → data/*.json at build time)
 - **Positive wording only.** Prompts never list unwanted things ("no …"), because content filters read the whole prompt.
   The build fails if any copied prompt contains filter-trigger or violent words, in English or in the Hindi voice lines
   (check P4 in `src/lib/quality/score.ts`).
-- **No person names inside prompts.** The fashion models appear as "the Indian model", "the Latina model", etc., with a
-  fixed description, because filters treat full names as possible real people. Voice lines never say their names
-  either (a unit test checks every package).
+- **No person names or face details in Flow prompts.** Flow's "prominent people" filter blocks prompts that read like
+  one specific real face. The fashion models appear as "the woman" (or "the first/second woman") with only skin tone
+  and hair colour (`promptLook` in the template); the full face description lives in the image prompt, and the face
+  reaches the video through Frames to Video. Fame words (Hollywood, paparazzi, supermodel, red carpet…) fail check P4.
+  Voice lines never say the models' names either (unit tests check every package).
 - **Thumbnail prompts render the headline** from `content-src/thumbnail-text/<channel>.ts` (1–4 words, Roman script).
 - Preview any composed prompt: `npx tsx scripts/preview-prompts.mts <channel> <index 0-179>`.
 

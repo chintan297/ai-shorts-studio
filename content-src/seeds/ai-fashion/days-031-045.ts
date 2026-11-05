@@ -949,7 +949,7 @@ const seeds: VideoSeed[] = [
     colorGrade: "Saturated cobalt, crisp white and silver highlights",
     characters: ["valeria"],
     look: {
-      outfit: "Cobalt-blue duchess-satin strapless column gown with a dramatic oversized bow at the back and a short sweep train",
+      outfit: "Cobalt-blue heavy-satin strapless column gown with a dramatic oversized bow at the back and a short sweep train",
       accessories: "Silver crystal drop earrings, a slim silver cuff, cobalt satin pumps",
       hairStyling: "Curls swept up into a voluminous high bun",
       pose: "Standing at the stairs facing away, looking back over her shoulder, one hand resting on the white banister",
@@ -960,7 +960,7 @@ const seeds: VideoSeed[] = [
       tone: "elegant and confident",
       lines: [
         { start: 1.3, end: 3.1, text: "Bow drama…" },
-        { start: 4.5, end: 6.7, text: "Cobalt में queen vibes!" },
+        { start: 4.5, end: 6.7, text: "Cobalt में boss vibes!" },
       ],
       music: "sweeping cinematic orchestral-pop instrumental with lush strings, harp glissandos and a soft beat",
       sfx: [

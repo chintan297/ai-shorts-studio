@@ -283,11 +283,11 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Science facts",
-    concept: "In a school physics lab, a magnetised iron bar holding a chain of steel paper clips is heated by a gas flame until it glows red, and the clips drop off as it passes its Curie temperature.",
+    concept: "In a school physics lab, a magnetised iron bar holding a chain of steel paper clips is heated by a gas flame until it glows red, and the clips drop off as it passes its magnetic tipping-point temperature.",
     hook: "A chain of shiny steel paper clips dangles from the tip of an iron bar clamped above a blue gas flame.",
     subject: "A magnetised iron bar in a metal clamp stand with a short chain of steel paper clips hanging from its tip",
     environment: "A tidy Indian school physics lab bench with a ceramic heat-proof tile, a clamp stand and a lab burner, safety goggles resting nearby",
-    action: "The blue flame heats the iron tip, which slowly darkens and then glows dull cherry red; as it passes its Curie temperature, the paper clips suddenly lose their grip and fall one by one onto the tile.",
+    action: "The blue flame heats the iron tip, which slowly darkens and then glows dull cherry red; as it passes its magnetic tipping-point temperature, the paper clips suddenly lose their grip and fall one by one onto the tile.",
     payoff: "The glowing red iron tip hangs alone above the scattered clips on the tile, the flame still burning softly.",
     camera: { angle: "Bench-level close-up from the side", movement: "Slow smooth push-in toward the glowing tip", lens: "85 mm macro-portrait lens" },
     lighting: "Cool lab light with the warm orange-red glow of the heated metal",

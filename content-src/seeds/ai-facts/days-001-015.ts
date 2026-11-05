@@ -1131,7 +1131,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Historical discoveries",
-    concept: "Rows of life-size clay figures stand in a vast excavation pit in China, the famous terracotta statues that farmers stumbled upon while digging a well in 1974.",
+    concept: "Rows of life-size clay figures stand in a vast excavation pit in China, the ancient terracotta statues that farmers stumbled upon while digging a well in 1974.",
     hook: "A life-size clay figure's face, with a carved beard and topknot, gazes straight into the lens.",
     subject: "Life-size terracotta statues standing in long ordered rows, each with a different face",
     environment: "A huge covered excavation pit near Xi'an, China, with earthen walls dividing the rows and soft light from a high roof",

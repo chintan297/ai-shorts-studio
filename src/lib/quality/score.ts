@@ -39,7 +39,7 @@ const MISLEADING_TITLE = [/guarantee/i, /100%\s*real/i, /real footage/i, /\bproo
  * so even "no nudity" can get a prompt refused. Prompts must describe what we want, never list what to avoid here.
  */
 export const FILTER_RISK_TERMS =
-  /\b(nude|nudity|naked|nipples?|lingerie|underwear|panties|thong|sexual\w*|sexy|seductive|sensual|erotic|cleavage|topless|see-?through|upskirt|sexualized|teen\w*|school-?girls?|childlike|gore|gory|bloody|weapons?|gun|guns|kill\w*|suicide|terror\w*|drugs?|cocaine|alcohol|mature (?:adult )?(?:face|woman)|adult (?:woman|face|proportions|model)|revealing (?:clothing|clothes|outfit|dress)|ill-fitting clothing|body proportions)\b/i;
+  /\b(nude|nudity|naked|nipples?|lingerie|underwear|panties|thong|sexual\w*|sexy|seductive|sensual|erotic|cleavage|topless|see-?through|upskirt|sexualized|teen\w*|school-?girls?|childlike|gore|gory|bloody|weapons?|gun|guns|kill\w*|suicide|terror\w*|drugs?|cocaine|alcohol|mature (?:adult )?(?:face|woman)|adult (?:woman|face|proportions|model)|revealing (?:clothing|clothes|outfit|dress)|ill-fitting clothing|body proportions|identity marker|celebrit\w*|famous|paparazzi|red[- ]carpet|supermodels?|hollywood|bollywood|influencers?|look-?alikes?|superstars?|(?:movie|film|pop) stars?)\b/i;
 
 /**
  * Violence / fear wording. Veo refuses or blocks violent prompts, so visuals are described gently

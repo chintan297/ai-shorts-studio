@@ -2,33 +2,34 @@ import type { CastMember, ChannelTemplate } from "@/lib/content/compose";
 import { LANGUAGE, TARGET_COUNTRY } from "./shared";
 
 /**
- * Four original, fictional ADULT AI models. Each identity is permanent: face, eyes, skin, identity marker,
+ * Four original, fictional ADULT AI models. Each identity is permanent: face, eyes, skin,
  * hair colour/length and body proportions never change between videos. Seeds pick 1 (rarely 2) by key.
+ * The full face description goes into image prompts only; Flow prompts get `promptLook` (skin tone + hair).
  */
 export const FASHION_MODELS: Record<string, CastMember> = {
   meher: {
     name: "Meher Anand",
-    promptLabel: "the Indian model",
+    promptLook: "warm golden-brown skin and glossy jet-black hair.",
     description:
       "a woman with a heart-shaped face, high cheekbones, large almond-shaped deep-brown eyes with thick dark lashes, bold softly arched black eyebrows, a tiny gold stud on her left nostril, full well-defined lips, warm wheatish golden-brown skin and very long, glossy jet-black hair with soft waves.",
   },
   valeria: {
     name: "Valeria Solis",
-    promptLabel: "the Latina model",
+    promptLook: "sun-kissed caramel-tan skin and dark-chocolate-brown hair.",
     description:
-      "a woman with an oval face, defined cheekbones, warm amber-brown eyes with long lashes, full dark eyebrows, a small beauty mark high on her right cheekbone, full lips with a natural berry tone, sun-kissed caramel-tan skin and long, voluminous dark-chocolate curls.",
+      "a woman with an oval face, defined cheekbones, warm amber-brown eyes with long lashes, full dark eyebrows, full lips with a natural berry tone, sun-kissed caramel-tan skin and long, voluminous dark-chocolate curls.",
   },
   hana: {
     name: "Hana Mori",
-    promptLabel: "the East Asian model",
+    promptLook: "fair, rosy skin and glossy black hair with soft curtain bangs.",
     description:
       "a woman with a soft oval face, dark-brown almond eyes, straight softly feathered eyebrows, naturally rosy lips, fair skin with a light natural flush and long, straight, glossy black hair with soft curtain bangs.",
   },
   elara: {
     name: "Elara Vey",
-    promptLabel: "the hazel-eyed model",
+    promptLook: "warm light-olive skin and dark-brown hair with caramel highlights.",
     description:
-      "a woman with a global mixed-heritage look, a soft oval face, almond-shaped hazel-green eyes with a warm amber ring, softly arched dark-brown eyebrows, a small beauty mark above the left corner of her upper lip, warm light-olive skin and long, thick, softly wavy dark-chocolate-brown hair with caramel highlights.",
+      "a woman with a global mixed-heritage look, a soft oval face, almond-shaped hazel-green eyes with a warm amber ring, softly arched dark-brown eyebrows, warm light-olive skin and long, thick, softly wavy dark-chocolate-brown hair with caramel highlights.",
   },
 };
 
@@ -76,7 +77,7 @@ export const aiFashionTemplate: ChannelTemplate = {
       summary: `Original fictional AI model (not a real person). Permanent look: ${m.description}`,
       traits: [
         { label: "Changes per video", value: "Outfit, styling, makeup, location, pose, expression, camera" },
-        { label: "Never changes", value: "Face, eyes, skin tone, identity marker, hair colour/length, body proportions" },
+        { label: "Never changes", value: "Face, eyes, skin tone, hair colour/length, body proportions" },
       ],
     })),
   },
@@ -85,10 +86,10 @@ export const aiFashionTemplate: ChannelTemplate = {
   imageStyle:
     "Photorealistic fashion editorial photograph, stylish modern look shot like a luxury magazine campaign, full-length or three-quarter framing.",
   videoStyle:
-    "Photorealistic fashion film: stylish modern look, soft professional lighting, confident editorial energy, full-length or three-quarter framing.",
-  trendLook: "high-end fashion campaign color grade, soft bloom, crisp detail and a trending Instagram-reel glow",
+    "Cinematic fashion film: stylish modern look, soft professional lighting, confident editorial energy, full-length or three-quarter framing.",
+  trendLook: "high-end fashion campaign color grade, soft bloom, crisp detail and a trending social-reel glow",
   consistencyRules:
-    "The model keeps exactly her own face, eye colour, skin tone, identity marker and hair colour as described, in every frame; outfit and accessories stay the same throughout the clip; hands look natural with five fingers each.",
+    "She keeps the same face, skin tone and hair colour in every frame; outfit and accessories stay the same throughout the clip; hands look natural with five fingers each.",
   motionRules:
     "She stays in place with subtle, confident movement: a slow head turn, an over-the-shoulder glance, a soft smile, hair and fabric moving in the breeze, at most one slow hand movement; hands relaxed and natural.",
   imageNegatives: [

@@ -8,17 +8,18 @@ import {
   type VideoSeed,
 } from "./schema";
 
-export const TEMPLATE_VERSION = "v2";
+export const TEMPLATE_VERSION = "v3";
 export const GENERATION_PLATFORM = "Google Flow (Veo 3.1 — video + native audio)";
 
 export interface CastMember {
   name: string;
   description: string;
   /**
-   * How prompts refer to this character instead of the name (e.g. "the Indian model"). Image/video filters
-   * treat full names as possible real people, so realistic characters are never named inside prompts.
+   * Skin tone + hair colour of a realistic character, for the Flow prompt. When set, prompts never name her
+   * ("the woman", or "the first/second woman" in a duo) and the Flow prompt leaves out face details: Flow's
+   * "prominent people" filter blocks prompts that read like one specific real face. The face comes from the image.
    */
-  promptLabel?: string;
+  promptLook?: string;
 }
 
 /** Everything a channel needs to turn seeds into complete, copy-ready packages. */
@@ -111,25 +112,40 @@ function castText(tpl: ChannelTemplate, seed: VideoSeed): string | null {
 const capitalize = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 const escapeRe = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-/** Cast text for prompts: realistic characters are described, never named. */
-function castPromptText(tpl: ChannelTemplate, seed: VideoSeed): string | null {
+/** How prompts refer to a realistic character: "the woman", or "the first/second woman" in a duo. */
+function promptLabel(tpl: ChannelTemplate, seed: VideoSeed, member: CastMember): string {
+  const keys = seed.characters ?? [];
+  if (keys.length < 2) return "the woman";
+  return tpl.cast?.[keys[1]!] === member ? "the second woman" : "the first woman";
+}
+
+/**
+ * Cast text for prompts: realistic characters are described, never named. "full" (image + thumbnail) keeps the
+ * face description so the image fixes the identity; "look" (Flow) gives only skin tone and hair.
+ */
+function castPromptText(tpl: ChannelTemplate, seed: VideoSeed, detail: "full" | "look"): string | null {
   const members = castMembers(tpl, seed);
   if (!members.length) return null;
   return members
-    .map((m) => (m.promptLabel ? `${capitalize(m.promptLabel)} is ${m.description}` : `${m.name}: ${m.description}`))
+    .map((m) => {
+      if (!m.promptLook) return `${m.name}: ${m.description}`;
+      const looks = detail === "look" ? m.promptLook : m.description.replace(/^a woman with /, "");
+      return `${capitalize(promptLabel(tpl, seed, m))} has ${looks}`;
+    })
     .join(" ");
 }
 
-/** Replaces names of characters that have a promptLabel ("Meher's" → "the Indian model's"). */
-export function depersonalize(tpl: ChannelTemplate, text: string): string {
+/** Replaces names of realistic characters ("Meher's" → "the woman's"). */
+export function depersonalize(tpl: ChannelTemplate, seed: VideoSeed, text: string): string {
   let out = text;
   for (const m of Object.values(tpl.cast ?? {})) {
-    if (!m.promptLabel) continue;
+    if (!m.promptLook) continue;
+    const label = promptLabel(tpl, seed, m);
     const first = m.name.split(" ")[0] ?? m.name;
     const re = new RegExp(`\\b(?:${escapeRe(m.name)}|${escapeRe(first)})\\b`, "g");
     out = out.replace(re, (_match, offset: number, whole: string) => {
       const sentenceStart = /(^|[.!?•\n]\s*)$/.test(whole.slice(0, offset));
-      return sentenceStart ? capitalize(m.promptLabel!) : m.promptLabel!;
+      return sentenceStart ? capitalize(label) : label;
     });
   }
   return out;
@@ -173,13 +189,13 @@ function storyboard(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["storyb
 }
 
 function imagePrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["imagePrompt"] {
-  const p = (t: string) => depersonalize(tpl, t);
+  const p = (t: string) => depersonalize(tpl, seed, t);
   const lines = [
     `${tpl.imageStyle} Vertical 9:16 portrait image, 1080×1920.`,
     `This image is the FIRST FRAME of an 8-second video: ${p(seed.hook)}`,
     `MAIN SUBJECT: ${p(seed.subject)}.`,
   ];
-  const identity = [tpl.permanentIdentity, castPromptText(tpl, seed)].filter(Boolean).join(" ");
+  const identity = [tpl.permanentIdentity, castPromptText(tpl, seed, "full")].filter(Boolean).join(" ");
   if (identity) lines.push(`CHARACTER (keep identical in every image): ${identity}`);
   if (seed.look) {
     lines.push(
@@ -211,7 +227,7 @@ const withArticle = (t: string) => `${/^[aeiou]/i.test(t) ? "an" : "a"} ${t}`;
 
 /** One sentence-style sound direction (Veo generates the audio together with the video). */
 function soundDirection(tpl: ChannelTemplate, seed: VideoSeed): string {
-  const p = (t: string) => depersonalize(tpl, t);
+  const p = (t: string) => depersonalize(tpl, seed, t);
   const { audio } = seed;
   const parts: string[] = [];
   const spoken = audio.mode === "music-only" ? [] : audio.lines;
@@ -248,13 +264,14 @@ const HELD_FRAME =
 /**
  * The single Google Flow (Veo 3.1) prompt. Built the way Google recommends for Veo: scene, subject, action
  * beats, camera, look and sound, in positive wording only. It never lists unwanted things (filters read the
- * whole prompt) and never names a realistic person.
+ * whole prompt) and never names or face-describes a realistic person.
  */
 function flowPrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["flowPrompt"] {
-  const p = (t: string) => depersonalize(tpl, t);
-  const who = castPromptText(tpl, seed);
+  const p = (t: string) => depersonalize(tpl, seed, t);
+  const who = castPromptText(tpl, seed, "look");
+  const realistic = castMembers(tpl, seed).some((m) => m.promptLook);
   const duo = (seed.characters?.length ?? 0) > 1;
-  const plural = (t: string) => (duo ? t.replace(/^She stays/, "Both models stay").replace(/^The model keeps/, "Each model keeps") : t);
+  const plural = (t: string) => (duo ? t.replace(/^She stays/, "Both women stay").replace(/^She keeps/, "Both women keep") : t);
   const lens = /\blens\b|framing/i.test(seed.camera.lens) ? seed.camera.lens : `${seed.camera.lens} lens`;
   const lines = [
     `A scroll-stopping 8-second vertical (9:16) ${tpl.genre}, filmed as one smooth continuous take. ${p(seed.concept)}`,
@@ -285,15 +302,22 @@ function flowPrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["flowPr
 
   const notes = [
     "Flow settings: choose Veo 3.1, aspect ratio Portrait (9:16). Each clip is 8 seconds.",
-    who
-      ? "Same face every time: use Frames to Video (or Ingredients to Video) with the image you made from the Image Prompt."
-      : "Best quality: use Frames to Video with the image you made from the Image Prompt as the first frame.",
+    realistic
+      ? "Same face every time: use Frames to Video (or Ingredients to Video) with the image you made from the Image Prompt. This prompt only gives skin tone and hair, so the face comes from your image."
+      : who
+        ? "Same face every time: use Frames to Video (or Ingredients to Video) with the image you made from the Image Prompt."
+        : "Best quality: use Frames to Video with the image you made from the Image Prompt as the first frame.",
   ];
   if (seed.audio.mode === "voiceover") {
     notes.push("Hindi voice: if the pronunciation isn't clear, generate again, or record the line yourself and add it in YouTube.");
   }
   if (seed.audio.mode === "dialogue") {
     notes.push("Check that the lip movement matches the Hindi words; generate again if it drifts.");
+  }
+  if (realistic) {
+    notes.push(
+      "If Flow says “prominent people”: try this prompt once with Text to Video (no image). If that works, the image was the cause: make a fresh image from the Image Prompt and use that one.",
+    );
   }
   notes.push(
     "If Flow says “might violate our policies”: wait 5–10 minutes and try the same prompt once more (busy servers fail too). If it fails again, report the video number.",
@@ -310,8 +334,8 @@ export function thumbnailHeadline(seed: VideoSeed): string {
 }
 
 function thumbnail(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["thumbnail"] {
-  const p = (t: string) => depersonalize(tpl, t);
-  const who = castPromptText(tpl, seed);
+  const p = (t: string) => depersonalize(tpl, seed, t);
+  const who = castPromptText(tpl, seed, "full");
   const headline = thumbnailHeadline(seed);
   const textPlacement = "Upper third, centered, inside the Shorts safe area (away from the bottom buttons)";
   const prompt = [

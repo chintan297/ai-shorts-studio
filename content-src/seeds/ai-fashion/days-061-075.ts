@@ -675,11 +675,11 @@ const seeds: VideoSeed[] = [
     concept: "Meher Anand's coffee-date OOTD: an oatmeal knit sweater dress, knee boots and gold hoops at a cozy café window seat on a rainy day.",
     hook: "Close-up of a latte with heart foam art beside a rain-streaked window, then Meher's face turns into view with a warm smile.",
     subject: "Meher Anand in an oatmeal knit sweater dress with tan knee boots",
-    environment: "Cozy café window seat on a rainy day with rain-streaked glass, warm Edison bulbs, wooden shelves of books and a potted fern",
+    environment: "Cozy café window seat on a rainy day with rain-streaked glass, warm vintage filament bulbs, wooden shelves of books and a potted fern",
     action: "The camera slowly pulls back to a three-quarter shot as she sits sideways on the window bench, wraps both hands around the latte cup and tucks a wave behind her ear.",
     payoff: "She looks up from the cup with a cozy, confident smile, rain blurring softly on the glass behind her.",
     camera: { angle: "Eye-level three-quarter seated shot", movement: "Slow smooth pull-back", lens: "50 mm" },
-    lighting: "Soft cool window light balanced with warm Edison-bulb glow",
+    lighting: "Soft cool window light balanced with warm filament-bulb glow",
     colorGrade: "Oatmeal beige, latte brown and soft rainy grey",
     characters: ["meher"],
     look: {

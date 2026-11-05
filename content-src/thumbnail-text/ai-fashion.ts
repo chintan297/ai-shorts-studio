@@ -8,7 +8,7 @@ const headlines: string[] = [
   "Leopard Is Back", // 7 d004-v1
   "Diwali Wali Chamak", // 8 d004-v2
   "Meet The Emerald Muse", // 9 d005-v1
-  "Paparazzi Ready", // 10 d005-v2
+  "Flash Ready Glam", // 10 d005-v2
   "Udaipur Sunset Saree", // 11 d006-v1
   "Bandra Street Style", // 12 d006-v2
   "Goa Lanes In Lemon", // 13 d007-v1
@@ -22,7 +22,7 @@ const headlines: string[] = [
   "Bows Are Trending", // 21 d011-v1
   "Denim On Denim", // 22 d011-v2
   "Cobalt Stepwell Shoot", // 23 d012-v1
-  "90s Supermodel Blowout", // 24 d012-v2
+  "90s Bouncy Blowout", // 24 d012-v2
   "Santorini In White", // 25 d013-v1
   "Mint Mehendi Mood", // 26 d013-v2
   "Disco Ball Duo", // 27 d014-v1
@@ -112,11 +112,11 @@ const headlines: string[] = [
   "Lehenga + Jacket Trend", // 111 d056-v1
   "Golden Silhouette Shoot", // 112 d056-v2
   "Velvet Under The Moon", // 113 d057-v1
-  "Teal Brocade Royalty", // 114 d057-v2
+  "Teal Brocade Glam", // 114 d057-v2
   "Cobalt & White Linen", // 115 d058-v1
   "Black Trench, White Snow", // 116 d058-v2
   "Moonlit White Desert", // 117 d059-v1
-  "Pilates Princess Era", // 118 d059-v2
+  "Pilates Glow Era", // 118 d059-v2
   "Hibiscus By The Sea", // 119 d060-v1
   "Velvet Dinner Date", // 120 d060-v2
   "Rainy Day Trench", // 121 d061-v1

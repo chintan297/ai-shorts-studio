@@ -992,7 +992,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Unusual inventions",
-    concept: "In an ancient South Indian forge, a clay crucible cracks open to reveal a glowing steel cake, and the camera glides to a finished blade whose watery patterns mark wootz steel, prized for famous Damascus swords.",
+    concept: "In an ancient South Indian forge, a clay crucible cracks open to reveal a glowing steel cake, and the camera glides to a finished blade whose watery patterns mark wootz steel, prized for legendary Damascus swords.",
     hook: "A clay crucible cracks open with a burst of sparks, revealing a glowing orange steel cake inside.",
     subject: "A round wootz steel ingot glowing orange, and a finished curved sword blade with flowing, water-like light and dark patterns on its surface",
     environment: "A traditional village forge in ancient South India at night: mud-brick walls, a charcoal furnace, leather bellows, clay crucibles, an anvil and a wooden rack",
@@ -1021,7 +1021,7 @@ const seeds: VideoSeed[] = [
       title: "Damascus तलवारों का राज़: भारत का Wootz Steel ⚔️",
       altTitles: ["Wootz Steel: Ancient India's Legendary Metal", "प्राचीन भारत का कमाल का स्टील", "Wootz Steel — Damascus Swords का Indian Connection"],
       summaryHi: "प्राचीन दक्षिण भारत में बनने वाला wootz, एक high-carbon crucible steel था, जिससे मशहूर 'Damascus' तलवारों के blade बनाए जाते थे।",
-      summaryEn: "Wootz steel, a high-carbon crucible steel from ancient South India, was prized for forging famous Damascus sword blades.",
+      summaryEn: "Wootz steel, a high-carbon crucible steel from ancient South India, was prized for forging legendary Damascus sword blades.",
       primaryKeywords: ["wootz steel", "ancient indian inventions"],
       secondaryKeywords: ["damascus steel", "indian history facts", "metallurgy facts"],
       hashtags: ["#WootzSteel", "#AncientIndia"],

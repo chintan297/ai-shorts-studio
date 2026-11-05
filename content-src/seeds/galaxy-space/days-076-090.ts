@@ -46,16 +46,16 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Cosmic mysteries",
-    concept: "A lone black hole in empty space sheds a ghostly mist of particles, illustrating the predicted but never-observed Hawking radiation by which black holes may slowly evaporate.",
+    concept: "A lone black hole in empty space sheds a ghostly mist of particles, illustrating the predicted but never-observed radiation by which black holes may slowly evaporate.",
     hook: "A perfectly black sphere sits alone in empty space while a barely visible mist of tiny glowing particles drifts away from its edge.",
-    subject: "An isolated black hole with no accretion disk, surrounded by an extremely faint mist of escaping particles as an illustration of Hawking radiation",
+    subject: "An isolated black hole with no accretion disk, surrounded by an extremely faint mist of escaping particles as an illustration of predicted black-hole radiation",
     environment: "Empty intergalactic darkness with only a few very distant galaxies",
     action: "The camera circles slowly around the black hole as faint particles seep away from its edge one by one, the dark sphere seeming to shrink almost imperceptibly.",
     payoff: "The camera holds on the dark sphere, wrapped in its ghostly halo of escaping particles, alone in the void.",
     camera: { angle: "Eye-level orbit around the sphere", movement: "Very slow circular orbit", lens: "50 mm" },
     lighting: "Near-total darkness with a faint pale-violet glow around the black hole's edge",
     colorGrade: "Inky black, ghostly violet and silver",
-    vfx: "Sparse escaping particles as an illustration of predicted Hawking radiation",
+    vfx: "Sparse escaping particles as an illustration of predicted black-hole radiation",
     audio: {
       mode: "voiceover",
       lines: [

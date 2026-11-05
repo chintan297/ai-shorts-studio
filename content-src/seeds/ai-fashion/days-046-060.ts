@@ -16,7 +16,7 @@ const seeds: VideoSeed[] = [
     look: {
       outfit: "Silver sequin long-sleeve column maxi dress with a high neckline and a soft train",
       accessories: "Ivory faux-fur stole, diamond-look chandelier earrings, a silver box clutch",
-      hairStyling: "Glossy Hollywood waves swept over one shoulder",
+      hairStyling: "Glossy vintage-glam waves swept over one shoulder",
       pose: "Standing three-quarter to the camera at the glass railing, one hand holding the stole, the other relaxed",
       expression: "Cool, assured smile",
     },
@@ -360,7 +360,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "AI fashion models",
-    concept: "Elara Vey's holiday signature look: a red satin halter gown with a giant bow and a bold red lip in a studio set with falling paper snow.",
+    concept: "A holiday glam look: Elara Vey in a red satin halter gown with a giant bow and a bold red lip in a studio set with falling paper snow.",
     hook: "Paper snowflakes tumble past the lens as Elara's red lips curve into a smile in a tight face close-up.",
     subject: "Elara Vey in a red satin halter gown with a giant sculptural bow",
     environment: "Minimal ivory studio set with a white seamless backdrop, slowly falling paper snow, a soft haze and a single silver star prop in the corner",
@@ -987,7 +987,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "AI fashion models",
-    concept: "Meet Meher Anand: her signature look in a black velvet one-shoulder gown with gold statement earrings in a studio with a giant golden full-moon backdrop.",
+    concept: "A midnight glam look: Meher Anand in a black velvet one-shoulder gown with gold statement earrings in a studio with a giant golden full-moon backdrop.",
     hook: "A giant golden moon glows behind Meher as she turns her face into the light, gold earrings flashing in close-up.",
     subject: "Meher Anand in a black velvet one-shoulder gown",
     environment: "Dark studio with a huge glowing golden full-moon disc backdrop, a low reflective black floor and a faint starry haze",

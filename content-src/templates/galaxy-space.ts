@@ -53,10 +53,10 @@ export const galaxySpaceTemplate: ChannelTemplate = {
     ],
   },
   genre: "space cinematic short",
-  imageStyle: "Photorealistic cinematic space visualization, scientifically inspired, IMAX-grade detail.",
+  imageStyle: "Photorealistic cinematic space visualization, scientifically inspired, giant-screen detail.",
   videoStyle:
     "Cinematic deep-space realism: scientifically grounded visuals, realistic planetary textures, volumetric nebula light, smooth majestic camera motion.",
-  trendLook: "IMAX-style space cinematography, deep blacks, luminous nebula colors, gentle lens bloom and an awe-inspiring scale reveal",
+  trendLook: "giant-screen space cinematography, deep blacks, luminous nebula colors, gentle lens bloom and an awe-inspiring scale reveal",
   consistencyRules:
     "Celestial bodies keep the same size, color, texture and relative positions throughout. Background stars stay fixed and steady, with no twinkling flicker. The sense of scale stays vast and consistent.",
   motionRules:

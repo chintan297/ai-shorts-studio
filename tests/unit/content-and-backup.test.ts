@@ -62,6 +62,15 @@ describe("static content library", () => {
     }
   });
 
+  it("fashion Flow prompts give only skin tone and hair, never face details or a 'model' label", () => {
+    for (const pkg of aiFashion as unknown as VideoPackage[]) {
+      const character = /^CHARACTER: (.*)$/m.exec(pkg.flowPrompt.prompt)?.[1] ?? "";
+      expect(character, pkg.id).toMatch(/^The (?:first )?woman has /);
+      expect(character, pkg.id).not.toMatch(/face|eyes|eyebrow|cheekbone|lips|beauty mark|nostril/i);
+      expect(pkg.flowPrompt.prompt, pkg.id).not.toMatch(/\bmodels?\b/i);
+    }
+  });
+
   it("thumbnail prompts render a short Latin-script headline", () => {
     for (const pkg of ALL) {
       expect(pkg.thumbnail.textSuggestion, pkg.id).toMatch(/^[A-Za-z0-9][A-Za-z0-9 '’!?&:+,.%#-]*$/);

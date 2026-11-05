@@ -642,7 +642,7 @@ const seeds: VideoSeed[] = [
     look: {
       outfit: "Gold sequin long-sleeve mini dress with an attached flowing sequin cape from the shoulders",
       accessories: "Gold drop earrings, a slim gold ring stack",
-      hairStyling: "Glossy Hollywood waves swept to one side",
+      hairStyling: "Glossy vintage-glam waves swept to one side",
       pose: "Standing three-quarter, shoulder turned toward the lens",
       expression: "Soft, confident gaze breaking into a smile",
     },
@@ -809,7 +809,7 @@ const seeds: VideoSeed[] = [
     hook: "A hard light snaps on, unveiling a studio split exactly in half — white on one side, black on the other — with Elara and Valeria back to back.",
     subject: "Elara Vey and Valeria Solis in white and black satin column gowns",
     environment: "Graphic studio set split vertically into a pure white half and a pure black half with a seamless glossy floor",
-    action: "The camera pulls back into a full-length two-shot as both models turn their heads toward the lens in sync, Elara with a soft smile and Valeria with a confident smirk.",
+    action: "The camera pulls back into a full-length two-shot as both women turn their heads toward the lens in sync, Elara with a soft smile and Valeria with a confident smirk.",
     payoff: "They stand shoulder to shoulder, each framed by her contrasting half of the set, looking straight into the lens.",
     camera: { angle: "Eye-level symmetrical full-length two-shot", movement: "Smooth dolly-out", lens: "50 mm" },
     lighting: "Crisp high-contrast key light with clean edge lights on both sides",
@@ -1050,7 +1050,7 @@ const seeds: VideoSeed[] = [
       tone: "graceful and confident",
       lines: [
         { start: 1.4, end: 3.3, text: "Palace lights…" },
-        { start: 4.7, end: 6.9, text: "और pastel royalty।" },
+        { start: 4.7, end: 6.9, text: "और pastel elegance।" },
       ],
       music: "regal Indian-fusion instrumental with veena-like plucks, soft mridangam rhythm and lush strings",
       sfx: [

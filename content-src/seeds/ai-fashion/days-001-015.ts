@@ -356,7 +356,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "AI fashion models",
-    concept: "Meet Elara Vey: her signature look is an emerald satin strapless corset gown with a high front slit in a glossy black studio under a single spotlight.",
+    concept: "An emerald glam look: Elara Vey in an emerald satin strapless corset gown with a high front slit in a glossy black studio under a single spotlight.",
     hook: "A single spotlight snaps on in the dark haze and catches Elara's face as she lifts her chin toward the light.",
     subject: "Elara Vey in an emerald satin strapless corset gown with a high front slit",
     environment: "Glossy black studio with a reflective black floor, soft drifting haze and one round spotlight pool",
@@ -369,7 +369,7 @@ const seeds: VideoSeed[] = [
     look: {
       outfit: "Emerald satin strapless corset gown with a structured bodice, a floor-length skirt and a high front slit",
       accessories: "Diamond-look drop earrings, a slim diamond-look bracelet, emerald satin pumps",
-      hairStyling: "Old-Hollywood sculpted side-swept waves",
+      hairStyling: "Vintage-glam sculpted side-swept waves",
       pose: "Standing straight in the spotlight, one hand on her waist, the other relaxed at her side",
       expression: "Calm, confident gaze",
     },
@@ -378,7 +378,7 @@ const seeds: VideoSeed[] = [
       tone: "warm and confident",
       lines: [
         { start: 1.2, end: 3.0, text: "सबकी नज़रें यहीं…" },
-        { start: 4.6, end: 6.6, text: "Emerald glam queen।" },
+        { start: 4.6, end: 6.6, text: "Emerald glam mood।" },
       ],
       music: "cinematic strings instrumental with a slow pulsing synth bass and a rising cello line",
       sfx: [
@@ -392,7 +392,7 @@ const seeds: VideoSeed[] = [
     seo: {
       title: "Meet Elara — Emerald Corset Gown Signature Look 💚",
       altTitles: ["Elara Vey's Signature Emerald Gown Look", "मिलिए Elara से — एमराल्ड गाउन ग्लैम", "Spotlight Mein Emerald Corset Gown"],
-      summaryHi: "हमारी AI model Elara Vey का signature look — emerald satin strapless corset gown, diamond-look earrings और Old-Hollywood waves, एक dark spotlight studio में।",
+      summaryHi: "हमारी AI model Elara Vey का signature look — emerald satin strapless corset gown, diamond-look earrings और vintage glam waves, एक dark spotlight studio में।",
       summaryEn: "Meet AI model Elara Vey in her signature emerald corset gown look under a single studio spotlight.",
       primaryKeywords: ["corset gown", "emerald gown look"],
       secondaryKeywords: ["evening gown ideas", "ai fashion model", "red carpet look"],
@@ -403,13 +403,13 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Fashion photography",
-    concept: "A paparazzi-flash editorial: Meher Anand in a black satin tuxedo blazer dress with crystal drop earrings in front of a step-and-repeat wall full of popping camera flashes.",
+    concept: "A flash-studio editorial: Meher Anand in a black satin tuxedo blazer dress with crystal drop earrings in front of a glossy black studio backdrop lit by popping strobe flashes.",
     hook: "A burst of white camera flashes pops across the frame, freezing Meher mid-glance in a crisp black satin blazer dress.",
     subject: "Meher Anand in a black satin tuxedo blazer dress with crystal drop earrings",
-    environment: "Event entrance at night with a plain white step-and-repeat wall, a black carpet, velvet rope stanchions and bursts of photographer flashes from off-screen",
+    environment: "Sleek photo studio at night with a seamless glossy black backdrop, a black-lacquer floor, chrome light stands and bursts of white strobe flashes from off-screen",
     action: "The camera pushes in from a full-length shot to three-quarter as the flashes strobe, and she turns her shoulders slightly, touches one crystal earring and gives the lens a cool over-the-shoulder look.",
     payoff: "Freeze-worthy final frame: Meher with one hand on her hip and a confident smirk, lit by one last bright flash.",
-    camera: { angle: "Eye-level press-line angle", movement: "Smooth slow push-in from full-length to three-quarter", lens: "70 mm" },
+    camera: { angle: "Eye-level studio angle", movement: "Smooth slow push-in from full-length to three-quarter", lens: "70 mm" },
     lighting: "Hard white on-camera flash bursts over a soft dark ambient base",
     colorGrade: "Crisp high-contrast black, white and crystal sparkle, editorial flash look",
     characters: ["meher"],
@@ -417,7 +417,7 @@ const seeds: VideoSeed[] = [
       outfit: "Black satin double-breasted tuxedo blazer dress with sharp shoulders and satin lapels, mini length",
       accessories: "Long crystal drop earrings, black satin pointed pumps, a crystal minaudière clutch",
       hairStyling: "Glossy sleek side part with long smooth waves behind one shoulder",
-      pose: "Standing three-quarter on the carpet, one hand touching her earring, the other holding the clutch",
+      pose: "Standing three-quarter on the glossy floor, one hand touching her earring, the other holding the clutch",
       expression: "Cool, confident smirk",
     },
     audio: {
@@ -429,14 +429,14 @@ const seeds: VideoSeed[] = [
         { at: 3.4, sound: "crystal earring tinkle" },
         { at: 6.3, sound: "single loud flash pop" },
       ],
-      ambience: "muffled crowd murmur and photographers calling out",
+      ambience: "soft studio room tone and the crisp click of a camera shutter",
     },
-    thumbnail: { text: "Flash Ready ⚡", concept: "Meher in a black satin tuxedo dress lit by bright paparazzi flashes" },
+    thumbnail: { text: "Flash Ready ⚡", concept: "Meher in a black satin tuxedo dress lit by bright studio flashes" },
     seo: {
       title: "Black Tuxedo Blazer Dress — Paparazzi Flash Glam ⚡",
       altTitles: ["Blazer Dress Look for a Red Carpet Night", "फ़्लैश लाइट्स में ब्लैक ब्लेज़र ड्रेस", "Event Night Ka Bold Tuxedo Dress Look"],
       summaryHi: "Camera flashes के बीच black satin tuxedo blazer dress, crystal drop earrings और sleek waves — event night के लिए एक bold editorial look।",
-      summaryEn: "AI model Meher Anand poses in a black tuxedo blazer dress in a paparazzi-flash fashion editorial.",
+      summaryEn: "AI model Meher Anand poses in a black tuxedo blazer dress in a flash-studio fashion editorial.",
       primaryKeywords: ["blazer dress", "tuxedo dress look"],
       secondaryKeywords: ["event outfit ideas", "fashion editorial", "black dress glam"],
       hashtags: ["#BlazerDress", "#FlashEditorial"],
@@ -759,7 +759,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "AI fashion models",
-    concept: "Meet Hana Mori: her signature look is a liquid-silver metallic one-shoulder gown in a white cyclorama studio with floating chrome spheres.",
+    concept: "A liquid-silver glam look: Hana Mori in a liquid-silver metallic one-shoulder gown in a white cyclorama studio with floating chrome spheres.",
     hook: "A mirrored chrome sphere drifts past the lens and reveals Hana's face reflected in it before the shot settles on her.",
     subject: "Hana Mori in a liquid-silver metallic one-shoulder gown",
     environment: "Seamless white cyclorama studio with several mirror-polished chrome spheres suspended at different heights, catching soft reflections",
@@ -905,7 +905,7 @@ const seeds: VideoSeed[] = [
     characters: ["hana"],
     look: {
       outfit: "Baby-pink satin corset mini dress with small ribbon bows on the straps and a flared skirt",
-      accessories: "Pink satin hair bows, pearl drop earrings, ballet-pink Mary Jane heels",
+      accessories: "Pink satin hair bows, pearl drop earrings, ballet-pink buckle-strap heels",
       hairStyling: "Loose half-up style tied with satin bows, curtain bangs softly framing her face",
       pose: "Standing under the gazebo arch, one hand at the bow in her hair",
       expression: "Sweet, knowing smile",
@@ -1026,9 +1026,9 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Beauty and styling",
-    concept: "Meher Anand shows a 90s supermodel blowout with brown-lined glossy lips in a chocolate satin cowl-neck top at a mirror-lit salon chair.",
+    concept: "Meher Anand shows a bouncy 90s blowout with brown-lined glossy lips in a chocolate satin cowl-neck top at a mirror-lit salon chair.",
     hook: "A huge bouncy blowout swings into frame as Meher turns in the salon chair toward the camera.",
-    subject: "Meher Anand with a 90s supermodel blowout and brown-lined glossy lips, wearing a chocolate satin cowl-neck top",
+    subject: "Meher Anand with a bouncy 90s blowout and brown-lined glossy lips, wearing a chocolate satin cowl-neck top",
     environment: "Chic salon with a tall arched mirror, warm globe lights, a round brush and a hairdryer on a marble counter and a velvet salon chair",
     action: "The camera pushes in from a medium shot to a portrait as she flips the voluminous blowout back with one hand and turns her face slightly to show the glossy lip.",
     payoff: "Portrait close-up: Meher smiling with the bouncy blowout perfectly framing her face, glossy lips catching the light.",
@@ -1062,7 +1062,7 @@ const seeds: VideoSeed[] = [
     seo: {
       title: "90s Supermodel Blowout + Glossy Brown Lips 💋",
       altTitles: ["How to Get a 90s Blowout Look", "90s वाला बाउंसी ब्लोआउट हेयर लुक", "Brown Lip Liner Wala Retro Glam"],
-      summaryHi: "Salon mirror के सामने big bouncy 90s blowout, brown-lined glossy lips और chocolate satin top — एक retro supermodel beauty look।",
+      summaryHi: "Salon mirror के सामने big bouncy 90s blowout, brown-lined glossy lips और chocolate satin top — एक retro 90s beauty look।",
       summaryEn: "AI model Meher Anand shows a 90s blowout hairstyle with brown-lined glossy lips in a salon.",
       primaryKeywords: ["90s blowout", "brown lip liner"],
       secondaryKeywords: ["volume hair", "retro makeup look", "glossy lips"],

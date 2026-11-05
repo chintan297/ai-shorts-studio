@@ -46,9 +46,9 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "Beauty and styling",
-    concept: "Meher Anand shows a sangeet glam beauty look with a shimmer-gold cut-crease eye, berry lip, maang tikka and Hollywood waves in a mirror-lit haveli dressing room.",
+    concept: "Meher Anand shows a sangeet glam beauty look with a shimmer-gold cut-crease eye, berry lip, maang tikka and vintage-glam waves in a mirror-lit haveli dressing room.",
     hook: "Extreme close-up of Meher's eyelids opening to reveal a shimmering gold cut-crease as the mirror bulbs flicker on around her.",
-    subject: "Meher Anand in sangeet glam makeup with a maang tikka and Hollywood waves",
+    subject: "Meher Anand in sangeet glam makeup with a maang tikka and vintage-glam waves",
     environment: "Mirror-lit haveli dressing room with carved wooden doors, a round bulb-framed mirror, brass jewelry trays and marigold garlands on the wall",
     action: "The camera slowly pulls back from her eyes to a portrait framing as she adjusts the maang tikka with one fingertip and turns her face side to side to catch the light on the gold shimmer.",
     payoff: "She settles facing the lens with a confident berry-lipped smile, the waves glossy over one shoulder and the tikka sparkling.",
@@ -59,7 +59,7 @@ const seeds: VideoSeed[] = [
     look: {
       outfit: "Fuchsia silk blouse with gold embroidered sleeves, the edge of a sequin dupatta draped on one shoulder",
       accessories: "Kundan maang tikka, matching kundan drop earrings, a stack of slim gold bangles",
-      hairStyling: "Glossy side-parted Hollywood waves brushed over one shoulder",
+      hairStyling: "Glossy side-parted vintage-glam waves brushed over one shoulder",
       pose: "Seated at the mirror, turned slightly toward the camera, one hand touching the maang tikka",
       expression: "Confident, glowing smile",
     },
@@ -82,7 +82,7 @@ const seeds: VideoSeed[] = [
     seo: {
       title: "Gold Cut-Crease + Berry Lip — Sangeet Makeup ✨",
       altTitles: ["Sangeet Glam Makeup Idea with a Maang Tikka", "संगीत के लिए गोल्ड आई मेकअप लुक", "Hollywood Waves Wala Sangeet Glam"],
-      summaryHi: "Shimmer-gold cut-crease eyes, berry lips, kundan maang tikka और glossy Hollywood waves — sangeet night के लिए एक bold glam makeup look।",
+      summaryHi: "Shimmer-gold cut-crease eyes, berry lips, kundan maang tikka और glossy vintage-glam waves — sangeet night के लिए एक bold glam makeup look।",
       summaryEn: "AI model Meher Anand shows a sangeet makeup look with a gold cut-crease eye, berry lip and maang tikka.",
       primaryKeywords: ["sangeet makeup", "gold eye makeup"],
       secondaryKeywords: ["maang tikka look", "hollywood waves", "wedding guest makeup"],
@@ -136,7 +136,7 @@ const seeds: VideoSeed[] = [
   },
   {
     category: "AI fashion models",
-    concept: "Meet Valeria Solis: her signature look is a fiery-orange satin draped one-shoulder gown against a sunset-orange seamless studio backdrop.",
+    concept: "A sunset glam look: Valeria Solis in a fiery-orange satin draped one-shoulder gown against a sunset-orange seamless studio backdrop.",
     hook: "Valeria's face turns into the key light as a ripple of fiery-orange satin catches a bright highlight across the frame.",
     subject: "Valeria Solis in a fiery-orange satin draped one-shoulder gown",
     environment: "Minimal studio with a seamless sunset-orange paper backdrop that fades to deep amber at the edges and a glossy floor reflection",
@@ -514,7 +514,7 @@ const seeds: VideoSeed[] = [
       tone: "elegant and confident",
       lines: [
         { start: 1.3, end: 3.2, text: "Pearls और organza…" },
-        { start: 4.6, end: 6.6, text: "Royal feel!" },
+        { start: 4.6, end: 6.6, text: "Classy feel!" },
       ],
       music: "graceful Indian-classical-fusion instrumental with a gentle sitar melody, soft tabla and light strings",
       sfx: [
