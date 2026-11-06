@@ -45,7 +45,12 @@ Reference examples: the first 3 seeds in each channel's `days-001-015.ts`.
 - `audio.mode`: `voiceover` (off-screen narrator, preferred), `dialogue` (on-screen speech, use rarely)
   or `music-only` (lines = []).
 - `audio.sfx`: 2–4 timed cues, one of them at ≤ 1.5 s.
-- `audio.music`: mood + instruments only, e.g. "uplifting synth pads with a soft arpeggio".
+- `audio.music`: mood + genre + instruments that match this video's look or topic, e.g. "uplifting synth pads
+  with a soft arpeggio". Genre names (deep house, Afro-house, R&B-style groove, Indian-fusion, lo-fi hip-hop) are
+  fine. The channel template's `music` block adds the channel's energy, the 0 s → 6 s reveal → 8 s arc and the
+  "original instrumental, no vocals" wording, so don't repeat those here.
+  **ai-fashion:** always beat-led and catchy (a groove, a hook, a steady beat); keep ambient, slow or lounge-only
+  moods out, and turn them into their beat versions (jazzy house, lo-fi house, Indian-fusion deep-house).
   **Never** name songs, artists, films, games, "remix", "lyrics", "in the style of",
   "Bollywood song" or "trending audio". The template already adds "original, no vocals, no lyrics".
 - Never ask for on-screen text, captions, logos or brand names. The kids channel may show the single

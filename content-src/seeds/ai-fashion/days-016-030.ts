@@ -23,7 +23,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "elegant cinematic waltz-tempo instrumental with lush strings, harp glissandos and a soft piano melody",
+      music: "elegant orchestral-pop instrumental with lush strings, harp glissandos, a piano hook and a steady modern beat",
       sfx: [
         { at: 0.4, sound: "delicate crystal chime" },
         { at: 3.2, sound: "soft rustle of velvet" },
@@ -113,7 +113,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "laid-back lo-fi hip-hop instrumental with dusty drums, mellow electric piano and warm bass",
+      music: "laid-back lo-fi hip-hop instrumental with a punchy head-nodding beat, a mellow electric-piano hook and warm bass",
       sfx: [
         { at: 0.4, sound: "soft click of sunglasses" },
         { at: 3.0, sound: "waves breaking on the tetrapods" },
@@ -469,7 +469,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "smooth jazz-lounge instrumental with a walking upright bass, brushed drums and a muted trumpet",
+      music: "glamorous jazzy house instrumental with a muted-trumpet hook, a walking upright bass and a crisp four-on-the-floor beat",
       sfx: [
         { at: 0.4, sound: "heel tap on the brass footrest" },
         { at: 3.0, sound: "ice clinking in a glass" },
@@ -516,7 +516,7 @@ const seeds: VideoSeed[] = [
         { start: 1.3, end: 3.2, text: "Pearls और organza…" },
         { start: 4.6, end: 6.6, text: "Classy feel!" },
       ],
-      music: "graceful Indian-classical-fusion instrumental with a gentle sitar melody, soft tabla and light strings",
+      music: "graceful Indian-classical-fusion groove instrumental with a sitar hook, a steady tabla beat and light strings",
       sfx: [
         { at: 0.4, sound: "soft pearl clink" },
         { at: 3.0, sound: "porcelain teacup on a saucer" },
@@ -692,7 +692,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "minimal Indian-fusion ambient instrumental with a soft santoor melody, slow tabla and airy pads",
+      music: "sleek Indian-fusion deep-house instrumental with a santoor hook, tabla accents and airy pads over a warm kick",
       sfx: [
         { at: 0.5, sound: "delicate jhumka jingle" },
         { at: 3.0, sound: "soft rustle of the cape" },
@@ -829,7 +829,7 @@ const seeds: VideoSeed[] = [
         { start: 1.2, end: 3.0, text: "Glass skin glow…" },
         { start: 4.4, end: 6.4, text: "बिल्कुल fresh!" },
       ],
-      music: "calm lo-fi instrumental with soft piano chords, vinyl crackle and a gentle beat",
+      music: "soft lo-fi R&B instrumental with warm piano chords, light vinyl crackle and a gentle head-nodding beat",
       sfx: [
         { at: 0.4, sound: "soft glass bottle clink" },
         { at: 3.0, sound: "delicate ear cuff click" },
@@ -872,7 +872,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "majestic Indian-fusion instrumental with a deep sarangi melody, slow tabla and swelling cinematic strings",
+      music: "majestic Indian-fusion instrumental with a deep sarangi melody, a steady tabla-and-dhol beat and swelling cinematic strings",
       sfx: [
         { at: 0.4, sound: "sparkling mirror shimmer" },
         { at: 3.0, sound: "soft velvet rustle" },
@@ -915,7 +915,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "minimal noir jazz instrumental with a muted trumpet, soft brushed snare and a slow double bass",
+      music: "sleek noir jazz-hop instrumental with a muted-trumpet hook, a crisp head-nodding beat and a deep double bass",
       sfx: [
         { at: 0.3, sound: "heavy spotlight switch clunk" },
         { at: 3.0, sound: "pearls softly clicking together" },
@@ -1138,7 +1138,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "serene festive Indian-fusion instrumental with veena-like plucks, soft mridangam rhythm and warm pads",
+      music: "festive Indian-fusion groove instrumental with veena-like plucks, a bouncy mridangam rhythm and warm pads",
       sfx: [
         { at: 0.4, sound: "jhumka jingle" },
         { at: 3.0, sound: "brass lamp flame flicker" },

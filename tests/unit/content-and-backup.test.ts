@@ -54,6 +54,18 @@ describe("static content library", () => {
     }
   });
 
+  it("music follows the channel's sound identity and always offers a copyright-free backup", () => {
+    for (const pkg of ALL) {
+      expect(pkg.flowPrompt.prompt, pkg.id).toMatch(/Music: original instrumental[^\n]*no vocals\.[^\n]*first frame[^\n]*by 8 seconds/);
+      expect(pkg.flowPrompt.prompt, pkg.id).toMatch(/ Mix: /);
+      expect(pkg.flowPrompt.notes.some((n) => /Audio Library, filter Genre “[^”]+”, Mood “[^”]+”/.test(n)), pkg.id).toBe(true);
+    }
+    for (const pkg of aiFashion as unknown as VideoPackage[]) {
+      expect(pkg.flowPrompt.prompt, pkg.id).toMatch(/beat-driven[^\n]*bass drop[^\n]*loops seamlessly/);
+      expect(pkg.audio.music, pkg.id).not.toMatch(/\b(?:serene|tranquil|calm|slow|ambient instrumental)\b/i);
+    }
+  });
+
   it("prompts never name the realistic fashion models and never list unwanted content", () => {
     for (const pkg of ALL) {
       const copied = `${pkg.flowPrompt.prompt}\n${pkg.imagePrompt.prompt}\n${pkg.thumbnail.prompt}`;

@@ -72,6 +72,10 @@ export const kidsLearningTemplate: ChannelTemplate = {
   videoStyle:
     "Soft 3D cartoon animation for toddlers and preschoolers: rounded friendly shapes, bright saturated colors, gentle bouncy motion, a cozy and safe atmosphere.",
   trendLook: "bright toy-like 3D cartoon, soft rounded shapes, cheerful primary-and-pastel palette and bouncy pop-in animation",
+  music: {
+    feel: "simple, catchy and happy, with a hummable melody and a bouncy, steady rhythm at a gentle, soothing volume",
+    arc: "A cheerful little motif starts on the first frame, the bouncy rhythm carries the lesson, a happy chime lift lands at the 6-second reveal, and it ends on a bright final note by 8 seconds.",
+  },
   consistencyRules:
     "Every character keeps exactly the same design, proportions, colors and clothing as described, in every frame. The art style never changes. Every letter, number, shape and color being taught is drawn correctly and is easy to recognize.",
   motionRules:

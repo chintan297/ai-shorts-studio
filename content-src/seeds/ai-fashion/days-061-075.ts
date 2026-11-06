@@ -23,7 +23,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "moody lo-fi instrumental with a dusty drum loop, soft Rhodes chords and a warm bass line",
+      music: "moody lo-fi hip-hop instrumental with a punchy dusty drum loop, soft Rhodes chords and a warm bass line",
       sfx: [
         { at: 0.4, sound: "raindrop splash in a puddle" },
         { at: 3.0, sound: "trench belt leather creak" },
@@ -113,7 +113,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "gentle Indian-fusion instrumental with a soft sitar melody, light tabla and warm string pads",
+      music: "graceful Indian-fusion groove instrumental with a sitar hook, a bouncy tabla beat and warm string pads",
       sfx: [
         { at: 0.5, sound: "delicate chime as flowers come into focus" },
         { at: 3.2, sound: "soft rustle of rose petals" },
@@ -246,7 +246,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "dreamy retro surf-guitar instrumental with reverb-soaked guitar, brushed drums and upright bass",
+      music: "groovy retro surf-guitar instrumental with a reverb-soaked guitar hook, a shuffling drum beat and upright bass",
       sfx: [
         { at: 0.3, sound: "vintage sign buzz and flicker" },
         { at: 3.2, sound: "film camera shutter clack" },
@@ -383,7 +383,7 @@ const seeds: VideoSeed[] = [
         { start: 1.4, end: 3.4, text: "Lake view…" },
         { start: 4.6, end: 6.8, text: "और full vintage glam।" },
       ],
-      music: "elegant jazz-lounge instrumental with brushed drums, upright bass and a light vibraphone melody",
+      music: "elegant jazzy house instrumental with a vibraphone hook, crisp brushed hi-hats and a bouncing upright bass",
       sfx: [
         { at: 0.5, sound: "airy whoosh over water" },
         { at: 3.2, sound: "silk scarf flutter" },
@@ -469,7 +469,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "magical ambient instrumental with soft music-box chimes, airy synth pads and gentle strings",
+      music: "magical winter-pop instrumental with a music-box hook, airy synth pads, gentle strings and a soft steady beat",
       sfx: [
         { at: 0.5, sound: "crystal-like aurora shimmer" },
         { at: 3.2, sound: "soft crunch of snow" },
@@ -516,7 +516,7 @@ const seeds: VideoSeed[] = [
         { start: 1.3, end: 3.3, text: "इस season का colour?" },
         { start: 4.6, end: 6.6, text: "Butter yellow!" },
       ],
-      music: "light French-cafe-style instrumental with accordion-like synth, pizzicato strings and a soft beat",
+      music: "playful French-café-style pop instrumental with an accordion-like hook, pizzicato strings and a bouncy beat",
       sfx: [
         { at: 0.4, sound: "paper flower wrap rustle" },
         { at: 3.0, sound: "soft satin swish" },
@@ -649,7 +649,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "cinematic Indian-fusion instrumental with a deep tanpura drone, slow tabla and swelling strings",
+      music: "cinematic Indian-fusion groove instrumental with a deep tanpura-style drone, a steady tabla beat and swelling strings",
       sfx: [
         { at: 0.4, sound: "soft rustle of marigold strands" },
         { at: 3.0, sound: "silk pallu swish" },
@@ -692,7 +692,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "warm lo-fi instrumental with mellow piano, soft vinyl crackle and a slow laid-back beat",
+      music: "warm lo-fi hip-hop instrumental with a mellow piano hook, soft vinyl crackle and a head-nodding beat",
       sfx: [
         { at: 0.5, sound: "cup set down on a saucer" },
         { at: 3.0, sound: "rain tapping on glass" },
@@ -782,7 +782,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "dreamy Indian-fusion instrumental with a santoor melody, soft tabla and lush synth pads",
+      music: "dreamy Indian-fusion deep-house instrumental with a santoor hook, soft tabla and lush synth pads",
       sfx: [
         { at: 0.4, sound: "brass lantern chime" },
         { at: 3.0, sound: "velvet fabric rustle" },
@@ -1052,7 +1052,7 @@ const seeds: VideoSeed[] = [
         { start: 1.4, end: 3.4, text: "बाहर बर्फ़…" },
         { start: 4.6, end: 6.8, text: "पर look full warm।" },
       ],
-      music: "soft lo-fi jazz instrumental with a mellow piano, gentle koto-like plucks and brushed drums",
+      music: "soft lo-fi jazz-hop instrumental with mellow piano, a koto-like pluck hook and a head-nodding brushed beat",
       sfx: [
         { at: 0.5, sound: "paper lantern creak in the wind" },
         { at: 3.0, sound: "soft hiss of rising steam" },
@@ -1096,7 +1096,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "atmospheric cinematic instrumental with deep synth swells, slow pulsing bass and shimmering textures",
+      music: "atmospheric cinematic-electronic instrumental with deep synth swells, a pulsing bass, shimmering textures and a steady beat",
       sfx: [
         { at: 0.4, sound: "low fog-machine whoosh" },
         { at: 3.0, sound: "light switch thunk as the front light rises" },
@@ -1229,7 +1229,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "dreamy cinematic instrumental with a gentle harp, soft piano and swelling strings",
+      music: "dreamy cinematic-pop instrumental with a harp hook, soft piano, swelling strings and a steady beat",
       sfx: [
         { at: 0.4, sound: "paper flowers rustling" },
         { at: 3.0, sound: "soft tulle swish" },
@@ -1319,7 +1319,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "elegant orchestral instrumental with soaring strings, soft harp and a gentle timpani roll",
+      music: "elegant orchestral-pop instrumental with soaring strings, harp sweeps and a steady modern beat",
       sfx: [
         { at: 0.4, sound: "crystal sparkle chime" },
         { at: 3.0, sound: "satin cape rustle" },

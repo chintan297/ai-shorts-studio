@@ -29,7 +29,12 @@ const BANNED_AUDIO = [
   /cover version/i,
   /bollywood (song|track|hit)/i,
   /famous song/i,
-  /trending (song|audio)/i,
+  /trending (song|audio|sound)/i,
+  /viral (song|audio|sound|track)/i,
+  /theme (song|music|tune) (from|of)/i,
+  /soundtrack (from|of)/i,
+  /\binspired by\b/i,
+  /\bsampl(e|ed|ing) from\b/i,
 ];
 
 const MISLEADING_TITLE = [/guarantee/i, /100%\s*real/i, /real footage/i, /\bproof\b/i];
@@ -142,7 +147,8 @@ export function scorePackage(pkg: Pkg, ctx: QualityContext): QualityReport {
   add("audio", "A1", "Music, sound effects and ambience are all specified", pkg.audio.music.length > 5 && pkg.audio.sfx.length > 0 && pkg.audio.ambience.length > 3, true);
   add("audio", "A2", "Copyright-safe music instruction (original instrumental, no vocals)", /original instrumental/.test(flow) && /no vocals/.test(flow), true);
   add("audio", "A3", "No copyrighted-song references", !BANNED_AUDIO.some((re) => re.test(audioText)), true, "Remove references to existing songs or artists.");
-  add("audio", "A4", "Natural audio ending (fade-out by 8 s)", /soft fade-out by 8 seconds/.test(flow), false);
+  add("audio", "A4", "Music starts on the first frame and ends cleanly by 8 s", /Music:[^\n]*first frame[^\n]*by 8 seconds/.test(flow), false, "Give the channel template a music arc that starts on the first frame and ends by 8 seconds.");
+  add("audio", "A6", "Voice and music mix is defined", /Mix: /.test(flow), false);
   add("audio", "A5", "Voice language and tone are defined", pkg.audio.mode === "music-only" || /speaking Hindi|dialogue in Hindi/.test(flow), true);
 
   // SEO

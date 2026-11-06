@@ -88,6 +88,10 @@ export const aiFashionTemplate: ChannelTemplate = {
   videoStyle:
     "Cinematic fashion film: stylish modern look, soft professional lighting, confident editorial energy, full-length or three-quarter framing.",
   trendLook: "high-end fashion campaign color grade, soft bloom, crisp detail and a trending social-reel glow",
+  music: {
+    feel: "catchy and beat-driven like a trending fashion reel, with a memorable hook melody that repeats and a confident, head-nodding groove",
+    arc: "The beat is already playing on the very first frame, builds with every move, lands a bass drop exactly at the 6-second reveal in sync with the pose, and ends on a clean final beat by 8 seconds so the reel loops seamlessly.",
+  },
   consistencyRules:
     "She keeps the same face, skin tone and hair colour in every frame; outfit and accessories stay the same throughout the clip; hands look natural with five fingers each.",
   motionRules:

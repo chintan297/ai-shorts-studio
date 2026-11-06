@@ -56,6 +56,10 @@ export const aiFactsTemplate: ChannelTemplate = {
   videoStyle:
     "Cinematic photoreal explainer with one striking visual demonstration of the fact: vivid colors, clean composition, premium documentary feel.",
   trendLook: "bold explainer look, satisfying macro detail, vivid colors and a clean, high-contrast composition with one clear wow moment",
+  music: {
+    feel: "curious and catchy, with a light ticking pulse that keeps the viewer leaning in",
+    arc: "A short bright musical sting lands on the first frame, a curious ticking build runs under the explanation, a satisfying swell lifts at the 6-second fact reveal, and it resolves on a clean final note by 8 seconds.",
+  },
   consistencyRules:
     "The demonstrated object or scene keeps a consistent shape, scale and color throughout. The visual demonstration is accurate to the fact and never exaggerates it.",
   motionRules: "Motion is clear and easy to follow, one main movement at a time, with realistic physics.",

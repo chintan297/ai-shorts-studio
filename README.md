@@ -103,7 +103,15 @@ Static content (content-src seeds + templates → data/*.json at build time)
 
 - **One Google Flow prompt per video** (Veo 3.1), built the way Google recommends: an opening line, SCENE, CHARACTER,
   ACTION in three beats (0–2s hook, 2–6s action, 6–8s payoff), CAMERA, LOOK (current trending style for the niche),
-  SOUND (Hindi voice-over, original instrumental, sound effects, ambience) and KEEP CONSISTENT.
+  SOUND (Hindi voice-over, original instrumental, voice/music mix, sound effects, ambience) and KEEP CONSISTENT.
+- **Music fits the content and the channel.** Each seed names its own genre + instruments for that video (a lehenga
+  look gets Indian-fusion, a beach look tropical house). The channel template's `music` block then adds the channel's
+  sound identity: fashion is catchy and beat-driven, with the beat on the first frame, a bass drop at the 6-second
+  reveal and a clean loop ending; facts get a curious ticking build; space an awe-filled swell; kids a gentle,
+  hummable melody. With a voice-over the mix keeps the Hindi voice upfront and the music underneath.
+- **Copyright:** music is always "original instrumental, no vocals" and never names a song, artist, film or "trending
+  audio" (check A3). Every video's Flow notes also give a copyright-free backup: the YouTube Audio Library genre and
+  mood to filter by, with "Attribution not required".
 - **Positive wording only.** Prompts never list unwanted things ("no …"), because content filters read the whole prompt.
   The build fails if any copied prompt contains filter-trigger or violent words, in English or in the Hindi voice lines
   (check P4 in `src/lib/quality/score.ts`).

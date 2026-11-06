@@ -70,6 +70,10 @@ export const aiAnimalsTemplate: ChannelTemplate = {
   videoStyle:
     "Photorealistic nature-documentary cinematography: accurate animal anatomy, natural behavior, lush environments, gentle cinematic camera work.",
   trendLook: "nature-documentary close-up, shallow depth of field, rich natural colors, warm sunlight and a heartwarming moment",
+  music: {
+    feel: "warm, emotional and memorable, with a simple signature melody that matches the animal's mood",
+    arc: "The melody starts on the first frame, grows with the action, blooms into a satisfying lift at the 6-second moment, and settles on a soft final note by 8 seconds.",
+  },
   consistencyRules:
     "The same individual animal keeps identical markings, fur or feather pattern, colors and size throughout, with the correct number of legs, ears, eyes and tail for its species.",
   motionRules:

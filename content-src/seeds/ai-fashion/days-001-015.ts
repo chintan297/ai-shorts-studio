@@ -200,7 +200,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "smooth jazz-lounge instrumental with muted trumpet, brushed drums and a warm upright bass",
+      music: "classy jazzy deep-house instrumental with a muted-trumpet hook, crisp brushed hi-hats and a warm walking bass",
       sfx: [
         { at: 0.4, sound: "delicate jingle of gold chains" },
         { at: 3.0, sound: "soft satin rustle in the breeze" },
@@ -243,7 +243,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "sleek R&B-style groove instrumental with a slow snap beat, warm electric keys and deep bass",
+      music: "sleek R&B-style groove instrumental with a crisp snap beat, warm electric keys and deep bass",
       sfx: [
         { at: 0.3, sound: "vanity bulbs clicking on" },
         { at: 3.2, sound: "soft swish of the ponytail" },
@@ -380,7 +380,7 @@ const seeds: VideoSeed[] = [
         { start: 1.2, end: 3.0, text: "सबकी नज़रें यहीं…" },
         { start: 4.6, end: 6.6, text: "Emerald glam mood।" },
       ],
-      music: "cinematic strings instrumental with a slow pulsing synth bass and a rising cello line",
+      music: "cinematic pop-house instrumental with a driving pulse, a soaring string hook and a rising cello line",
       sfx: [
         { at: 0.3, sound: "deep spotlight clunk" },
         { at: 3.0, sound: "soft satin swish" },
@@ -466,7 +466,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "serene Indian-fusion instrumental with santoor ripples, soft tabla and warm ambient pads",
+      music: "chilled Indian-fusion deep-house instrumental with a santoor hook, a soft tabla loop and a warm rolling kick",
       sfx: [
         { at: 0.5, sound: "gentle lake water lapping" },
         { at: 3.0, sound: "organza cape fluttering" },
@@ -603,7 +603,7 @@ const seeds: VideoSeed[] = [
         { start: 1.3, end: 3.3, text: "Wedding night का red…" },
         { start: 4.7, end: 6.5, text: "सबसे अलग।" },
       ],
-      music: "romantic Indian-fusion instrumental with shehnai-like lead, soft dhol and lush string pads",
+      music: "romantic Indian-fusion groove instrumental with a shehnai-like hook, a steady dhol beat and lush string pads",
       sfx: [
         { at: 0.4, sound: "earring jingle" },
         { at: 3.0, sound: "sequin saree rustle" },
@@ -736,7 +736,7 @@ const seeds: VideoSeed[] = [
         { start: 1.2, end: 3.0, text: "Fur coat season…" },
         { start: 4.4, end: 6.4, text: "Gold ज़्यादा, tension कम।" },
       ],
-      music: "slow R&B-style groove instrumental with a heavy snare, mellow Rhodes chords and deep bass",
+      music: "head-nodding R&B-style groove instrumental with a heavy snare, mellow Rhodes chords and deep bass",
       sfx: [
         { at: 0.4, sound: "gold rings clinking" },
         { at: 3.0, sound: "soft faux-fur brush" },
@@ -869,7 +869,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "warm lo-fi instrumental with soft piano chords, dusty drums and a mellow bass",
+      music: "cosy lo-fi house instrumental with warm piano chords, a head-nodding kick and a mellow bass",
       sfx: [
         { at: 0.5, sound: "boot heel on cobblestone" },
         { at: 3.0, sound: "wool coat belt rustle" },
@@ -913,7 +913,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "dreamy lo-fi pop instrumental with music-box chimes, soft guitar and gentle beat",
+      music: "dreamy bedroom-pop instrumental with a music-box hook, soft guitar and a bouncy beat",
       sfx: [
         { at: 0.4, sound: "satin ribbon flutter" },
         { at: 3.0, sound: "soft breeze through roses" },
@@ -1093,7 +1093,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "airy Mediterranean-flavoured chill instrumental with bouzouki-like plucks, soft pads and a gentle beat",
+      music: "sunny Mediterranean-house instrumental with a bouzouki-like hook, soft claps and a warm rolling bassline",
       sfx: [
         { at: 0.5, sound: "strong sea wind whoosh" },
         { at: 3.0, sound: "fabric flutter" },
@@ -1273,7 +1273,7 @@ const seeds: VideoSeed[] = [
         { start: 1.4, end: 3.2, text: "ठंडी शादी…" },
         { start: 4.6, end: 6.6, text: "Velvet में warm glam।" },
       ],
-      music: "cosy Indian-fusion instrumental with a soft sitar line, warm cello and a slow dhol pulse",
+      music: "cosy Indian-fusion groove instrumental with a sitar hook, warm cello and a steady dhol beat",
       sfx: [
         { at: 0.4, sound: "crackling fire pit" },
         { at: 3.0, sound: "velvet shawl rustle" },

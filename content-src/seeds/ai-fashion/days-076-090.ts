@@ -160,7 +160,7 @@ const seeds: VideoSeed[] = [
         { start: 1.3, end: 3.2, text: "Canal की शाम…" },
         { start: 4.6, end: 6.8, text: "velvet वाली elegance।" },
       ],
-      music: "romantic jazz-lounge instrumental with soft brushed drums, upright bass and a gentle accordion melody",
+      music: "romantic jazzy café-house instrumental with an accordion hook, crisp brushed hi-hats and a bouncing upright bass",
       sfx: [
         { at: 0.5, sound: "soft earring chime" },
         { at: 3.0, sound: "gentle water lapping against stone" },
@@ -246,7 +246,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "atmospheric cinematic instrumental with soft strings, a warm cello line and light piano",
+      music: "atmospheric cinematic-pop instrumental with soft strings, a warm cello hook and a steady pulsing beat",
       sfx: [
         { at: 0.4, sound: "boot crunching fresh snow" },
         { at: 3.0, sound: "wool coat rustle" },
@@ -293,7 +293,7 @@ const seeds: VideoSeed[] = [
         { start: 1.2, end: 3.0, text: "Blue satin…" },
         { start: 4.5, end: 6.7, text: "और पूरी night मेरी।" },
       ],
-      music: "smoky jazz-lounge instrumental with muted trumpet, walking upright bass and brushed snare",
+      music: "smoky jazz-house instrumental with a muted-trumpet hook, a walking upright bass and a crisp dance beat",
       sfx: [
         { at: 0.4, sound: "heel tap on wooden floor" },
         { at: 3.0, sound: "soft satin swish" },
@@ -336,7 +336,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "dreamy lo-fi instrumental with soft electric piano, vinyl crackle and a gentle beat",
+      music: "dreamy lo-fi pop instrumental with a soft electric-piano hook, light vinyl crackle and a bouncy beat",
       sfx: [
         { at: 0.3, sound: "crystal sparkle twinkle" },
         { at: 3.0, sound: "soft clip click" },
@@ -692,7 +692,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "soft Indian-fusion instrumental with a santoor-like melody, light tabla and dreamy synth pads",
+      music: "bouncy Indian-fusion pop instrumental with a santoor-like hook, a tabla-and-clap beat and dreamy synth pads",
       sfx: [
         { at: 0.4, sound: "sequin shimmer" },
         { at: 3.0, sound: "flowers rustling in the breeze" },
@@ -739,7 +739,7 @@ const seeds: VideoSeed[] = [
         { start: 1.4, end: 3.4, text: "Sunrise और balloons…" },
         { start: 4.8, end: 6.8, text: "dream look ready।" },
       ],
-      music: "uplifting cinematic instrumental with soaring strings, a soft piano motif and a gentle swell",
+      music: "uplifting cinematic-pop instrumental with soaring strings, a piano hook and a steady driving beat",
       sfx: [
         { at: 0.5, sound: "distant balloon burner whoosh" },
         { at: 3.0, sound: "soft tulle rustle" },
@@ -782,7 +782,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "clean minimal lo-fi instrumental with soft keys, a light kick and airy chimes",
+      music: "clean minimal lo-fi house instrumental with a soft keys hook, a crisp kick and airy chimes",
       sfx: [
         { at: 0.3, sound: "lip tint cap click" },
         { at: 3.0, sound: "soft hair swish" },
@@ -1185,7 +1185,7 @@ const seeds: VideoSeed[] = [
         { start: 1.3, end: 3.2, text: "Blue, pink…" },
         { start: 4.6, end: 6.8, text: "और full drama।" },
       ],
-      music: "dramatic cinematic instrumental with deep taiko-like drums, swelling strings and an ethereal synth choir pad",
+      music: "dramatic cinematic groove instrumental with deep taiko-like drums, swelling strings and ethereal synth pads",
       sfx: [
         { at: 0.4, sound: "soft airy whoosh of colored mist" },
         { at: 3.0, sound: "satin swish in the wind" },
@@ -1228,7 +1228,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "retro jazz-lounge instrumental with swinging brushed drums, vibraphone and a playful upright bass",
+      music: "retro swing-house instrumental with swinging brushed drums, a vibraphone hook and a playful upright bass",
       sfx: [
         { at: 0.4, sound: "sunglasses tap" },
         { at: 3.0, sound: "silk scarf fluttering" },
@@ -1318,7 +1318,7 @@ const seeds: VideoSeed[] = [
     audio: {
       mode: "music-only",
       lines: [],
-      music: "warm Mediterranean-inspired instrumental with mandolin-like plucks, soft strings and a gentle beat",
+      music: "sunny Mediterranean-pop instrumental with a mandolin-like hook, soft strings and a bouncy beat",
       sfx: [
         { at: 0.4, sound: "earring chime" },
         { at: 3.0, sound: "lemon leaves rustling" },

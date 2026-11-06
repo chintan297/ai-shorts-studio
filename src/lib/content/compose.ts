@@ -8,7 +8,7 @@ import {
   type VideoSeed,
 } from "./schema";
 
-export const TEMPLATE_VERSION = "v3";
+export const TEMPLATE_VERSION = "v4";
 export const GENERATION_PLATFORM = "Google Flow (Veo 3.1 — video + native audio)";
 
 export interface CastMember {
@@ -35,6 +35,16 @@ export interface ChannelTemplate {
   videoStyle: string;
   /** Current Shorts look for this niche (grade, texture, energy). Positive wording only. */
   trendLook: string;
+  /**
+   * The channel's sound identity, added after each seed's own genre + instruments so the music fits the niche
+   * and holds attention. Positive wording only.
+   */
+  music: {
+    /** What makes the track attractive for this niche (energy, hook, character). */
+    feel: string;
+    /** How the 8 seconds unfold: start on the first frame, lift at the 6 s reveal, end "by 8 seconds". */
+    arc: string;
+  };
   consistencyRules: string;
   motionRules: string;
   imageNegatives: string[];
@@ -250,11 +260,57 @@ function soundDirection(tpl: ChannelTemplate, seed: VideoSeed): string {
     parts.push("No voice: music and natural sound only.");
   }
   parts.push(
-    `Music: original instrumental, ${audio.music}, no vocals, with a gentle lift at the 6-second reveal and a soft fade-out by 8 seconds.`,
+    `Music: original instrumental, ${audio.music.replace(/\binstrumental\b/i, "track")}; ${tpl.music.feel}, no vocals. ${tpl.music.arc}`,
+    spoken.length
+      ? "Mix: the Hindi voice stays clear and upfront; the music sits softly underneath and rises in the gaps between lines."
+      : "Mix: the music leads, full and punchy, with the sound effects landing on the beat.",
     `Sound effects: ${audio.sfx.map((c) => `${c.sound} (${fmt(c.at)}s)`).join(", ")}.`,
     `Ambience: ${audio.ambience}.`,
   );
   return parts.join(" ");
+}
+
+/** YouTube Studio → Audio Library filters (genre, mood) closest to the seed's music: the copyright-free backup. */
+const LIBRARY_GENRES: Array<[RegExp, string]> = [
+  [/house|techno|disco|electro|synthwave|synth-pop|club|dance-pop|edm|trance/i, "Dance & Electronic"],
+  [/hip-hop|boom-bap|lo-fi|jazz-hop/i, "Hip Hop & Rap"],
+  [/r&b/i, "R&B & Soul"],
+  [/jazz|swing|lounge/i, "Jazz & Blues"],
+  [/reggae/i, "Reggae"],
+  [/rock|surf-guitar/i, "Rock"],
+  [/indian|carnatic|sitar|tabla|santoor|dhol|shehnai|sarangi|veena|mridangam|tanpura|oud|bouzouki|latin|tropical|island|afro|mediterranean|desert|gamelan|steel/i, "World"],
+  [/orchestral|cinematic|score|anthem|epic/i, "Cinematic"],
+  [/ambient|drone|synth pads|pads/i, "Ambient"],
+  [/baroque|chamber|classical|harpsichord|waltz/i, "Classical"],
+  [/acoustic|folk|ukulele|guitar|mandolin/i, "Country & Folk"],
+  [/pop|funk/i, "Pop"],
+];
+
+/** Mood words → Audio Library mood; the earliest mood word in the description wins. */
+const LIBRARY_MOODS: Array<[RegExp, string]> = [
+  [/\b(?:funky|funk|groovy|disco|slap)\b/gi, "Funky"],
+  [/\b(?:romantic|soulful)\b/gi, "Romantic"],
+  [/\b(?:hopeful|uplifting|proud|triumphant|inspiring|majestic|grand|regal|soaring)\b/gi, "Inspirational"],
+  [/\b(?:dramatic|tense|epic|sweeping|powerful)\b/gi, "Dramatic"],
+  [/\b(?:dark|mysterious|mystical|noir|moody|haunting|gritty|smoky)\b/gi, "Dark"],
+  [/\b(?:calm|serene|gentle|soft|dreamy|tranquil|peaceful|meditative|hushed|chill|chilled|laid-back|cosy|cozy|mellow|smooth|intimate|ethereal|slow|atmospheric|heartfelt|tender)\b/gi, "Calm"],
+  [/\b(?:happy|cheerful|joyful|playful|bouncy|festive|fun|gleeful|sunny|whimsical|quirky|feel-good|light|breezy)\b/gi, "Happy"],
+  [/\b(?:energetic|upbeat|punchy|bright|glittering|glittery|sparkling|euphoric|high-energy|driving|glamorous|glossy|sleek|confident|chic|elegant|bubbly|fresh)\b/gi, "Bright"],
+];
+
+export function audioLibraryHint(music: string, forKids = false): { genre: string; mood: string } {
+  const genre = forKids ? "Children's" : (LIBRARY_GENRES.find(([re]) => re.test(music))?.[1] ?? "Cinematic");
+  let mood = "Bright";
+  let first = Number.POSITIVE_INFINITY;
+  for (const [re, name] of LIBRARY_MOODS) {
+    for (const match of music.matchAll(re)) {
+      if (match.index < first) {
+        first = match.index;
+        mood = name;
+      }
+    }
+  }
+  return { genre, mood };
 }
 
 /** Payoffs that already end on a held frame ("…, holding steady.") skip the closing hold sentence. */
@@ -321,7 +377,10 @@ function flowPrompt(tpl: ChannelTemplate, seed: VideoSeed): VideoPackage["flowPr
   }
   notes.push(
     "If Flow says “might violate our policies”: wait 5–10 minutes and try the same prompt once more (busy servers fail too). If it fails again, report the video number.",
-    "Silent result? Add a track from YouTube Studio's Audio Library, never a commercial song.",
+  );
+  const library = audioLibraryHint(seed.audio.music, tpl.channel.madeForKids);
+  notes.push(
+    `Music silent or weak? Use a copyright-free backup: YouTube Studio → Audio Library, filter Genre “${library.genre}”, Mood “${library.mood}” and “Attribution not required”. Download a track and add it under the clip in your editor before uploading. Never use a commercial song.`,
   );
   return { prompt: lines.join("\n"), notes };
 }

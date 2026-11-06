@@ -58,6 +58,10 @@ export const futureAiTemplate: ChannelTemplate = {
   videoStyle:
     "Ultra-realistic cinematic sci-fi realism with a premium commercial look: believable near-future technology, clean futuristic lighting, high-end visual effects.",
   trendLook: "sleek premium sci-fi commercial look, glowing holographic accents, crisp HDR detail and a satisfying reveal moment",
+  music: {
+    feel: "modern, hopeful and cinematic, with a steady pulse that builds a sense of wonder",
+    arc: "A soft pulse starts on the first frame, builds steadily through the action, opens into a wide shimmering lift at the 6-second reveal, and resolves on a clean final note by 8 seconds.",
+  },
   consistencyRules:
     "Keep the same subject design, materials, colors and environment layout in every frame. Technology looks plausible and well-engineered. No random new objects appear.",
   motionRules:

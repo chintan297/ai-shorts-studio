@@ -57,6 +57,10 @@ export const galaxySpaceTemplate: ChannelTemplate = {
   videoStyle:
     "Cinematic deep-space realism: scientifically grounded visuals, realistic planetary textures, volumetric nebula light, smooth majestic camera motion.",
   trendLook: "giant-screen space cinematography, deep blacks, luminous nebula colors, gentle lens bloom and an awe-inspiring scale reveal",
+  music: {
+    feel: "awe-filled and cinematic, with wide shimmering space and a deep, warm low end",
+    arc: "A deep cinematic swell starts on the first frame, rises with the camera move, blooms into a huge awe-filled lift at the 6-second reveal, and settles into a soft shimmering fade-out by 8 seconds.",
+  },
   consistencyRules:
     "Celestial bodies keep the same size, color, texture and relative positions throughout. Background stars stay fixed and steady, with no twinkling flicker. The sense of scale stays vast and consistent.",
   motionRules:
